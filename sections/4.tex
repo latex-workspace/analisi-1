@@ -1,0 +1,395 @@
+\subsection{Equazioni differenziali lineari}
+\textbox{Fatto generale importante: se tutti i coefficienti dell'equazione sono funzioni continuo in un intervallo $ \left( a,b \right)  $, allora esiste una soluzione almeno nell'intervallo $ \left( a,b \right)  $}
+\teorema{Spazio soluzioni equazione differenziale lineare}{
+	L'insieme di tutte le soluzione di una equazione differenziale lineare di ordine $ n $ \underline{omogenea} ( $ f\left( t \right) =0 $) è uno spazio vettoriale di ordine $ n $. La soluzione dell'equzione si può dunque esprimere come combinazione lineare fra gli elementi di una sua \underline{qualsiasi} base
+}
+Stringi stringe questo equivale a dire che mi ritrovero tante costanti $ c_0,c_1,\ldots, c_{k-1}, c_{k} $ quante l'ordine della suddetta equazione
+\teorema{Soluzione equazioni differenziali non omogenee}{
+	Una equazione differenziale lineare \underline{non omogenea} ha una soluzione che si può scrivere nella seguente forma:
+	\[
+		u\left( t \right) = c_1 u_1\left( t \right) + c_2u_2\left( t \right) + \ldots + c_nu_n\left( t \right) + \overline{u}\left( t \right)
+	\]
+	dove
+	\begin{itemize}
+		\item $ u_1\left( t \right) ,\ldots, u_n\left( t \right)  $ solo gli elementi di una base qualsiasi dell'insieme soluzione dell'equazione \underline{omogenea} associata (ottenuta mettengo $ f\left( t \right)=0  $)
+		\item $ \overline{u}\left( t \right)  $ è una soluzione \underline{qualsiasi} del sistema \underline{non omogeneo}
+	\end{itemize}
+}
+La funzione $ \overline{u}\left( t \right)  $ può essere trovata adoperando alcuni stratagemmi. In reltà però non abbiamo un metodo che ci garantisca di trovarla. Dobbiamo tendenzialmente procedere "a tentoni"
+
+\section{Tecniche risolutive equazioni differenziali}
+\subsection{Edo lineari di primo ordine}
+\subsubsection*{Equazioni a variabili separabili}
+\label{edol1}
+La risoluzione di equazioni lineari a coefficienti costanti omogenee è immediata e si vede ad occhio:
+\[
+	au' + bu = 0 \rightarrow u' = -\frac{b}{a}u
+\]
+l'esponenziale fornisce una soluzione a questa equazione, in particolare
+\[
+	ce ^{-\frac{b}{a}t}
+\]
+è la famiglia di soluzioni dell'equazione differenziale
+
+\subsubsection*{Equazioni lineari non omogenee di primo ordine}
+Per risolvere un'equazione lineare non necessariamente autonoma del primo ordine con la seguente forma
+\[
+	u'\left( t \right) + a\left( t \right) u\left( t \right) = b\left( t \right)
+\]
+posso utilizzare la tecnica del fattore integrante
+\begin{itemize}
+	\item Trovo una primitiva qualsiasi si $ a\left( t \right)  $
+	      \[
+		      A'\left( t \right)=a\left( t \right)
+	      \]
+	\item Moltiplico entrambi i membri dell'equazione per $ e^{A\left( t \right) } $
+	\item Ottengo la derivata di un \underline{prodotto di funzioni} a sinistra
+	      \[
+		      u'\left( t \right)e^{A\left( t \right) } + a\left( t \right) u\left( t \right) e^{A\left( t \right) } = b\left( t \right) e^{A\left( t \right) }
+	      \]
+	      \[
+		      d \left[ ue^{A\left( t \right) } \right] = b\left( t \right) e^{A\left( t \right) }
+	      \]
+	\item Integro da entrambe le parti e ricavo $ u\left( t \right)  $
+\end{itemize}
+
+
+\subsection{Edo lineari di secondo ordine}
+\label{edol2}
+\begin{itemize}
+	\item Scrivo polinomio associato a equazione lineare
+	\item Trovo zeri del polinomio associato
+	\item Seguo le soluzioni in base ai seguenti casi in base delta del polinomio
+\end{itemize}
+In particolare, avrò 3 casi a seconda del $ \Delta  $ del polinomio
+\begin{itemize}
+	\item $ \Delta  > 0 $
+	      \begin{itemize}
+		      \item Ho due radici reali distinte: $ \lambda , \mu \quad \lambda \neq \mu  $
+		      \item La base dell'insieme soluzione è costituita da
+		            \[
+			            e^{\lambda t} , \quad e^{\mu t}
+		            \]
+		      \item La funzione soluzione è quindi costituita da:
+		            \[
+			            c_1e^{\lambda t} + c_2e^{\mu t}
+		            \]
+	      \end{itemize}
+	\item $ \Delta =0 $
+	      \begin{itemize}
+		      \item Ho una radice con molteplicità doppia $ \lambda  $
+		      \item La base dell'insieme soluzione è costituita da:
+		            \[
+			            e^{\lambda  t}, \quad te^{\lambda t}
+		            \]
+		      \item La funzione soluzione è quindi costituita da:
+		            \[
+			            c_1e^{\lambda t} + c_2te^{\lambda  t}
+		            \]
+	      \end{itemize}
+	\item $ \Delta <0 $
+	      \begin{itemize}
+		      \item Il polinomio ha due radici complesse coniugate di forma $ \alpha  \pm i \beta \quad \alpha ,\beta  \in  \R $
+		      \item La base dell'insieme soluzione è costituita da:
+		            \[
+			            e^{\alpha t}\cos \left( \beta  t \right) , \quad  e ^{\alpha t}\sin \left( \beta t \right)
+		            \]
+		      \item La funzione soluzione è quindi costituita da:
+		            \[
+			            c_1 e^{\alpha t}\cos \left( \beta  t \right)  +c_2 e ^{\alpha t}\sin \left( \beta t \right)
+		            \]
+	      \end{itemize}
+\end{itemize}
+\subsection*{Esempi equazioni lineari}
+
+\subsubsection*{Esempio 1}
+\[
+	u'' + 3u' -4u =0
+\]
+ha polinomio associato
+\[
+	x^2 + 3x - 4 \rightarrow \left( x+4 \right) \left( x-1 \right)
+\]
+quindi ho base
+\[
+	e^{-4t}, e^{t}
+\]
+\subsubsection*{Esempio 2}
+\[
+	u'' - 6u + 9u =0 \rightarrow x^2 - 6x + 9 =0 \rightarrow \left( x-3 \right) ^2 =0
+\]
+che ha quindi base
+\[
+	e^{3t}, t e ^{3t}
+\]
+\subsubsection*{Esempio 3}
+\[
+	u'' + 8u + 17 u =0 \rightarrow x^2 + 8x + 17 =0
+\]
+trova radici
+\[
+	x_{1 /2} -4 \pm \sqrt{16-17} = -4 \pm i
+\]
+quindi ho radici complesse con $ \alpha  = -4 $ e $ \beta  = 1 $. La base sarà:
+\[
+	e ^{ -4t}\cos \left( t \right) , e ^{ -4t}\sin \left( t \right)
+\]
+\subsubsection*{Esempio 4}
+\[
+	u'' - 4u' =0 \rightarrow x^2 - 4x =0 \rightarrow x\left( x-4 \right)
+\]
+Quindi ho base associata
+\[
+	e^{0t}=1, e ^{4t}
+\]
+\subsubsection*{Esempio 5}
+\[
+	u'' - 4u =0 \rightarrow x^2 - 4	=0 \rightarrow \left( x-2 \right) \left( x+2 \right) =0
+\]
+Quindi ho base associata
+\[
+	e^{2t}, e^{-2t}
+\]
+NB: se la base è del tipo $ e^{\alpha t}, e^{-\alpha t}$, allora un'altra base può essere ottenuta dividendo i componenti della base per 2:
+\[
+	\frac{e^{2t}+e^{-2t}}{2}=\cosh \left( 2t \right)  , \quad \frac{e^{2t}-e^{-2t}}{2} = \sinh \left( 2t \right)
+\]
+\subsubsection*{Esempio 6}
+\[
+	u'' + 4 u =0	\rightarrow x^2 + 4 =0
+\]
+il polinomio associato ha due radici complesse coniugate $ x_{1 / 2} = \pm 2i$. Quindi $ \alpha  =0 $ e $ \beta  = 2 $ e la base sarà
+\[
+	e ^{ 0t}\cos \left( 2t \right) = \cos \left( 2t \right) , e^{0t}\sin \left( 2t \right) =\sin \left( 2t \right)
+\]
+\subsection{Equazioni lineari omogenee di ordine m}
+Generalizzando quanto detto nella \textit{sezione \ref{edol1}} e \textit{\ref{edol2}} posso ragionare cercando gli elementi della base della famiglia delle soluzioni seguendo le seguenti regole.
+\textbox{Innanzitutto, per il teorema fondamentale dell'algebra, un polinomio di grado $ n $ ha sempre $ n $ radici \underline{complesse}}
+\begin{itemize}
+	\item Una radice reale $ \lambda  $ di molteplicità 1 produce un elemento di forma
+	      \[
+		      e^{\lambda t}
+	      \]
+	\item Una radice reale $ \lambda  $ di molteplicità $ m $ produce $ m $ elementi della seguente forma:
+	      \[
+		      e^{\lambda t}, te^{\lambda t}, t^2 e ^{\lambda t},\ldots, t ^{m-1}e^{\lambda t}
+	      \]
+	\item Una coppia di radici complesse coniugate di forma $  \alpha  \pm i \beta  $ con molteplicità 1 produce 2 elemendi di base:
+	      \[
+		      e^{\alpha t} \cos \left( \beta  \right) , \quad  e ^{\alpha t}\sin \left( \beta t \right)
+	      \]
+	\item Una coppia di radici complesse coniugare di forma $ \alpha  \pm i \beta  $ con molteplicità $ m $ produce $ 2m $ elementi di base con forma:
+	      \[
+		      e^{\alpha t} \cos \left( \beta  \right) ,  e ^{\alpha t}\sin \left( \beta t \right), te^{\alpha t} \cos \left( \beta  \right) ,  te ^{\alpha t}\sin \left( \beta t \right),\ldots,  t ^{m-1}e^{\alpha t} \cos \left( \beta  \right) ,  t^{m-1}e ^{\alpha t}\sin \left( \beta t \right)
+	      \]
+\end{itemize}
+\subsection{Equazioni lineari non omogenee} \label{edononomogenee}
+\subsubsection*{Tipo esponenziale}
+\label{tipoesponensiale}
+Per risolvere equazioni differenziali non omogenee del tipo
+\[
+	au''+ bu' + cu = e^{\lambda_1 t}
+\]
+bisogna procedere a tentoni, prendendo come funzione (che tipo di funzioni, tramite loro combinazioni lineari, possono darmi una funzione del tipo $ \lambda_0 e^{\lambda_1 t} $):
+\[
+	\overline{u}\left( t \right) = \lambda  e^{\lambda_1 t}
+\]
+\begin{itemize}
+	\item Prendo funzione $ \overline{u}\left( t \right)  $ del tipo $ \lambda e^{\lambda_1 t} $
+	\item Vedo se esiste un valore di $  \lambda  $ che soddisfi l'equazione
+	\item Ho due casi:
+	      \begin{itemize}
+		      \item Se $ \overline{u} \left( t \right)  $ \underline{non} è soluzione dell'equazione omogenea associata (ossia $ au''+ bu' + cu = 0$). Allora posso trovare un valore di $ \lambda $ che risolva l'equazione
+		      \item Se $ \overline{u}\left( t \right)  $ è soluzione dell'equazione omogenea associata allora è impossibile trovare un valore di $ \lambda  $ che soddisfi l'equazione. Devo provare con $ \overline{u}\left( t \right) = \lambda t e^{\lambda_1 t} $
+		      \item Se non funziona nemmeno con questo devo provare con $ \overline{u}\left( t \right) = \lambda t^2e^{\lambda_1 t} $ e così via per ogni potenza di $ t $
+	      \end{itemize}
+\end{itemize}
+\subsubsection*{Tipo trigonometrico}
+Per risolvere equazioni differenziali non omogenee del tipo
+\[
+	au''+ bu' + cu = \sin \left( at \right) \quad au''+ bu' + cu = \cos \left( at \right)
+\]
+devo procedere a tentoni prendendo come funzione $ \overline{u} $
+\[
+	\overline{u}\left( t \right) = \lambda \cos \left( at \right) + \mu \sin \left( at \right)
+\]
+Alla fine otterrò una somma di seni e coseni sia a destra che a sinistra. Posso trovare i valori di $ \lambda  $ e $ \mu  $ risolvendo un sistema
+\vskip3mm
+NB: se la funzione $ \overline{u}\left( t \right)  $ è soluzione del sistema omogeneo associato, devo provare moltiplicando per le potenze di $ t $, come in \textit{sottosezione \ref{tipoesponensiale}}
+\subsubsection*{Tipo polinomiale}
+Per risolvere equazioni differenziali non omogenee del tipo
+\[
+	au''+ bu' + cu = p\left( t \right)
+\]
+devo procedere a tentoni prendendo come funzione $ \overline{u} $
+\[
+	\overline{u}\left( t \right) = k_1t ^{n}+ k_2 t ^{n-1}+\ldots+k_{n-1}t+ k_n
+\]
+ossia il polinomio generico completo di grado $ n $, dove $ n $ è il grado del polinomio $ p\left( t \right)  $
+\vskip3mm
+NB: questo tentativo non funziona quando $ 0 $ è tra le radici del polinomio dell'omogenea associata
+\hr
+\textbox{Se il termine noto dell'equazione differenziale è dato dalla somma di diversi tipi(esponenziale, trigonometrico, polinomiale) la soluzione sarà data dalla somma delle soluzioni. Es
+}
+Esempio:
+\[
+	u'' + 3u' - 4u = \cos \left( 2t \right) + t^3 + e^{5t}+ e^{-4}t
+\]
+risolvo le equazioni differenziali non omogenee:
+\begin{align*}
+	u'' + 3u' - 4u & =  \cos \left( 2t \right) \\
+	u'' + 3u' - 4u & = t^3                     \\
+	u'' + 3u' - 4u & =  e^{5t}                 \\
+	u'' + 3u' - 4u & =  e^{-4t}
+\end{align*}
+la soluzione dell'equazione differenziale originaria è data dalla somma delle soluzioni trovate, per via della \underline{linearità}
+\subsection{Metodo di variazione delle costanti}
+Per risolvere equazioni diff. lineari \underline{non} omogenee posso utilizzare anche questo metodo oltre che il medoto "a tentoni" spiegato in \textit{sezione \ref{edononomogenee}}. Esempio:
+\[
+	u''-3u' + 2u =t
+\]
+\subsubsection*{Risoluzione tramite metodo "a tentoni"}
+\begin{itemize}
+	\item Trovo basi soluzione omogenea
+	      \begin{itemize}
+		      \item $ x^2 - 3x + 2 =0 \rightarrow \left( x-1 \right) \left( x-1 \right) =0 $
+		      \item Trovo $ \lambda  = 2 $ e $ \mu  = 1 $
+		      \item La base è $ e^{t}, \quad e ^{2t} $
+	      \end{itemize}
+	\item Trovo soluzione particolare
+	      \begin{itemize}
+		      \item Provo con polinomio completo di primo grado $ \overline{u}\left( t \right) =at - b $
+		      \item $ 0-3a + 2at + 2b = t $
+		      \item Ottengo sistema
+		            \[
+			            \begin{cases}
+				            2a=1 \\
+				            2b-3a=0
+			            \end{cases}
+		            \]
+	      \end{itemize}
+\end{itemize}
+\subsubsection*{Risoluzione tramite metodo di variazione delle costanti}
+Noi sappiamo quali sono le soluzione generale dell'equazione omogenea associata. Il metodo della variazione di costanti cerca una soluzione al sistema non omogeneo variando i coefficienti della base ottenuta, rendendoli \underline{funzioni di $ t $}. Se le basi sono
+\[
+	u\left( t \right) = a e^{t}+ b e^{2t}
+\]
+allora la funzione diventerà
+\[
+	\overline{u}\left( t \right) = a\left( t \right) e^{t} +  b\left( t \right) e^{2t}
+\]
+Quindi il procedimento sarà il seguente
+\begin{itemize}
+	\item Trovo $ \overline{u}\left( t \right)  $
+	\item Calcolo la derivata prima $ \overline{u}' \left( t \right)  $
+	\item Impongo che la somma dei termini contenenti le derivate di $ a'\left( t \right)  $ e $ b'\left( t \right)  $ si annullino
+	\item Calcolo la derivata seconda $ \overline{u}''\left( t \right) $ (ricorda di aver imposto che la somma di alcuni termini sia 0, risparmiando alcuni conti)
+	\item Alla fine inserisco le funzioni $ \overline{u}\left( t \right) , \overline{u}'\left( t \right) , \overline{u}''\left( t \right)  $ nell'equazione diff.
+	\item Tutti i termini contenenti i coefficienti $ a\left( t \right)  $ e $ b\left( t \right)  $ si devono cancellare, in quanto sono soluzioni dell'equazione omogenea
+	\item Ciò che rimane è un'equazione del tipo
+	      \[
+		      a'\left( t \right) e^{t}+ 2b'\left( t \right) e^{2t}=t
+	      \]
+	      che metterò a sistema con l'equazione trovata ottenuta dal calcolo della derivata, imponendo che la somma dei termino conententi le derivate $ a'\left( t \right)  $ e $ b'\left( t \right)  $ si annullasse
+	\item Risolvo il sistema e trovo $ a'\left( t \right)  $ e $ b'\left( t \right)  $
+	\item Integro per trovate $ a\left( t \right)  $ e $ b\left( t \right)  $
+\end{itemize}
+\section{Altri metodi risolutivi equazioni diff particolari}
+\subsubsection*{Tecnica della riduzione di ordine}
+Un'equazione in cui manca il termine $ u $, che contiene quindi solo le sue derivate, posso eseguire una sotituzione e ridurre l'ordine della edo. Esempio:
+\[
+	u''=\frac{t}{t^2+1}u'
+\]
+se sostituisco $ u' = v\left( t \right)  $ ottengo un'equazione del primo ordine:
+\[
+	v' \left( t \right) = \frac{t}{t^2+1} v\left( t \right)
+\]
+risolveno l'equazione diff. trovo la famiglia delle soluzioni $ v\left( t \right)  $ e posso trovare $ u\left( t \right)  $ \underline{integrando}. In questo caso trovo che
+\[
+	v\left( t \right)  = \frac{2}{2-\log \left( t^2+1 \right) }
+\]
+Nota bene che la funzione non è definita per $ t=\pm \sqrt{e^2-1}  $. Se avessi un problema di Cauchy dovrei restringere la soluzione a uno di questi tre intervalli: $ \left( - \infty, -\sqrt{e^2-1}  \right) $ , $  \left( -\sqrt{e^2-1},\sqrt{e^2-1} \right), \left( \sqrt{e^2-1}, \infty \right) $
+\[
+	u\left( t \right) = \int_{0}^{t} v\left( s \right)  \; ds =  \int_{0}^{t} \frac{2}{2-\log \left( s^2+1 \right) } \; ds
+\]
+\subsubsection*{Metodo di d'Alembert}
+Vediamo un esempio applicato alle equazioni di Legiam
+\[
+	\left( 1-t^2 \right) u'' - 2tu' + \left( n\left( n+1 \right) -\frac{m}{1-t^2} \right) u=0
+\]
+con $ n=1 $ e $ m=0 $ ottengo:
+\[
+	\left( 1-t^2 \right) u'' -2tu' + 2u=0 \quad \text{ con }t \in \left( -1,1 \right)
+\]
+Noto che $ u\left( t \right) =t $ è soluzione
+\[
+	0 - 2t + 2t =0
+\]
+\subsubsection*{Cambiamento di variabili}
+Ci sono delle equazioni conosciute (ad esempio quelle di eulero) del secondo ordine che si studiano per tempi positivi ad esempio:
+\[
+	t^2 u'' + btu' + cu = g\left( t \right) \quad  \text{ con } t > 0
+\]
+il trucco sta nel cambiare variabile con $ t= e^{s} $. Se $ u $ è soluzione allora
+\[
+	e^{2s} u'' \left( e^{s} \right) + b e^{s}u'\left( e^{s} \right) + cu\left( e^{s} \right) = g\left( e^{s} \right)
+\]
+
+\subsection*{Bestiario delle edo di primo ordine}
+\subsubsection*{Equazioni differenziali esatte}
+Si chiamano così per via di qualche cosa a me oscura che ha a che vedere con il differenziale. Faccio finta di aver capito
+\[
+	u'\left( t \right) = - \frac{P\left( t,u \right) }{Q \left( t,u \right) }
+\]
+La soluzione in forma implicita di questo tipo di edo è data dalle soluzioni di :
+\[
+	F\left( t,u \right) = \int_{t_0}^{t} P\left( s,u \right)  \; ds + \int_{u_0}^{u} Q\left( t_0,s \right)  \; ds =0
+\]
+Esempio:
+\[
+	\begin{cases}
+		u'\left( t \right) =\displaystyle -\frac{t+u}{t-3u} \\
+		u\left( 0 \right) =1
+	\end{cases}
+\]
+\begin{itemize}
+	\item Calcolo $ F\left( t,u \right)  $:
+	      \[
+		      F\left( t,u \right) = \int_{0}^{t} \left( s+u \right)  \; ds + \int_{1}^{u} \left( 0-3s \right)   \; ds
+	      \]
+	\item Eseguo gli integrali. Tieno ben presente che $ u $ va trattata \underline{come una costante} quando integri
+	      \[
+		      \int_{0}^{t} s \; ds + \int_{0}^{t} u \; ds + \int_{1}^{u} -3s \; ds = \left[ \frac{s^2}{2} \right] _0 ^{t} + \left[ us \right] _0 ^{t} - \left[ -\frac{3}{2} \right] _1 ^{u}
+	      \]
+	      \[
+		      \frac{t^2}{2} + ut - \frac{3}{2}u^2 + \frac{3}{2}
+	      \]
+	\item Impongo $ F\left( t,u \right)  =0$
+	      \[
+		      u_{1 / 2}= \frac{t \pm \sqrt{t^2 + 3\left( t^2 + 3 \right) } }{3}
+	      \]
+	\item Visto che $ u_{1/2}\left( 0 \right) = \pm 1 $ devo scegliere la soluzione con il $ + $ visto che in caso contrario non soddisferebbe la condizione iniziale
+\end{itemize}
+\subsubsection*{Equazione di bernoulli}
+\[
+	u'\left( t \right) = P\left( t \right) u + Q\left( t \right) u^{\alpha} \quad \alpha  \neq 0 , 1
+\]
+notiamo che una soluzione banale di questa equazione è $ u=0 $. Per trovare le altre soluzioni l'idea è la seguente:
+\begin{itemize}
+	\item Moltiplico ambo i membro dell'equazione per $ u^{- \alpha } $ e ottengo
+	      \[
+		      u^{-\alpha } u'\left( t \right) = P\left( t \right) u^{1-\alpha } + Q\left( t \right)
+	      \]
+	\item Definisco una funzione ausiliaria $ \phi =u ^{1-\alpha } $. Noto che quando derivo la funzione $ \phi  $ ottengo:
+	      \[
+		      \phi ' \left( t \right) = \left( 1-\alpha  \right) u^{-\alpha }u'\left( t \right)  \quad  \rightarrow \quad \frac{\phi '\left( t \right)}{\left( 1-\alpha  \right) } = u^{-\alpha  }u'\left( t \right)
+	      \]
+	\item Sostituisco $ \phi \left( t \right)  $ nel membro destro dell'equazione originaria, e $ \phi ' \left( t \right)  $ nel membro sisnistro
+	      \[
+		      \frac{\phi '\left( t \right) }{1-\alpha }=P\left( t \right) \phi \left( t \right) + Q\left( t \right)
+	      \]
+	\item Ottengo quindi un'equazione lineare che posso risolvere tramite il metodo del \underline{fattore integrante}
+	      \[
+		      \phi '\left( t \right) =  \left( 1-\alpha  \right)  P\left( t \right) \phi \left( t \right) + \left( 1-\alpha  \right) Q\left( t \right)
+	      \]
+\end{itemize}

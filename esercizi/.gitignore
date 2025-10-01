@@ -1,7 +1,5 @@
 # Ignore everything except top level folders
 *
-!.gitignore
-!.README.md
 !*/
 !*/**
 
@@ -11,3 +9,6 @@
 
 # Ignore tikz folder externalization folder
 tikz/
+
+!.gitignore
+!README.md

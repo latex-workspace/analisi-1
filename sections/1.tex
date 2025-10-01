@@ -212,11 +212,13 @@ Iniettiva ma non suriettiva
 	\] }
 
 \subsection{Esteremi superiori ed inferiori di un insieme}
-\definizione{Estremi superiori e inferiori}{Sia $A  \in \R, \quad A \neq 0$ L'estremo superiore di A si indica con supA e vale:
+\begin{definizione}{Estremi superiori e inferiori}
+	Sia $A  \in \R, \quad A \neq 0$ L'estremo superiore di A si indica con supA e vale:
 	\begin{itemize}
 		\item $ + \infty$ se A non è limitato superiormente
 		\item Il minimo dei maggioranti di A se è limitato superiormente
-	\end{itemize}}
+	\end{itemize}
+\end{definizione}
 NB: supA e infA esistono sempre!
 Esempi:
 \begin{itemize}
@@ -224,7 +226,9 @@ Esempi:
 	      i
 \end{itemize}
 \incomprensione{09:43:11}
-\teorema{Esistenza estremo superiore}{Se $A \subset \R \neq \emptyset $ allora supA esiste.}
+\begin{teorema}{Esistenza estremo superiore}
+	Se $A \subset \R \neq \emptyset $ allora supA esiste.
+\end{teorema}
 Dimostrazione:
 \begin{itemize}
 	\item Se A non è limitato superiormente allora per definizione supA= $+\infty$
@@ -258,12 +262,14 @@ Esempi:
 		      \item supA=maxA=4
 	      \end{itemize}
 \end{itemize}
-\definizione{Grafico di una funzione}{Si dice grafico di $f$ è il sottoinsieme del prodotto $A \times B$ \[
+\begin{definizione}{Grafico di una funzione}
+	Si dice grafico di $f$ è il sottoinsieme del prodotto $A \times B$ \[
 		graf\left( f \right) = \left\{ \left( a,b \right)  \in  A \times B : f\left( a \right)  = b \right\} \quad \text{ per proprietà }
 	\]
 	\[
 		graf\left( f \right) = 	\left\{ \left( a, f\left( a \right)  \right) : a  \in A \right\} \quad \text{ per elenco }
-	\] }
+	\]
+\end{definizione}
 \subsection{Intervalli}
 \label{sec:dd}
 \[
@@ -362,6 +368,8 @@ Dimostrazione che $\sum_{k=1}^{n} a^{k} = \frac{a^{n+1}-1}{a-1}$
 		      \left[ 1+a+a^2 \ldots a^{k+1} \right]= \frac{a^{n+1}-1}{a-1} + \left( a \right) ^{n+1}
 	      \]
 \end{itemize}
+
+
 \subsection{Dimostrazione 4}
 \label{sub:dimostrazione4}
 
@@ -379,11 +387,12 @@ Dimostrazione che $2^{n} \ge n \quad \forall n  \in  \N$
 \end{itemize}
 \subsection{Disuguaglianza di bernulli}
 \label{sub:disbernoulli}
-\formula{Disuguaglianza di Bernoulli}{
+\begin{formula}{Disuguaglianza di Bernoulli}
 	\[
 		\left( 1+x \right) ^{n}\ge 1 + nx \quad \forall n  \in  \N \quad x > -1
 	\]
-}
+
+\end{formula}
 \[
 \]
 \begin{itemize}
@@ -426,12 +435,13 @@ Dimostrazione che $2^{n} \ge n \quad \forall n  \in  \N$
 \end{itemize}
 \subsection{Assioma di continuità}
 \label{sub:assiomadicontinuità}\phantom{.}
-\assioma{Assioma di continuità}{
+
+\begin{assioma}{Assioma di continuità}
 	Siano A e B due sottoinsiemi non vuoti dei numeri reali. Supponiamo che ogni elemento di A sia minore o uguale a B. Per quando i due insiemi siano vicini esiste almeno un numero reale che stia fra a e b ossia:
 	\[
 		\exists c  \in \R \text{ t.c. } \quad a\le c \le b \quad \forall a  \in A, b  \in B
 	\]
-}
+\end{assioma}
 
 \bigbox{
 	\textit{Se C appartiene sia ad A che a B questo elemento è unico}
@@ -443,25 +453,35 @@ Dimostrazione che $2^{n} \ge n \quad \forall n  \in  \N$
 	Unico elemento separatore è $\sqrt{2} $, numero che è reale
 }
 NB: c può essere unico nel caso di insiemi che hanno come intersezione c stesso ma anche in insiemi con intersezione vuota: es $R^{-}$ e $R^{+}$
-\definizione{Densità degli insiemi}{Siano A e B insiemi non vuoti. Si dice che \underline{A è denso in B} se per ogni elemento $b_1, b_2  \in  B$ esiste un elemento in A tale che $b_1 \le a \le b_2$}
-\definizione{Maggiorante e minorante}{Si dice che un numero k reale è un \underline{maggiorante} del sottoinsieme A se $k \ge a \forall a  \in  A$\\
+\begin{definizione}{Densità degli insiemi}
+	Siano A e B insiemi non vuoti. Si dice che \underline{A è denso in B} se per ogni elemento $b_1, b_2  \in  B$ esiste un elemento in A tale che $b_1 \le a \le b_2$
+\end{definizione}
+
+\begin{definizione}{Maggiorante e minorante}
+	Si dice che un numero k reale è un \underline{maggiorante} del sottoinsieme A se $k \ge a \forall a  \in  A$\\
 	Si dice che un numero k reale è un \underline{minorante} del sottoinsieme A se $k \le a \forall a  \in  A$
-}
+
+\end{definizione}
 NB: maggioranti e minoranti non devono esistere necessariamente ad esempio in $\R^{+}$ o in $ \N $ non esiste maggiorante
 \vskip3mm
 NB: se esistono, maggioranti e minoranti non sono unici
 
-\definizione{Insiemi limitati superiormente/inferiormente}{Dato un insieme A non vuoto questo di dice limitato superiormente su esiste un suo maggiorante\\
+\begin{definizione}{Insiemi limitati superiormente/inferiormente}
+	Dato un insieme A non vuoto questo di dice limitato superiormente su esiste un suo maggiorante\\
 	Dato un insieme A non vuoto questo di dice limitato inferiormente se esiste un suo minorante\\
 	Dato un insieme A non vuoto questo di dice limitato se esiste un suo maggiorante e un suo minorante \[
 		A  \in \R \quad A \neq \emptyset \text{ è limitato se e solo se } \exists k  \in  \R \text{ t.c. } \left|a\right| \le k \forall a  \in  A
 	\]
-}
-\definizione{Massimo/minimo insieme}{Sia $ A  \in \R$ non vuoto si dice che $ M  \in \R$ è massimo di A e si indica con $M = max\left( A \right) $ se:
+
+\end{definizione}
+
+\begin{definizione}{Massimo/minimo insieme}
+	Sia $ A  \in \R$ non vuoto si dice che $ M  \in \R$ è massimo di A e si indica con $M = max\left( A \right) $ se:
 	\begin{itemize}
 		\item $ a \le M \quad \forall a  \in  A $ ossia M è un maggiorante
 		\item $ M  \in A$
-	\end{itemize}}
+	\end{itemize}
+\end{definizione}
 NB: se un insieme ha massimo o minimo, questi sono necessariemente unici
 
 
@@ -472,6 +492,8 @@ $ P\left( x \right)$  nella variabile x di grado k è un oggetto del tipo
 \[
 	p\left( x \right) = a_0 + \sum_{k=1}^{n} a_k z^k
 \]
+
+
 \subsection{Operazioni polinomi}
 \label{sec:operazionipolinomi}
 \subsubsection{Somma Polinomi}
@@ -504,11 +526,13 @@ Dato $P\left( x \right) $ e $ Q\left( x \right) $ con $Q\left( x \right) \neq 0$
 \[
 	f\left( x \right) = \frac{P\left( x \right) }{Q\left( x \right) }
 \]
-\teorema{Divisione fra polinomi}{Dati due polinomi $ P_1\left( x \right) , P_2\left( x \right)  $ di grado n e m con $n \ge m$ esistono 2 polinomi $ Q\left( x \right)  e R\left( x \right) $ tali che \[
+\begin{teorema}{Divisione fra polinomi}
+	Dati due polinomi $ P_1\left( x \right) , P_2\left( x \right)  $ di grado n e m con $n \ge m$ esistono 2 polinomi $ Q\left( x \right)  e R\left( x \right) $ tali che \[
 		P_1\left( x \right)  = P_2\left( x \right) Q\left( x \right) + R\left( x \right)
 	\]
 	Il grado di R è \underline{strettamente minore} del grado di $P_2$
-}
+
+\end{teorema}
 
 \subsubsection{Algoritmo standard divisione}
 
@@ -517,7 +541,7 @@ Dato $P\left( x \right) $ e $ Q\left( x \right) $ con $Q\left( x \right) \neq 0$
 	\item Divido grado massimo di $\left( P\left( x \right)  \right) $ per grado massimo di $Q\left( x \right) $
 	\item Moltiplico risultato ottenuto e sottraggo con ultimo polinomio ottenuto a sx
 \end{itemize}
-\begin{table}[h!]
+\begin{table}[H]
 	\centering
 	\caption{Divisione fra polinomi}
 	\label{tab:label}
@@ -557,12 +581,35 @@ Dato $P\left( x \right) $ e $ Q\left( x \right) $ con $Q\left( x \right) \neq 0$
 	\frac{x^3 + 4x + 1}{\left( x-1 \right)} = \left( x^2 + x + 5 \right) +\frac{6}{\left( x-1 \right)}
 \]
 Teoremi utili:
-\teorema{Divisione per polinomio di grado 1}{
+\begin{teorema}{Divisione per polinomio di grado 1
+	}
 	Dati due polinomi $P\left( x \right)  \text{ e  }Q\left( x \right) = x-c$ condizione necessaria e sufficiente affinchè $P\left( x \right) $ sia divisibile per $Q\left( x \right)$ è che $P\left( c \right) =0$, in quanto posso scrivere $P\left( x \right) $ come $\left( x-c \right) \cdot\left( \ldots \right) $
-}
-\definizione{Radice di un polinomio}{
-Definizione: Se a e tale per cui $ P\left( a \right) =0$, a viene detto \textbf{radice} del polinomio $P\left( x \right) $
-}
+
+\end{teorema}
+\begin{definizione}{Radice di un polinomio}
+	Definizione: Se a e tale per cui $ P\left( a \right) =0$, a viene detto \textbf{radice} del polinomio $P\left( x \right) $
+\end{definizione}
+
+\begin{minipage}[t]{0.48\textwidth}
+	Esempio 2 $f : \R \rightarrow \R $
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+					title={GRAFICO: $x^{2}$},
+					xmin=-4, xmax=4,
+					ymin=0,ymax=4,
+					restrict y to domain=0:4, domain=-4:4, width=\linewidth, height=\linewidth, grid=major, samples=200,  ylabel=$f(x)$, xlabel=$x$]
+				\addplot[black, thick] {x^2};
+				\addplot[red, thick] {2};
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	\begin{itemize}
+		\item Non è iniettiva
+		\item Non è surgettiva
+	\end{itemize}
+
+\end{minipage}
 
 \subsection{Dimostrazione teorema fondamentale dell'algebra}
 \label{sub:dimostrazioneperinduzione}
@@ -576,7 +623,9 @@ Dato un polinomio $P\left( x \right) $ di grado n, questo ammette al massimo n r
 \end{itemize}
 \subsection{Polinomio irreducibile}
 
-\teorema{Irriducibilità dei polinomi}{Un polinomio P a coefficienti reali di grado $x \ge 1$ è detto \underline{irriducibile} se non esiste un polinomio D di grado n con $0 < m < n$ che divida esattamente P}
+\begin{teorema}{Irriducibilità dei polinomi}
+	Un polinomio P a coefficienti reali di grado $x \ge 1$ è detto \underline{irriducibile} se non esiste un polinomio D di grado n con $0 < m < n$ che divida esattamente P
+\end{teorema}
 
 NB: nei numeri reali i soli polinomi irreducibili sono quelli di grado 1 o di grado 2 con $\Delta$ negativo
 \vskip3mm
@@ -599,7 +648,7 @@ Una funzione $f : \R \rightarrow \R$ è surgettiva se e solo se:
 \begin{itemize}
 	\item $ \forall \lambda  \in  \R \quad f\left( x \right) = \lambda$ ha almeno una soluzione
 	\item In modo equivalente, $f$ è surgettiva se ogni retta parallela all'asse delle x incontra il suo grafico in almeno un punto
-	      i
+
 \end{itemize}
 \subsubsection{Esempi}
 
@@ -608,10 +657,10 @@ Una funzione $f : \R \rightarrow \R$ è surgettiva se e solo se:
 	\begin{center}
 		\begin{tikzpicture}
 			\begin{axis}[
-					title=GRAFICO: $x^{2}$,
+					title={GRAFICO: $x^{2}$},
 					xmin=-4, xmax=4,
 					ymin=0,ymax=4,
-					restrict y to domain = 0:4, domain=-4:4, width=\textwidth, height=\textwidth, grid=major, samples=200,  ylabel=$f(x)$, xlabel=$x$, legend entries={$ $}]
+					restrict y to domain=0:4, domain=-4:4, width=\linewidth, height=\linewidth, grid=major, samples=200,  ylabel=$f(x)$, xlabel=$x$]
 				\addplot[black, thick] {x^2};
 				\addplot[red, thick] {2};
 			\end{axis}
@@ -632,7 +681,7 @@ Una funzione $f : \R \rightarrow \R$ è surgettiva se e solo se:
 					title=GRAFICO: $x^2$,
 					xmin=-4, xmax=4,
 					ymin=0,ymax=4,
-					restrict y to domain = 0:4, domain=-4:4, width=\textwidth, height=\textwidth, grid=major, samples=200,  ylabel=$f(x)$, xlabel=$x$, legend entries={$ $}]
+					restrict y to domain = 0:4, domain=-4:4, width=\textwidth, height=\textwidth, grid=major, samples=200,  ylabel=$f(x)$, xlabel=$x$]
 				\addplot[black, thick] {x^2};
 			\end{axis}
 		\end{tikzpicture}
@@ -950,7 +999,10 @@ Formula fondamentale della trigonometria \[
 \section{Esercizi}
 \subsection{Esercizio 1}
 
-\teorema{Insiemi limitati}{Se un insieme $S \neq \emptyset$ è \underline{limitato superiormente/inferiormente} esso ammette \underline{estremo superiore/inferiore}}
+\begin{teorema}{Insiemi limitati}
+	Se un insieme $S \neq \emptyset$ è \underline{limitato superiormente/inferiormente} esso ammette \underline{estremo superiore/inferiore}
+\end{teorema}
+
 \label{teo6}
 \bigbox{
 	Dato un un insieme $S$ limitato inferiormente ma non superiormente e un insieme $L$ costituito da tutti i minoranti di $S$ allora \[
@@ -1003,7 +1055,7 @@ si determini limite superiore, inferiore, massimo e minimo se presenti.
 	\item Visto che la successione decresce in valore assoluto posso affermare che
 \end{itemize}
 
-\begin{table}[h!]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{|ll|}
 		\hline
@@ -1048,7 +1100,7 @@ si determini limite superiore, inferiore, massimo e minimo se presenti.
 		      \item La disequazione ha soluzioni per ogni valore positivo di $\varepsilon$ e  $\beta $ è un \underline{estremo superiore}
 	      \end{itemize}
 \end{itemize}
-\begin{table}[h!]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{|ll|}
 		\hline
@@ -1106,18 +1158,22 @@ dove $a$ e $b$ sono numeri reali e $i$ è un numero tale che $i^2= -1$}
 	\]
 }
 \subsection{Definizioni}
-\definizione{Numeri coniugati}{
+\begin{definizione}{Numeri coniugati
+	}
 	Dato $z = a + bi$ si dice coniugato di z e si indica con $ \overline{z} $ un numero uguale a \[
 		a - bi
 	\]
-}
+\end{definizione}
+
 \begin{itemize}
 	\item $z * \overline{z} = \left( a+bi \right) \left( a-bi \right)  = a^2 + b^2= \left|z\right|^2$ quindi ho come conseqguenza che $\frac{1}{z}= \frac{\overline{z}}{\left|z\right|^2}$
 	\item
 \end{itemize}
-\definizione{Modulo numero complesso}{Dato $z = a + bi$ si dice il modulo di $z$ il numero \[
+\begin{definizione}{Modulo numero complesso}
+	Dato $z = a + bi$ si dice il modulo di $z$ il numero \[
 		\left|z\right| = \sqrt{a^2 + b ^2}
-	\] }
+	\]
+\end{definizione}
 
 \section{Rappresentazione trigonometrica}
 \bigbox{
@@ -1192,9 +1248,12 @@ Se $z = \rho e^{ i \theta}$
 	\left( 1 + i \right) ^{ 6000}= 2^{3000} e ^{i \frac{\pi}{4}6000} = 2^{3000}
 \]
 \subsection{Radici dei numeri complessi}
-\definizione{Radici dei numeri complessi}{
+
+\begin{definizione}{Radici dei numeri complessi
+	}
 	Dato un numero complesso $a  \in  \C$, le radici complesse n-esimi sono tutti i numeri complessi $z  \in  \C$ tali che $z^{n} = a$
-}
+\end{definizione}
+
 NB: se $ a \neq 0$ esistono sempre n numeri complessi $z$ che verificano l'equazione $ z ^{ n } = a$. Questi numeri coincidono con i vertici di un poligono regolare di n lati con centro nell'origine
 \vskip3mm
 Supponiamo che $a = r e ^{ i \phi}$ e $ z = \rho e ^{ i \theta}$.
@@ -1219,16 +1278,16 @@ NB: ottengo valori diversi solo per $k  \in  \left[ 0, n-1 \right] $
 
 \begin{itemize}
 	\item Ciò corrisponde a risolvere l'equazione \[
-	z^{n} = -i
-	\] 
+		      z^{n} = -i
+	      \]
 	\item $-i= 1e^{\frac{3}{2}\pi}$
-	\item Le soluzioni sono: 
-\[
-\begin{cases}
-	\rho = 1 \\
-	6 \phi =\left( \frac{3}{2} \pi  + 2k\pi \right) 
-\end{cases}
-\] 
+	\item Le soluzioni sono:
+	      \[
+		      \begin{cases}
+			      \rho = 1 \\
+			      6 \phi =\left( \frac{3}{2} \pi  + 2k\pi \right)
+		      \end{cases}
+	      \]
 \end{itemize}
 %
 \begin{center}
@@ -1238,21 +1297,30 @@ NB: ottengo valori diversi solo per $k  \in  \left[ 0, n-1 \right] $
 Per polinomi a coefficienti reali $P\left( x \right) $ sapevamo che:
 \bigbox{ $P\left( x \right)  = c_n x ^{n} + c_{n-1} x ^{ n-1} \ldots + c_1 x ^{1} + c_0 \quad c_n  \in  \R$ polinomio di grado $n$ a coefficienti reali. Ha al massimo n soluzioni.}
 
-\definizione{Radice di un polinomio}{Dato un polinomio a coefficienti complessi$\alpha  \in  \C$ si dice radice di  $P\left( z \right) $ se $P\left( \alpha \right) =0$}
+\begin{definizione}{Radice di un polinomio}
+	Dato un polinomio a coefficienti complessi$\alpha  \in  \C$ si dice radice di  $P\left( z \right) $ se $P\left( \alpha \right) =0$
+\end{definizione}
 
-\definizione{Molteplicità radice}{Si diche che $\alpha  \in  \C$ è una radice di $ P\left( x \right) $ di molteplicità $ \mu  \in  \N$ se é è divisibile per $\left( x-\alpha \right) ^{\mu}$}
+\begin{definizione}{Molteplicità radice}
+	Si diche che $\alpha  \in  \C$ è una radice di $ P\left( x \right) $ di molteplicità $ \mu  \in  \N$ se é è divisibile per $\left( x-\alpha \right) ^{\mu}$
+\end{definizione}
+
 Per un polinomio a coefficienti complessi devi ridefinire il teorema fondamentale dell'algebra:
 \bigbox{
-$P\left( x \right) = c_n x ^{n} + c_{n-1} x ^{ n-1} \ldots + c_1 x ^{1} + c_0 \quad c_n  \in \C$ polinomio di grano $n$ a coefficienti complessi. Ha \underline{esattamente} n soluzioni}
+	$P\left( x \right) = c_n x ^{n} + c_{n-1} x ^{ n-1} \ldots + c_1 x ^{1} + c_0 \quad c_n  \in \C$ polinomio di grano $n$ a coefficienti complessi. Ha \underline{esattamente} n soluzioni}
 quindi
-\teorema{Teorema fondamentale dell'algebra}{Ogni polinimio $ p\left( x \right) $ di grado $n$ a coefficienti complessi ha  \underline{esattamente n radici complesse} eventualmente contando le rispettive moltepliicità}
-Ogni polinomio a coefficienti complessi può essere scritto come prodotto di fattori di grado 1 
+\begin{teorema}{Teorema fondamentale dell'algebra}
+	Ogni polinimio $ p\left( x \right) $ di grado $n$ a coefficienti complessi ha  \underline{esattamente n radici complesse} eventualmente contando le rispettive moltepliicità
+\end{teorema}
+Ogni polinomio a coefficienti complessi può essere scritto come prodotto di fattori di grado 1
 \[
-P\left( z \right) = a_k x ^{k}\ldots a_1 x + a_0 = a_n \left( z-\alpha_1 \right)^{\mu_1} \left( z-\alpha_2 \right) ^{\mu_2}
+	P\left( z \right) = a_k x ^{k}\ldots a_1 x + a_0 = a_n \left( z-\alpha_1 \right)^{\mu_1} \left( z-\alpha_2 \right) ^{\mu_2}
 \]
 dove $\alpha_1, \alpha_2 \ldots \alpha_n$ sono radici $  \in  \C$ di $ P\left( z \right) $
 
-\teorema{Radici complesse coniugate}{Sia $ P\left( z \right) $ polinomio a coefficienti reali. Se $ z  \in  \C$ è radice di $ P\left( z \right) $ allora anche $\overline{z}$ è radice di $ P\left( z \right) $}
+\begin{teorema}{Radici complesse coniugate}
+	Sia $ P\left( z \right) $ polinomio a coefficienti reali. Se $ z  \in  \C$ è radice di $ P\left( z \right) $ allora anche $\overline{z}$ è radice di $ P\left( z \right) $
+\end{teorema}
 \begin{itemize}
 	\item Se $ \alpha  \in  \C$ è radice di P anche $\overline{\alpha}$ è radice di P
 	\item Se $\alpha  \in  \C$ è radice di P con moltepicità $\mu  \in  \N$ allora $ \overline{\alpha}  \in  \C$ è radice di P con molteplicità $\mu$
@@ -1262,43 +1330,54 @@ Dimostrazione:
 \begin{itemize}
 	\item $P\left( x \right)  = \sum_{k=0}^{n} a_k x^k \quad P\left( \alpha \right) = 0$ per hp.
 	\item $P\left( \alpha \right)  = \sum_{k=0}^{n} a_k \alpha^k = 0$
-	i
+	      i
 \end{itemize}
 \incomprensione{09:48:11}
 \bigbox{
-Ogni polinomio reale di grado $ n$ è prodotto di fattori di grado $1$ e di fattori irreducibili di grado 2
-\begin{itemize}
-	\item I fattori di grado dure rappresentano coppie di radici complesse coniugate eventualmente con molteplicità
-\end{itemize}
+	Ogni polinomio reale di grado $ n$ è prodotto di fattori di grado $1$ e di fattori irreducibili di grado 2
+	\begin{itemize}
+		\item I fattori di grado dure rappresentano coppie di radici complesse coniugate eventualmente con molteplicità
+	\end{itemize}
 }
 \incomprensione{10:00:29}
 
 \section{Successione numeri reali}
 \subsection{Frequenza variabili}
 
-\definizione{Freqentemente}{Si dice che una variabile $ P_n$ + vera (o falsa) \underline{frequentemente} se + vera per infiniti valori di $n  \in \N$}
-\definizione{Definitivamente}{Si dice che una variabile $P_n$ è \underline{definitivamente} se \[
-\exists n_0  \in \N \text{ t.c. } \quad P_n \text{ vera } \forall n \ge n_0
-\] }
+\begin{definizione}{Freqentemente}
+	Si dice che una variabile $ P_n$ + vera (o falsa) \underline{frequentemente} se + vera per infiniti valori di $n  \in \N$
+\end{definizione}
+
+\begin{definizione}{Definitivamente}
+	Si dice che una variabile $P_n$ è \underline{definitivamente} se \[
+		\exists n_0  \in \N \text{ t.c. } \quad P_n \text{ vera } \forall n \ge n_0
+	\]
+\end{definizione}
+
 NB: se una variabile è vera definitivamente lo è anche frequentemente. Ma non vale il contrario: \[
-\left( -2 \right) ^2 \ge 7
-\] 
+	\left( -2 \right) ^2 \ge 7
+\]
 \begin{itemize}
 	\item Vera frequentemente
 	\item Falsa frequentemente
 	\item Non è ne vera ne falsa definitivamente
 \end{itemize}
 \subsection{Successione di numeri naturali}
-\definizione{Successione di numeri naturali}{E una funzione in cui l'insieme iniziale sono i numeri \underline{naturali} e l'insieme finale sono i nueri \underline{reali} \[
-f: \N \rightarrow \R
-\]
-il termine n-esimo della succesione si indica con $f_n$}
+\begin{definizione}{Successione di numeri naturali}
+	E una funzione in cui l'insieme iniziale sono i numeri \underline{naturali} e l'insieme finale sono i nueri \underline{reali} \[
+		f: \N \rightarrow \R
+	\]
+	il termine n-esimo della succesione si indica con $f_n$
+\end{definizione}
 NB: la seguente non è una successione:
 \[
-a_n = \frac{1}{n-2022}
-\] 
+	a_n = \frac{1}{n-2022}
+\]
 in quanto per $n=2022$ risulta $\frac{1}{0}$ che non è definito, per questo usiamo una definizione più accomodante
-\definizione{Successione di numeri reali accomodante}{Consideriamo succeesione di numeri reali quelle che sono vere almento definitivamente, ossia che siano definite da un determinato indice $ n_0$ in poi}
+
+\begin{definizione}{Successione di numeri reali accomodante}
+	Consideriamo succeesione di numeri reali quelle che sono vere almento definitivamente, ossia che siano definite da un determinato indice $ n_0$ in poi
+\end{definizione}
 Esempi:
 \begin{itemize}
 	\item $a_n = \frac{1}{n+5}$ \quad vera in senso classico
@@ -1309,39 +1388,40 @@ Esempi:
 \subsection{Rappresentazione di successioni}
 Posso rappresentare successioni come normali funzioni, quindi \underline{traite grafico}
 \begin{itemize}
-	\item \underline{Tramite grafico} \quad $\left( n, f\left( n \right)  \right) $ 
-	\[
-	f\left( n \right) = a_n = \frac{1}{n}
-	\] 
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-			xmin=0, xmax=4,
-			ymin=0,ymax=4,
-			restrict y to domain = 0:4, domain=0:4, width=0.5\textwidth, height=0.5\textwidth, grid=major, samples=200,  ylabel=$f(n)$, xlabel=$n$, legend entries={$\frac{1}{n}$}]
-			\addplot[black, thick] {1/x};
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}	
+	\item \underline{Tramite grafico} \quad $\left( n, f\left( n \right)  \right) $
+	      \[
+		      f\left( n \right) = a_n = \frac{1}{n}
+	      \]
+	      \begin{center}
+		      \begin{tikzpicture}
+			      \begin{axis}[
+					      xmin=0, xmax=4,
+					      ymin=0,ymax=4,
+					      restrict y to domain = 0:4, domain=0:4, width=0.5\textwidth, height=0.5\textwidth, grid=major, samples=200,  ylabel=$f(n)$, xlabel=$n$, legend entries={$\frac{1}{n}$}]
+				      \addplot[black, thick] {1/x};
+			      \end{axis}
+		      \end{tikzpicture}
+	      \end{center}
+
 	\item Sulla retta dei numeri reali:
-	\begin{tikzpicture}
-		\begin{axis}[
-		axis y line = none,
-		xmin=0, xmax=1,
-		ymin=0,ymax=0,
-		domain=0:1, width=0.5\textwidth, height=0.1\textwidth]
-		\coordinate (zero) at (1,0){};
-		\coordinate (uno) at (1/2,0){};
-		\coordinate (due) at (1/3,0){};
-		\coordinate (tre) at (1/4,0){};
-		\coordinate (quattro) at (1/5,0){};
-		\end{axis}
-		\node [fill = black, circle, inner sep = 1pt, label = north: $1$] at (zero){};
-		\node [fill = black, circle, inner sep = 1pt, label = north: $\frac{1}{2}$] at (uno){};
-		\node [fill = black, circle, inner sep = 1pt, label = north: $\frac{1}{3}$] at (due){};
-		\node [fill = black, circle, inner sep = 1pt, label = north: $\frac{1}{4}$] at (tre){};
-		\node [fill = black, circle, inner sep = 1pt, label = north: $\frac{1}{5}$] at (quattro){};
-	\end{tikzpicture}
+	      \begin{tikzpicture}
+	       \begin{axis}[
+	         axis y line = none,
+	         xmin=0, xmax=1,
+	         ymin=0,ymax=0,
+	         domain=0:1, width=0.5\textwidth, height=0.1\textwidth]
+	        \coordinate (zero) at (1,0){};
+	        \coordinate (uno) at (1/2,0){};
+	        \coordinate (due) at (1/3,0){};
+	        \coordinate (tre) at (1/4,0){};
+	        \coordinate (quattro) at (1/5,0){};
+	       \end{axis}
+	       \node [fill = black, circle, inner sep = 1pt, label = north: $1$] at (zero){};
+	       \node [fill = black, circle, inner sep = 1pt, label = north: $\frac{1}{2}$] at (uno){};
+	       \node [fill = black, circle, inner sep = 1pt, label = north: $\frac{1}{3}$] at (due){};
+	       \node [fill = black, circle, inner sep = 1pt, label = north: $\frac{1}{4}$] at (tre){};
+	       \node [fill = black, circle, inner sep = 1pt, label = north: $\frac{1}{5}$] at (quattro){};
+	      \end{tikzpicture}
 	\item Rapppresentazione dinamica: i mmagino di accendere una lampadina ogni tot secondi e in corrispondenza dell'accensione segno il valore della funzione
 \end{itemize}
 
@@ -1350,33 +1430,38 @@ Posso rappresentare successioni come normali funzioni, quindi \underline{traite 
 Una successione ha 4 possibilità:
 \begin{itemize}
 	\item $\lim_{n \to \infty} a_n = l \in  \R$ ossia $a_n \to l$
-	\begin{itemize}
-		\item $\lim_{n \to \infty} a_n = l^{+}$ ossia ha $a_n \ge l$ \underline{definitivamente} 
-		\item $\lim_{n \to \infty} a_n = l^{-}$ ossia $a_n \le l$ \underline{definitivamente}
-		\item $\lim_{n \to \infty} a_n = l$ oscillando intorno al valore
-	\end{itemize}
-	\item $\lim_{n \to \infty} a_n = + \infty$ ossia $a_n \to \infty$ 
+	      \begin{itemize}
+		      \item $\lim_{n \to \infty} a_n = l^{+}$ ossia ha $a_n \ge l$ \underline{definitivamente}
+		      \item $\lim_{n \to \infty} a_n = l^{-}$ ossia $a_n \le l$ \underline{definitivamente}
+		      \item $\lim_{n \to \infty} a_n = l$ oscillando intorno al valore
+	      \end{itemize}
+	\item $\lim_{n \to \infty} a_n = + \infty$ ossia $a_n \to \infty$
 	\item $\lim_{n \to \infty} a_n = - \infty$ ossia $a_n \to -\infty$
 	\item $\lim_{n \to \infty} a_n \quad \text{ NON esiste }$ ossia $a_n$ non ha limite
 \end{itemize}
 Definizione formale di limite
-\definizione{Limite infinito}{Si diche che $a_n \to + \infty$ se \[
-\forall M \in  \R \exists a_m \text{ t.c. } a_m\ge M
-\] 
-ossia $a_m \ge M$ \underline{definitivamente}
-\vskip3mm
-Si dice che $a_n \to -\infty$ se \[
-\forall M \in  \R \exists a_m \le M 
-\] 
-ossia $a_m \ge M $}
 
-\definizione{Limite se tenda a numero finito}{Si dice che $a_n \to l \in  \R$ \[
- \forall \epsilon \ge 0 \quad l- \epsilon \le a_n \le l+ \epsilon
-\] 
-ossia 
-\[
-\left|a_n-l\right| \le \epsilon \quad \text{ \underline{definitivamente} }
-\] }
+\begin{definizione}{Limite infinito}
+	Si diche che $a_n \to + \infty$ se \[
+		\forall M \in  \R \exists a_m \text{ t.c. } a_m\ge M
+	\]
+	ossia $a_m \ge M$ \underline{definitivamente}
+	\vskip3mm
+	Si dice che $a_n \to -\infty$ se \[
+		\forall M \in  \R \exists a_m \le M
+	\]
+	ossia $a_m \ge M $
+\end{definizione}
+
+\begin{definizione}{Limite se tenda a numero finito}
+	Si dice che $a_n \to l \in  \R$ \[
+		\forall \epsilon \ge 0 \quad l- \epsilon \le a_n \le l+ \epsilon
+	\]
+	ossia
+	\[
+		\left|a_n-l\right| \le \epsilon \quad \text{ \underline{definitivamente} }
+	\]
+\end{definizione}
 
 \subsubsection{Errori comuni}
 \begin{itemize}
@@ -1387,8 +1472,8 @@ ossia
 \subsection{Esempi}
 \underline{Esempio 1}
 \[
-a_n = n^2
-\] 
+	a_n = n^2
+\]
 Dimostriamo che $a_n \to \infty$
 2 casi:
 \begin{itemize}
@@ -1397,37 +1482,39 @@ Dimostriamo che $a_n \to \infty$
 \end{itemize}
 \underline{Esempio 2}
 \[
-a_n = \sqrt{n} 
-\] 
+	a_n = \sqrt{n}
+\]
 Dimostriamo che $a_n \to \infty$ 2 casi:
 \begin{itemize}
 	\item Se $M \le 0 $ \rarr $\sqrt{n} \ge M$ sempre
 	\item Se $M \ge 0$ \rarr $\sqrt{n} \ge M \Leftrightarrow n \ge M^2$
 \end{itemize}
 \bigbox{
-\[
-\lim_{n \to \infty} n ^{a} = \infty \quad \forall a\ge 0 
-\]
+	\[
+		\lim_{n \to \infty} n ^{a} = \infty \quad \forall a\ge 0
+	\]
 }
 \underline{Esemipio 3}
 \[
-\lim_{n \to \infty} \frac{1}{n} = o^{+} 
-\] 
+	\lim_{n \to \infty} \frac{1}{n} = o^{+}
+\]
 Devo verificare che \[
-\forall \epsilon > 0 \quad 0 < \frac{1}{n} \ge \epsilon
-\] 
+	\forall \epsilon > 0 \quad 0 < \frac{1}{n} \ge \epsilon
+\]
 \begin{itemize}
 	\item $a < \frac{1}{n}$ definitivamente in quanto $n$ è naturale
 	\item $\frac{1}{n} \le \epsilon \Leftrightarrow \frac{1}{\epsilon} \le n$
 \end{itemize}
 \bigbox{
-\[
-\lim_{n \to \infty}  n ^{\alpha} =0 \quad \forall \alpha \le 0
-\] 
+	\[
+		\lim_{n \to \infty}  n ^{\alpha} =0 \quad \forall \alpha \le 0
+	\]
 }
 
-\teorema{Permanenza del segno}{Se $a_n \to l > 0$ allora $a_n > 0 $ definitivamente\\
-Se $a_n \to l<0$ allora $a_n < 0 $ definitivamente}
+\begin{teorema}{Permanenza del segno}
+	Se $a_n \to l > 0$ allora $a_n > 0 $ definitivamente\\
+	Se $a_n \to l<0$ allora $a_n < 0 $ definitivamente
+\end{teorema}
 \underline{Dimostrazione}
 
 \subsection{Unicità del limite}
@@ -1440,148 +1527,160 @@ Una successione ha sempre \underline{solo uno } dei comportamenti descritti in s
 \end{itemize}
 \subsection{Teoremi sui limiti}
 \label{sub:teoremilimiti}
-\teorema{Teorema del confronto a 2}{Siano $a_n $ e $b_n$ succesioni. Supponiamo che $a_n \ge b_n$ almeno definitivamente
-\begin{itemize}
-	\item Se $b_n \to \infty$ allora $a_ n \to \infty$
-	\item Se $a_n \to -\infty$ allora $b_n  \to -\infty$
-\end{itemize}}
-\label{teoconfrontoadue}
-\teorema{Teorema del confronto a 3 (dei due carabinieri)}{Siano $a_n, b_n, c_n$ successioni tali che $a_n \le b_n \le c_n$ almeno definitivamente. Supponiamo che $a_n \to l \in  \R$ e $c_n \to l \in  \R$ allora $ b_n \to l \in  \R$}
+\begin{teorema}{Teorema del confronto a 2}
+	Siano $a_n $ e $b_n$ succesioni. Supponiamo che $a_n \ge b_n$ almeno definitivamente
+	\begin{itemize}
+		\item Se $b_n \to \infty$ allora $a_ n \to \infty$
+		\item Se $a_n \to -\infty$ allora $b_n  \to -\infty$
+	\end{itemize}
+\end{teorema} \label{teoconfrontoadue}
+
+\begin{teorema}{Teorema del confronto a 3 (dei due carabinieri)}
+	Siano $a_n, b_n, c_n$ successioni tali che $a_n \le b_n \le c_n$ almeno definitivamente. Supponiamo che $a_n \to l \in  \R$ e $c_n \to l \in  \R$ allora $ b_n \to l \in  \R$
+\end{teorema}
+
 \label{teoconfrontoatre}
 \subsection{Errori comuni}
 \begin{itemize}
 	\item Supponiamo che a $a_n > b_n$ e $a_n \to l_1, b_n \to l_2$. Allora \[
-	l_1 > l_2
-	\] 
+		      l_1 > l_2
+	      \]
 	\item \underline{Falso} in quanto al limite non si conserva l'uguale. Vedi ad esempio:
-	\[
-	a_n = \frac{2}{n} \quad b_n = \frac{1}{n}
-	\] 
-	nonostante i termini di $a_n$ siano sempre il doppio di quelli di $ b_n$ il loro limite è lo stesso e vale 0. Posso in caso affermare che se $a_n > b_n$ allora $l_1 \ge l_2$
+	      \[
+		      a_n = \frac{2}{n} \quad b_n = \frac{1}{n}
+	      \]
+	      nonostante i termini di $a_n$ siano sempre il doppio di quelli di $ b_n$ il loro limite è lo stesso e vale 0. Posso in caso affermare che se $a_n > b_n$ allora $l_1 \ge l_2$
 \end{itemize}
 
 \subsection{Retta reale estesa}
 \label{sub:rettarealeestesa}
 \[
-\overline{\R} = \R \cup \left\{ +\infty \right\} \cup \left\{ - \infty \right\} 
-\] 
-\teorema{Somma, prodotto e divisione limiti}{Siano $a_n$ e $b_n$ successioni reali. \[
-a_n \to l_1 \in  \R \text{ e } b_n \to l_2 \in  \R
-\] 
-allora 
-\begin{align*}
-a_n + b_n &\to l_1 + l_2 & a_n - b_n &\to l_1-l_2\\
-a_n b_n & \to l_1l_2 & \frac{a_n}{b_n} &\to \frac{l_1}{l_2}\\
-a_n^{b_n} & \to l_1^{ l_2}
-\end{align*}
+	\overline{\R} = \R \cup \left\{ +\infty \right\} \cup \left\{ - \infty \right\}
+\]
+\begin{teorema}{Somma, prodotto e divisione limiti}
+	Siano $a_n$ e $b_n$ successioni reali. \[
+		a_n \to l_1 \in  \R \text{ e } b_n \to l_2 \in  \R
+	\]
+	allora
+	\begin{align*}
+		a_n + b_n & \to l_1 + l_2  & a_n - b_n       & \to l_1-l_2         \\
+		a_n b_n   & \to l_1l_2     & \frac{a_n}{b_n} & \to \frac{l_1}{l_2} \\
+		a_n^{b_n} & \to l_1^{ l_2}
+	\end{align*}
 
-A meno che non si cada in uno di questi 7 casi speciali:
-\begin{gather*}
-	+\infty - \infty \quad 0 \cdot \left( \pm \infty \right) \frac{0}{0} \quad  \frac{\pm \infty}{\pm \infty}\\
-\quad 0^{0} \quad \left( + \infty \right) ^{0} \quad 1^{\pm \infty}\\
-\end{gather*}
-}
+	A meno che non si cada in uno di questi 7 casi speciali:
+	\begin{gather*}
+		+\infty - \infty \quad 0 \cdot \left( \pm \infty \right) \frac{0}{0} \quad  \frac{\pm \infty}{\pm \infty}\\
+		\quad 0^{0} \quad \left( + \infty \right) ^{0} \quad 1^{\pm \infty}\\
+	\end{gather*}
+
+\end{teorema}
 NB: nel caso della successione di tipo $\frac{a_n}{b_n}$ devo stare attento al modo in cui $b_n$ tende a zero: può tendere a $a^{+}, 0 ^{-}$ o a $0$
 
 \subsection{Forma indeterminata}
 \textbf{Esempio 1}
 \[
-a_n = \underbrace{n^3}_{+ \infty} + \underbrace{n^2}_{+\infty} \to + \infty
-\] 
+	a_n = \underbrace{n^3}_{+ \infty} + \underbrace{n^2}_{+\infty} \to + \infty
+\]
 \textbf{Esempio 2}
 \[
-a_n = \underbrace{n^3}_{+ \infty} -  \underbrace{n^2}_{+\infty} = \underbrace{n^2}_{\infty} \underbrace{\left( n-1 \right)}_{+\infty-1}  \to + \infty
-\] 
+	a_n = \underbrace{n^3}_{+ \infty} -  \underbrace{n^2}_{+\infty} = \underbrace{n^2}_{\infty} \underbrace{\left( n-1 \right)}_{+\infty-1}  \to + \infty
+\]
 \textbf{Esempio 3}
 \[
-a_n= \underbrace{\sqrt{n}}_{+\infty} - \underbrace{\frac{1}{n^3}}_{0} \to + \infty
+	a_n= \underbrace{\sqrt{n}}_{+\infty} - \underbrace{\frac{1}{n^3}}_{0} \to + \infty
 \]
 \textbf{Esempio 4}
 \[
-a_n = 2^{n}
-\] 
+	a_n = 2^{n}
+\]
 Dimostro con \underline{disuguaglianza di Bernoulli}(sub \ref{sub:disbernoulli}):
 \[
-2^{n} \ge n+1
-\] 
+	2^{n} \ge n+1
+\]
 dunque visto che $ n+1 \to \infty$ allora anche $2^{n} \to \infty$ per \underline{teorema del confronto a 2}(teo \ref{teoconfrontoatre})
 
-\textbf{Esempio 5} 
+\textbf{Esempio 5}
 \[
-\lim_{n \to \infty} \frac{\arctan \left( 2^{n} + n! \right) }{n^2 + 3} = 0
-\] 
+	\lim_{n \to \infty} \frac{\arctan \left( 2^{n} + n! \right) }{n^2 + 3} = 0
+\]
 \[
-\lim_{n \to \infty} \frac{\sin\left( n \right)}{n}  = 0
-\] 
+	\lim_{n \to \infty} \frac{\sin\left( n \right)}{n}  = 0
+\]
 in quanto al numeratore ho valoni finiti e al demonimatore valori infiniti. Posso applicare teorema dei dure carabinieri:
 \begin{itemize}
 	\item $0 \le \arctan \left( 2^{n} + n! \right) \le \pi$
 	\item Diviso per $ n^2 + 3$
-	\[
-	0 \le \frac{\arctan \left( s^{n} + n! \right) } {\underbrace{n^2 + 3}_{\to 0}} \le \frac{\pi}{\underbrace{n^2 + 3}_{\to 0}}
-	\]
+	      \[
+		      0 \le \frac{\arctan \left( s^{n} + n! \right) } {\underbrace{n^2 + 3}_{\to 0}} \le \frac{\pi}{\underbrace{n^2 + 3}_{\to 0}}
+	      \]
 	\item Il mio limite deve essere compreso fra $0$ e $0$, quindi è $=0$ per il teorema del confronto a tre (teo \ref{teoconfrontoatre})
 \end{itemize}
 \textbf{Esempio 6}
 \[
-\lim_{n \to \infty} \frac{\sqrt{n} - \sqrt[3] {n} }{n + 10^{23}} = \frac{n^{\frac{1}{2}}\left( 1- n^{-6} \right)}{n}  = \frac{1}{\sqrt{n} }\left( 1-n^{-6} \right) \to 0
-\] 
+	\lim_{n \to \infty} \frac{\sqrt{n} - \sqrt[3] {n} }{n + 10^{23}} = \frac{n^{\frac{1}{2}}\left( 1- n^{-6} \right)}{n}  = \frac{1}{\sqrt{n} }\left( 1-n^{-6} \right) \to 0
+\]
 \subsection{Implicazione i mportante disuquaglianza di bernoulli}
-Dimostro che 
+Dimostro che
 \[
-\lim_{n \to \infty} a ^{ n} = + \infty \quad \forall a > 1
-\] 
+	\lim_{n \to \infty} a ^{ n} = + \infty \quad \forall a > 1
+\]
 \begin{itemize}
-	\item Noto che 
-	\[
-	a^{n}= \left( 1 + \left(  a-1 \right)  \right) ^{n}
-	\] 
+	\item Noto che
+	      \[
+		      a^{n}= \left( 1 + \left(  a-1 \right)  \right) ^{n}
+	      \]
 	\item questa quantità per il teorema di bernoulli è maggiore di:
-	\[
-	\left( 1 + \left( a-1 \right)  \right) ^{n} \ge 1 + n\left( a-1 \right) 
-	\] 
+	      \[
+		      \left( 1 + \left( a-1 \right)  \right) ^{n} \ge 1 + n\left( a-1 \right)
+	      \]
 	\item Se $a > 1$ $\lim_{n \to \infty} n\left( a-1 \right) = + \infty $
 \end{itemize}
 Se invece ho $a \in  \left( 0,1 \right) $
 \[
-\lim_{n \to \infty} a^{n} \quad \text{  con  }a \in  \left( 0,1 \right)  
+	\lim_{n \to \infty} a^{n} \quad \text{  con  }a \in  \left( 0,1 \right)
 \]
 Visto che $a \in  \left( a,1 \right) $ posso supporre che $a=\frac{1}{b}$ con $b > 1$
 \[
-a^{n} = \left( \frac{1}{b} \right) ^{n} = \frac{1}{b^{n}} \to 0
-\] 
+	a^{n} = \left( \frac{1}{b} \right) ^{n} = \frac{1}{b^{n}} \to 0
+\]
 \section{Fattoriali e combinatoria}
-\definizione{Fattoriale di un numero}{Il fattoriale di un numero è definito nel seguente modo:
-\[
-0! = 1
-\] 
-\[
-\left( n+1 \right) ! = \left( n+1 \right) \cdot n!
-\] 
-in numeri $ n!$ rapprentenza il numero di modi in cui posso ordinare $n$ oggetti
-}
-Per scegliere n persone posso pensare che 
- \begin{itemize}
+\begin{definizione}{Fattoriale di un numero}
+	Il fattoriale di un numero è definito nel seguente modo:
+	\[
+		0! = 1
+	\]
+	\[
+		\left( n+1 \right) ! = \left( n+1 \right) \cdot n!
+	\]
+	in numeri $ n!$ rapprentenza il numero di modi in cui posso ordinare $n$ oggetti
+
+\end{definizione}
+
+Per scegliere n persone posso pensare che
+\begin{itemize}
 	\item La prima persona la posso scieglere in $n$ modi
 	\item La seconda in $n-1$
 	\item La terza in $n-2$
 	\item \ldots la k esima in $n-k+1$
 \end{itemize}
 quindi
-\begin{table}[h!]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|}
-	\hline
-	n & n-1 & n-2 & \ldots & n-k+1 \\
-	\hline
+		\hline
+		n & n-1 & n-2 & \ldots & n-k+1 \\
+		\hline
 	\end{tabular}
 \end{table}
 
-\definizione{Coefficiente binomiale}{
-Dati 2 interi $n,k \quad 0 \le k\le n$, ponto \[
-\binom{n}{k}= \frac{n!}{k! \left( n-k \right) !}
-\]  
-}
+\begin{definizione}{Coefficiente binomiale
+	}
+	Dati 2 interi $n,k \quad 0 \le k\le n$, ponto \[
+		\binom{n}{k}= \frac{n!}{k! \left( n-k \right) !}
+	\]
+
+\end{definizione}
 Immagino di avere un esercito di $n$ soldati e ne devo estrarre k. Non conta l'ordine con cui gli estraggo
 \begin{itemize}
 	\item Il primo soldato lo posso scegliere in $n$ modi
@@ -1589,252 +1688,254 @@ Immagino di avere un esercito di $n$ soldati e ne devo estrarre k. Non conta l'o
 	\item Il terzo in $n-2$
 	\item \ldots il k esimo in $n-k+1$
 	\item Devo poi dividere per il le permutazioni possibili visto che \underline{l'ordine non conta}
-	\[
-	\text{ numero modi di estrarre } = \frac{n\left( n-1 \right) \left( n-2 \right) \ldots \left( n-k+1 \right)}{k!} = \binom{n}{k}
-	\] 
+	      \[
+		      \text{ numero modi di estrarre } = \frac{n\left( n-1 \right) \left( n-2 \right) \ldots \left( n-k+1 \right)}{k!} = \binom{n}{k}
+	      \]
 	\item Perchè diviso? Pensa al fatto che ogni squadra estratta può essere disposta in $k!$ modi, quindi $k!$ modi vanno considerati come la stessa squadra
 \end{itemize}
 \subsection{Proprietà dei fattoriali}
 \begin{itemize}
 	\item Scontate:
-	\begin{align*}
-	\binom{n}{0} &=  \frac{n!}{0!n!}= 1 &  \binom{n}{n}&=  \frac{n!}{n!0!}= 1 \\
-	\binom{n}{1} &=  \frac{n!}{1!\left( n-1 \right) !}=  \frac{n \left( n-1 \right) !}{\left( n-1 \right) }=n &  \binom{n}{n-1} &= \frac{n!}{\left( n-1 \right) 1!}= \frac{n\left( n-1 \right) !}{\left( n-1 \right) !}=n
-	\end{align*}
+	      \begin{align*}
+		      \binom{n}{0} & =  \frac{n!}{0!n!}= 1                                                                       & \binom{n}{n}   & =  \frac{n!}{n!0!}= 1                                                                    \\
+		      \binom{n}{1} & =  \frac{n!}{1!\left( n-1 \right) !}=  \frac{n \left( n-1 \right) !}{\left( n-1 \right) }=n & \binom{n}{n-1} & = \frac{n!}{\left( n-1 \right) 1!}= \frac{n\left( n-1 \right) !}{\left( n-1 \right) !}=n
+	      \end{align*}
 	\item Simmetrica: prendere $k$ persona da squadra di $n$ è la stessa cosa che lasciarne fuori $n-k$ :
-\[
-\binom{n}{k}= \binom{n}{n-k}
-\] 
+	      \[
+		      \binom{n}{k}= \binom{n}{n-k}
+	      \]
 	\item Generazione ricorsiva binomiale:
-	\[
-	\binom{n+1}{k+1} = \binom{n}{k} + \binom{n}{k+1}
-	\]
-	Dimostrazione
-		\begin{align*}
-		\binom{n}{k} + \binom{n}{k+1} &=  \frac{n!}{k! \left( n-k \right) !} + \frac{n!}{\left( k+1 \right) \left( n-k-1 \right) !}\\
-		&= \frac{n!}{k! \underbrace{\left( n-k \right)}_{\left( n-k \right) \left( n-k-1 \right) !} !} + \frac{n!}{\underbrace{\left( k+1 \right)}_{\left( k+1 \right) k!} \left( n-k-1 \right) !} \\
-		&= \frac{n!}{k! \left( n-k-1 \right) !} \frac{k+1 +n-k}{\left( n-k \right) \left( k+1 \right) }
-		\end{align*}
-A livello combinatorio
-\begin{itemize}
-	\item Prendo un gruppo di $n$ persone e tengo separatamente 1
-	\item Per formare un gruppo grande $k+1$ posso:
-	\begin{enumerate}
-		\item Creare un gruppo grande $n$ e poi aggiungerci il nuovo arrivato
-		\item Creare un gruppo grande $n+1$ che non contenga il nuovo arrivato 
-	\end{enumerate}
-	\item Nel primo caso posso creare $ \binom{n}{k}$ gruppi
-	\item nel secondo caso posso create $ \binom{n}{k+1}$ gruppi
-\end{itemize}
+	      \[
+		      \binom{n+1}{k+1} = \binom{n}{k} + \binom{n}{k+1}
+	      \]
+	      Dimostrazione
+	      \begin{align*}
+		      \binom{n}{k} + \binom{n}{k+1} & =  \frac{n!}{k! \left( n-k \right) !} + \frac{n!}{\left( k+1 \right) \left( n-k-1 \right) !}                                                                                              \\
+		                                    & = \frac{n!}{k! \underbrace{\left( n-k \right)}_{\left( n-k \right) \left( n-k-1 \right) !} !} + \frac{n!}{\underbrace{\left( k+1 \right)}_{\left( k+1 \right) k!} \left( n-k-1 \right) !} \\
+		                                    & = \frac{n!}{k! \left( n-k-1 \right) !} \frac{k+1 +n-k}{\left( n-k \right) \left( k+1 \right) }
+	      \end{align*}
+	      A livello combinatorio
+	      \begin{itemize}
+		      \item Prendo un gruppo di $n$ persone e tengo separatamente 1
+		      \item Per formare un gruppo grande $k+1$ posso:
+		            \begin{enumerate}
+			            \item Creare un gruppo grande $n$ e poi aggiungerci il nuovo arrivato
+			            \item Creare un gruppo grande $n+1$ che non contenga il nuovo arrivato
+		            \end{enumerate}
+		      \item Nel primo caso posso creare $ \binom{n}{k}$ gruppi
+		      \item nel secondo caso posso create $ \binom{n}{k+1}$ gruppi
+	      \end{itemize}
 \end{itemize}
 \subsection{Il triangolo di tartaglia}
-	\begin{center}
-		\includegraphics{Images/Tartaglia.pdf}
-	\end{center}
+\begin{center}
+	\includegraphics{Images/Tartaglia.pdf}
+\end{center}
 Ogni valore è dato dalla somma dei valori dei termini \underline{sopra} di esso a \underline{sinistra e a destra}
 \bigbox{Il coefficiente alla riga n nella posizione k è dato da \[
-\binom{n}{k}
-\] 
-visto che il coefficiente nella posizione $n+1, k+1$ è uguale al coefficiente nella posizione $n, k$ e $n, k+1$ noto che questo triangolo verifica la generazione ricorsiva binomiale:
-\[
-\binom{n+1}{k+1}= \binom{n}{k} + \binom{n}{k+1}
-\]
+		\binom{n}{k}
+	\]
+	visto che il coefficiente nella posizione $n+1, k+1$ è uguale al coefficiente nella posizione $n, k$ e $n, k+1$ noto che questo triangolo verifica la generazione ricorsiva binomiale:
+	\[
+		\binom{n+1}{k+1}= \binom{n}{k} + \binom{n}{k+1}
+	\]
 }
 \bigbox{
 Nello sviluppo di un binomio del tipo $\left( x+y \right) ^{n}$ il monomio $x^{k}y^{n-k}$ ha coefficiente $ \binom{n}{k}$ ossia:
 \[
-\left( x+y \right) ^{n} = \sum_{k=0}^{n} \binom{n}{k}x^{k}y^{n-k}
-\] 
+	\left( x+y \right) ^{n} = \sum_{k=0}^{n} \binom{n}{k}x^{k}y^{n-k}
+\]
 }
 \bigbox{
-La somma dei coefficienti alla riga $n$ è uguale a \[
-2^{n}
-\] 
+	La somma dei coefficienti alla riga $n$ è uguale a \[
+		2^{n}
+	\]
 }
 
 Dimostrazione:
 \begin{itemize}
 	\item Applico sviluppo del binomio $\left( x+y \right) ^{n}$ con $x=y=1$
 	\item In questo caso so che \[
-	\left( 1+1 \right) ^{n} = 2^{n}= \sum_{k=0}^{n} \binom{n}{k}1^{k}1^{n-k}= \sum_{k=0}^{n} \binom{n}{k}
-	\] 
+		      \left( 1+1 \right) ^{n} = 2^{n}= \sum_{k=0}^{n} \binom{n}{k}1^{k}1^{n-k}= \sum_{k=0}^{n} \binom{n}{k}
+	      \]
 \end{itemize}
 \section{3 criteri: rapporto, radice, rapporto-radice}
 \subsection{Criterio della radice}
 \begin{itemize}
 	\item Sia $a_n$ una successione tale che $a_n \ge 0 $ definitavente
 	\item Supponiamo che se $\sqrt[n]{a_n} \to l \in  \R \cup \left\{ +\infty \right\} $ allora ho 3 possibilità:
-	\begin{itemize}
-		\item se $l > 1$, allora $ a_n \to +\infty$
-		\item se $l < 1$, allora $a_n \to 0$
-		\item se  $l=1$ il criterio non fornisce informazioni 
-	\end{itemize}
+	      \begin{itemize}
+		      \item se $l > 1$, allora $ a_n \to +\infty$
+		      \item se $l < 1$, allora $a_n \to 0$
+		      \item se  $l=1$ il criterio non fornisce informazioni
+	      \end{itemize}
 \end{itemize}
 \subsection{Criterio del rapporto}
 \begin{itemize}
 	\item Sia $a_n$ una successione tale che $a_n > 0$ definitivamente
 	\item Supponiamo che $\lim_{n \to \infty} \frac{a_n+1}{a_n}=l \in  \R \cup    \left\{ +\infty \right\} $
-	allora ho 3 possibilità
-	\begin{itemize}
-		\item se $l > 1$, allora $ a_n \to +\infty$
-		\item se $l < 1$, allora $a_n \to 0$
-		\item se  $l=1$ il criterio non fornisce informazioni 
-	\end{itemize}
+	      allora ho 3 possibilità
+	      \begin{itemize}
+		      \item se $l > 1$, allora $ a_n \to +\infty$
+		      \item se $l < 1$, allora $a_n \to 0$
+		      \item se  $l=1$ il criterio non fornisce informazioni
+	      \end{itemize}
 \end{itemize}
 \subsection{Criterio rapporto $ \rightarrow $ radice}
 \begin{itemize}
 	\item Sia $a_n$ una successione tale che $a_n > 0 $ definitivamente
 	\item Supponiamo che $\frac{a_{n + 1}}{a_n} \to l \in  \R \cup \left\{ +\infty \right\} $
-allora
-\[
-\sqrt[n]{a_n} \to l
-\] 
-ossia $\frac{a_{n +1}}{a_n}$ e $\sqrt[n]{a_n} \to l$ tendono allo stesso $l \in \R \cup \left\{ +\infty \right\} $
+	      allora
+	      \[
+		      \sqrt[n]{a_n} \to l
+	      \]
+	      ossia $\frac{a_{n +1}}{a_n}$ e $\sqrt[n]{a_n} \to l$ tendono allo stesso $l \in \R \cup \left\{ +\infty \right\} $
 \end{itemize}
 \subsection{Dimostrazioni}
 \subsubsection{Dimostrazione criterio radice}
 \begin{itemize}
 	\item Prendo punto a metà fra 1 e $l$
-	\begin{tikzpicture}
-			\node [label=north: 1 , fill=black, circle, inner sep = 1pt] at (0,0) {};
-			\node [label=north: $l$ , fill=black, circle, inner sep = 1pt] at (3,0) {};
-			\node [label=north: $\frac{l+1}{2}$ , fill=black, circle, inner sep = 1pt] at (1.5,0) {};
-			\draw (-1,0) to (4,0);
-	\end{tikzpicture}
-	\item Visto che $\sqrt[n]{a_n} \to l$ necessariamente 
-	\[
-	\sqrt[n]{a_n} \ge \frac{l+1}{2}
-	\] 
+	      \begin{tikzpicture}
+		      \node [label=north: 1 , fill=black, circle, inner sep = 1pt] at (0,0) {};
+		      \node [label=north: $l$ , fill=black, circle, inner sep = 1pt] at (3,0) {};
+		      \node [label=north: $\frac{l+1}{2}$ , fill=black, circle, inner sep = 1pt] at (1.5,0) {};
+		      \draw (-1,0) to (4,0);
+	      \end{tikzpicture}
+	\item Visto che $\sqrt[n]{a_n} \to l$ necessariamente
+	      \[
+		      \sqrt[n]{a_n} \ge \frac{l+1}{2}
+	      \]
 	\item Ho quantità positive sia a sinistra che a destra, posso elevare alla $n$ da entrambe le parti, ottenendo:
-\[
-a_n \ge \left( \frac{l+1}{2} \right) ^{n}
-\] 
+	      \[
+		      a_n \ge \left( \frac{l+1}{2} \right) ^{n}
+	      \]
 	\item Se $l > 1$ $\left( \frac{l+1}{2} \right)^{n}  \to \infty$
 \end{itemize}
 \hr
 se invece $l<1$ agisco nello stesso modo:
 \begin{itemize}
 	\item Prendo punto a metà fra $l$ e 1
-	\begin{tikzpicture}
-			\node [label=north: 1 , fill=black, circle, inner sep = 1pt] at (3,0) {};
-			\node [label=north: $l$ , fill=black, circle, inner sep = 1pt] at (0,0) {};
-			\node [label=north: $\frac{l+1}{2}$ , fill=black, circle, inner sep = 1pt] at (1.5,0) {};
-			\draw (-1,0) to (4,0);
-	\end{tikzpicture}
-	\item Visto che $\sqrt[n]{a_n} \to l$ necessariamente 
-	\[
-	\sqrt[n]{a_n} \le \frac{l+1}{2}
-	\] 
+	      \begin{tikzpicture}
+		      \node [label=north: 1 , fill=black, circle, inner sep = 1pt] at (3,0) {};
+		      \node [label=north: $l$ , fill=black, circle, inner sep = 1pt] at (0,0) {};
+		      \node [label=north: $\frac{l+1}{2}$ , fill=black, circle, inner sep = 1pt] at (1.5,0) {};
+		      \draw (-1,0) to (4,0);
+	      \end{tikzpicture}
+	\item Visto che $\sqrt[n]{a_n} \to l$ necessariamente
+	      \[
+		      \sqrt[n]{a_n} \le \frac{l+1}{2}
+	      \]
 	\item Ho quantità positive sia a sinistra che a destra, posso elevare alla $n$ da entrambe le parti, ottenendo:
-\[
-a_n \le \left( \frac{l+1}{2} \right) ^{n}
-\] 
+	      \[
+		      a_n \le \left( \frac{l+1}{2} \right) ^{n}
+	      \]
 	\item Se $l < 1$ $\left( \frac{l+1}{2} \right)^{n}  \to 0$
-	\item Siccome $a_n \ge 0$ per ipotesi allora 
-	\[
-	0 \le a_n \le \left( \frac{l+1}{2} \right) ^{n}
-	\] 
-	ossia $a_n \to 0$ per teorema del confronto a tre
+	\item Siccome $a_n \ge 0$ per ipotesi allora
+	      \[
+		      0 \le a_n \le \left( \frac{l+1}{2} \right) ^{n}
+	      \]
+	      ossia $a_n \to 0$ per teorema del confronto a tre
 \end{itemize}
 \subsection{Numero di nepero}
 \bigbox{
-Il numero di nepero è definito dal seguente limite
-\[
-\lim_{n \to \infty} \left( 1+\frac{1}{n} \right) ^{n} 
-\] 
+	Il numero di nepero è definito dal seguente limite
+	\[
+		\lim_{n \to \infty} \left( 1+\frac{1}{n} \right) ^{n}
+	\]
 }
 \subsection{Esempio forme indeterminate}
 \textbf{Esempio 1}
 \[
-\lim_{n \to \infty} \frac{n^{n}}{n!} = + \infty
+	\lim_{n \to \infty} \frac{n^{n}}{n!} = + \infty
 \]
 Criterio del rapporto:
 \[
-\frac{a_{n+1}}{a_n} = \frac{\left( n+1 \right) ^{n+1}}{\left( n+1 \right) !} \cdot\frac{n!}{n^{n}}
-\] 
+	\frac{a_{n+1}}{a_n} = \frac{\left( n+1 \right) ^{n+1}}{\left( n+1 \right) !} \cdot\frac{n!}{n^{n}}
+\]
 \textbf{Esempio 2}
 \[
-\lim_{n \to \infty} \frac{3^{n^{2}}}{n!} = +\infty
+	\lim_{n \to \infty} \frac{3^{n^{2}}}{n!} = +\infty
 \]
 Criterio del rapporto:
 \[
-\frac{a_{n+1}}{a_n} = \frac{3^{\left( n+1 \right) ^{2}}}{\left( n+1 \right) !}
-\] 
+	\frac{a_{n+1}}{a_n} = \frac{3^{\left( n+1 \right) ^{2}}}{\left( n+1 \right) !}
+\]
 \textbf{Esempio 3}
 \[
-\lim_{n \to \infty} \frac{\sqrt[n]{n!} }{n} = 
-\] 
+	\lim_{n \to \infty} \frac{\sqrt[n]{n!} }{n} =
+\]
 Criterio rapporto radice
 \[
-\frac{\sqrt[n]{n!} }{n} = \sqrt[n]{\frac{n!}{n^{n}}} 
+	\frac{\sqrt[n]{n!} }{n} = \sqrt[n]{\frac{n!}{n^{n}}}
 \]
 \section{Limiti di funzioni}
-\definizione{Limite di funzione}{
-Data una funzione $f : A \rightarrow \R \quad  A \subseteq \R$ abbiamo tre tipologie di limite:
-\[
-\lim_{x \to \infty} f(x) \quad \lim_{x \to -\infty} f(x) \quad \lim_{x \to x_0} f(x)  
-\] 
-\textbf{Primo tipo:}
-\[
-\lim_{x \to \infty} f(x) = \begin{cases}
-	l \in \R\\
-	+ \infty \\
-	- \infty \\
-	\text{ non esiste }
-\end{cases}
-\] 
-se $ \lim_{x \to \infty} f(x) = + \infty$: 
-\[
-\forall M \in  \R \quad \exists k \in  \R \text{ t.c. } f\left( x \right) \ge M \forall x \ge k
-\] 
-se $ \lim_{x \to \infty} f(x) = + -\infty$: 
-\[
-\forall M \in  \R \quad \exists k \in  \R \text{ t.c. } f\left( x \right) \le M \forall x \ge k
-\] 
-se $ \lim_{x \to \infty} f(x) = l$: 
-\[
-\forall \epsilon > 0 \quad \exists k \in  \R \text{ t.c. } l- \epsilon \le f\left( x \right) \le l+ \epsilon \quad \forall x \ge k
-\] 
-ossia 
-\[
-\left|f\left( x \right) -l\right| \le \epsilon
-\] 
-se $ \lim_{x \to \infty} f(x) = l^{+}$: 
-\[
-\forall \epsilon > 0 \quad \exists k \in  \R \text{ t.c. }  l <  f\left( x \right) \le l+ \epsilon \quad \forall x \ge k
-\] 
-se $ \lim_{x \to \infty} f(x) = l^{-}$: 
-\[
-\forall \epsilon > 0 \quad \exists k \in  \R \text{ t.c. }  l-\epsilon \le f\left( x \right) \le l \quad \forall x \ge k
-\] 
-\textbf{Secondo tipo}: molto simile a primo, semplicemnte speculare
-\vskip3mm
-\textbf{Terzo tipo:}
-\[
-\lim_{x \to x_0} f(x) =
-\begin{cases}
-	l \in  \R \\
-	+ \infty\\
-	-\infty
-	\text{ non esiste }
-\end{cases}
-\]
-se $\lim_{x \to x_0} f(x) = + \infty$:
-\[
-\forall M \in  \R \quad \exists \delta > 0 \text{ t.c. } f\left( x \right)  \ge M \quad \forall x \in \left[ x_0-\delta, x_0+\delta \right] \setminus \left\{ x_0 \right\}  
-\] 
-se $\lim_{x \to x_0} f(x) = l \in  \R$:
-\[
-\forall \epsilon >0 \quad \exists \delta > 0 \text{ t.c. } \left|f\left( x \right) -l \right|\le \epsilon \text{ se } x \in \left[ x_0- \delta, x_0+ \delta \right] \setminus \left\{ x_0 \right\} 
-\] 
-}
+\begin{definizione}{Limite di funzione}
+	Data una funzione $f : A \rightarrow \R \quad  A \subseteq \R$ abbiamo tre tipologie di limite:
+	\[
+		\lim_{x \to \infty} f(x) \quad \lim_{x \to -\infty} f(x) \quad \lim_{x \to x_0} f(x)
+	\]
+	\textbf{Primo tipo:}
+	\[
+		\lim_{x \to \infty} f(x) = \begin{cases}
+			l \in \R \\
+			+ \infty \\
+			- \infty \\
+			\text{ non esiste }
+		\end{cases}
+	\]
+	se $ \lim_{x \to \infty} f(x) = + \infty$:
+	\[
+		\forall M \in  \R \quad \exists k \in  \R \text{ t.c. } f\left( x \right) \ge M \forall x \ge k
+	\]
+	se $ \lim_{x \to \infty} f(x) = + -\infty$:
+	\[
+		\forall M \in  \R \quad \exists k \in  \R \text{ t.c. } f\left( x \right) \le M \forall x \ge k
+	\]
+	se $ \lim_{x \to \infty} f(x) = l$:
+	\[
+		\forall \epsilon > 0 \quad \exists k \in  \R \text{ t.c. } l- \epsilon \le f\left( x \right) \le l+ \epsilon \quad \forall x \ge k
+	\]
+	ossia
+	\[
+		\left|f\left( x \right) -l\right| \le \epsilon
+	\]
+	se $ \lim_{x \to \infty} f(x) = l^{+}$:
+	\[
+		\forall \epsilon > 0 \quad \exists k \in  \R \text{ t.c. }  l <  f\left( x \right) \le l+ \epsilon \quad \forall x \ge k
+	\]
+	se $ \lim_{x \to \infty} f(x) = l^{-}$:
+	\[
+		\forall \epsilon > 0 \quad \exists k \in  \R \text{ t.c. }  l-\epsilon \le f\left( x \right) \le l \quad \forall x \ge k
+	\]
+	\textbf{Secondo tipo}: molto simile a primo, semplicemnte speculare
+	\vskip3mm
+	\textbf{Terzo tipo:}
+	\[
+		\lim_{x \to x_0} f(x) =
+		\begin{cases}
+			l \in  \R \\
+			+ \infty  \\
+			-\infty
+			\text{ non esiste }
+		\end{cases}
+	\]
+	se $\lim_{x \to x_0} f(x) = + \infty$:
+	\[
+		\forall M \in  \R \quad \exists \delta > 0 \text{ t.c. } f\left( x \right)  \ge M \quad \forall x \in \left[ x_0-\delta, x_0+\delta \right] \setminus \left\{ x_0 \right\}
+	\]
+	se $\lim_{x \to x_0} f(x) = l \in  \R$:
+	\[
+		\forall \epsilon >0 \quad \exists \delta > 0 \text{ t.c. } \left|f\left( x \right) -l \right|\le \epsilon \text{ se } x \in \left[ x_0- \delta, x_0+ \delta \right] \setminus \left\{ x_0 \right\}
+	\]
+
+\end{definizione}
 \subsection{Continuità}
-\definizione{Continuità}{
-Una funzione $ f: A \rightarrow \R \text{ con } A \subseteq \R$ si dice continua in un punto $x_0 \in  A$ se:
-\[
-\lim_{x \to x_0} f(x) = f\left( x_0 \right) 
-\] 
-}
+\begin{definizione}{Continuità}
+	Una funzione $ f: A \rightarrow \R \text{ con } A \subseteq \R$ si dice continua in un punto $x_0 \in  A$ se:
+	\[
+		\lim_{x \to x_0} f(x) = f\left( x_0 \right)
+	\]
+\end{definizione}
+
 OSS:
 \begin{itemize}
 	\item Si dice che $f$ è continua in $A$ se essa è continua in ogni punto di $A$
@@ -1850,206 +1951,212 @@ Limiti "nonni"
 \end{gather}
 Limiti "di seconda generazione"
 \begin{align*}
-	& \lim_{x \to 0} \frac{1-\cos\left( x \right) }{x^2} = \frac{1}{2} &\lim_{x \to 0} \frac{e^{x}-1}{x}=1 \\
-	& \lim_{x \to 0} \frac{\log\left( 1+x \right) }{x}=1 &\lim_{x \to -\infty} \left( 1+\frac{1}{x} \right) ^{x} = e\\
-	& \lim_{x \to 0} \frac{ \tan \left( x \right) }{x}=1  & \lim_{x \to 0} \frac{\arctan \left( x \right) }{x} = 1  \\
-	& \lim_{x \to 0} \frac{\arcsin \left( x \right) }{x} = 1 & \lim_{x \to 0} \frac{a^{x}-1}{x}= \log \left( a \right) \\
-	& \lim_{x \to 0^{+}} x \log \left( x \right) =0
+	 & \lim_{x \to 0} \frac{1-\cos\left( x \right) }{x^2} = \frac{1}{2} & \lim_{x \to 0} \frac{e^{x}-1}{x}=1                         \\
+	 & \lim_{x \to 0} \frac{\log\left( 1+x \right) }{x}=1               & \lim_{x \to -\infty} \left( 1+\frac{1}{x} \right) ^{x} = e \\
+	 & \lim_{x \to 0} \frac{ \tan \left( x \right) }{x}=1               & \lim_{x \to 0} \frac{\arctan \left( x \right) }{x} = 1     \\
+	 & \lim_{x \to 0} \frac{\arcsin \left( x \right) }{x} = 1           & \lim_{x \to 0} \frac{a^{x}-1}{x}= \log \left( a \right)    \\
+	 & \lim_{x \to 0^{+}} x \log \left( x \right) =0
 \end{align*}
 \subsection{Cambio di variabile}
-\textbf{Esempio 1} 
+\textbf{Esempio 1}
 \[
-\lim_{x \to 0} \frac{\sin\left( x^2 \right) }{x^2} 
-\] 
-pongo $y=x^2$ 
+	\lim_{x \to 0} \frac{\sin\left( x^2 \right) }{x^2}
+\]
+pongo $y=x^2$
 \[
-\lim_{x \to 0} \frac{\sin\left( x^2 \right) }{x^2}= \lim_{y \to 0} \frac{\sin\left( y \right) }{y}= 1 
-\] 
+	\lim_{x \to 0} \frac{\sin\left( x^2 \right) }{x^2}= \lim_{y \to 0} \frac{\sin\left( y \right) }{y}= 1
+\]
 \textbf{Esempio 2}
 \[
-\lim_{x \to  0} \frac{e^{\sin\left( x \right) }-1}{\sin\left( x \right) } 
-\] 
-pongo $y=\sin\left( x \right) $ ; se $x \to 0 \Rightarrow \sin\left( x \right) \to 0 \Rightarrow y \to 0$ 
+	\lim_{x \to  0} \frac{e^{\sin\left( x \right) }-1}{\sin\left( x \right) }
+\]
+pongo $y=\sin\left( x \right) $ ; se $x \to 0 \Rightarrow \sin\left( x \right) \to 0 \Rightarrow y \to 0$
 \[
-\lim_{x \to 0} \frac{e^{\sin\left(  \right) -1}}{\sin\left( x \right) }= \lim_{y \to 0} \frac{e^{y}-1}{y}  
-\] 
+	\lim_{x \to 0} \frac{e^{\sin\left(  \right) -1}}{\sin\left( x \right) }= \lim_{y \to 0} \frac{e^{y}-1}{y}
+\]
 \textbf{Esempio 3}
 \[
-\lim_{x \to \pi } \frac{\log\left( 1+\sin\left( x \right)  \right) }{\sin\left( x \right) } 
-\] 
+	\lim_{x \to \pi } \frac{\log\left( 1+\sin\left( x \right)  \right) }{\sin\left( x \right) }
+\]
 pongo $y=\sin\left( x \right) $ ; se $x \to \pi \Rightarrow \sin\left( x \right) \to 0 \Rightarrow y \to 0$
 \[
-\lim_{x \to \pi } \frac{\log\left( 1+\sin\left( x \right)  \right) }{\sin\left( x \right) } = \lim_{y \to 0} \frac{\log \left( 1+y \right) }{y} 
-\] 
+	\lim_{x \to \pi } \frac{\log\left( 1+\sin\left( x \right)  \right) }{\sin\left( x \right) } = \lim_{y \to 0} \frac{\log \left( 1+y \right) }{y}
+\]
 \textbf{Esempio 4}
 \[
-\lim_{x \to 0} \frac{1-\cos\left( x \right) }{x^2} 
+	\lim_{x \to 0} \frac{1-\cos\left( x \right) }{x^2}
 \]
-moltiplico e divido per $1+\cos\left( x \right) $ 
+moltiplico e divido per $1+\cos\left( x \right) $
 \[
-\lim_{x \to 0} \frac{1-\cos\left( x \right) }{x^2} = \lim_{x \to 0} \left(\frac{1-\cos\left( x \right) }{c^2} \cdot \frac{1+ \cos \left( x \right) }{1 + \cos \left( x \right) } \right) = \lim_{x \to 0} \frac{1-\cos ^2 \left( x \right) }{x^2} \cdot \frac{1}{1+\cos\left( x \right) }  = 
+	\lim_{x \to 0} \frac{1-\cos\left( x \right) }{x^2} = \lim_{x \to 0} \left(\frac{1-\cos\left( x \right) }{c^2} \cdot \frac{1+ \cos \left( x \right) }{1 + \cos \left( x \right) } \right) = \lim_{x \to 0} \frac{1-\cos ^2 \left( x \right) }{x^2} \cdot \frac{1}{1+\cos\left( x \right) }  =
 \]
 \[
-=\lim_{x \to 0} \left( \frac{\sin \left( x \right) }{x} \right) ^2 \cdot \frac{1}{1+\cos\left( x \right) } = 1 \cdot \frac{1}{2}
+	=\lim_{x \to 0} \left( \frac{\sin \left( x \right) }{x} \right) ^2 \cdot \frac{1}{1+\cos\left( x \right) } = 1 \cdot \frac{1}{2}
 \]
 \textbf{Limite}
 \[
-\lim_{x \to 0} \frac{e^{x} -1}{x}
-\] 
-pongo $ x = \log \left( y+1 \right) $ 
+	\lim_{x \to 0} \frac{e^{x} -1}{x}
+\]
+pongo $ x = \log \left( y+1 \right) $
 \[
- \lim_{y \to 0} \frac{y}{\log \left( 1+y \right) }  = \lim_{x \to 0} \frac{1}{\underbrace{\frac{\log\left( 1+ y\right) }{y}}_{\text{limite notevole}}} 
-\] 
+	\lim_{y \to 0} \frac{y}{\log \left( 1+y \right) }  = \lim_{x \to 0} \frac{1}{\underbrace{\frac{\log\left( 1+ y\right) }{y}}_{\text{limite notevole}}}
+\]
 \textbf{Limite}
 \[
-\lim_{x \to 0} \frac{e^{x}-1}{x} 
-\] 
+	\lim_{x \to 0} \frac{e^{x}-1}{x}
+\]
 pongo $a^{x}=x \log \left( a \right) $
 \[
-\frac{e^{x \log \left( a \right)  }}{x} \cdot  
-\] 
+	\frac{e^{x \log \left( a \right)  }}{x} \cdot
+\]
 \subsection{Ordini di infiniti}
 \bigbox{
-\[
-\lim_{x \to \infty} \frac{\left( \log \left( x \right)  \right) ^{a}}{x^{b}}=0 \quad \forall e>0, b>0
-\] 
+	\[
+		\lim_{x \to \infty} \frac{\left( \log \left( x \right)  \right) ^{a}}{x^{b}}=0 \quad \forall e>0, b>0
+	\]
 }
 dimostro facendo cambiodi variabile (im pongo $y= \log \left( x \right) $)
 \bigbox{
-\[
-\lim_{x \to 0^{+}} x \log \left( x \right) = 0
-\] 
+	\[
+		\lim_{x \to 0^{+}} x \log \left( x \right) = 0
+	\]
 }
 pongo $y=\frac{1}{y}$
 
 \subsection{Dimostrazioe $\lim_{x \to 0} \frac{\sin\left( x \right) }{x} $}
 \begin{itemize}
 	\item Sappaimo che vale la seguente disuguaglianza:
-	\[
-	\sin \left( x \right) \le x \le \tan \left( x \right) 
-	\] 
+	      \[
+		      \sin \left( x \right) \le x \le \tan \left( x \right)
+	      \]
 	\item Divido per $\sin\left( x \right) $
-	 \[
-	 1 \le \frac{x}{\sin\left( x \right) }\le \frac{1}{\cos\left( x \right) }
-	 \] 
+	      \[
+		      1 \le \frac{x}{\sin\left( x \right) }\le \frac{1}{\cos\left( x \right) }
+	      \]
 \end{itemize}
 \subsection{Altri esempi}
 \textbf{Esempio 1}
 \[
-\lim_{x \to  0} \frac{\log \left( \cos \left( x \right)  \right) }{x^2}  
+	\lim_{x \to  0} \frac{\log \left( \cos \left( x \right)  \right) }{x^2}
 \]
 \begin{itemize}
 	\item
-	\[
-\lim_{x \to  0} \frac{\log \left( \cos \left( x \right)  \right) }{x^2}  = \lim_{x \to 0} \frac{\log\left( \cos \left( x \right) +1 -1 \right) }{x^2} 
-	\] 
+	      \[
+		      \lim_{x \to  0} \frac{\log \left( \cos \left( x \right)  \right) }{x^2}  = \lim_{x \to 0} \frac{\log\left( \cos \left( x \right) +1 -1 \right) }{x^2}
+	      \]
 	\item Moltiplico e divito per $\cos\left( x \right) -1$
-	\[
-	\lim_{x \to 0} \frac{\log \left( 1+ \left( \cos \left( x \right) -1 \right)  \right) }{\cos \left( x \right) -1} \cdot \frac{\cos \left( x \right) -1}{x^2} 
-	\] 
+	      \[
+		      \lim_{x \to 0} \frac{\log \left( 1+ \left( \cos \left( x \right) -1 \right)  \right) }{\cos \left( x \right) -1} \cdot \frac{\cos \left( x \right) -1}{x^2}
+	      \]
 	\item Ottengo due limiti notevoli
 \end{itemize}
 \textbf{Esempio 2}
 \[
-\lim_{x \to 0} \left( \cos\left( x \right) \right) ^{\frac{1}{x^2}}  
-\] 
+	\lim_{x \to 0} \left( \cos\left( x \right) \right) ^{\frac{1}{x^2}}
+\]
 \begin{itemize}
 	\item Ricordo che $A^{B}=e^{B\log A}$
-	\item 
-	\[
-\lim_{x \to 0} \left( \cos\left( x \right) \right) ^{\frac{1}{x^2}}  = \lim_{x \to 0} e^{\frac{1}{x^2}\log\left( \cos\left( x \right)  \right) } 
-	\] 
+	\item
+	      \[
+		      \lim_{x \to 0} \left( \cos\left( x \right) \right) ^{\frac{1}{x^2}}  = \lim_{x \to 0} e^{\frac{1}{x^2}\log\left( \cos\left( x \right)  \right) }
+	      \]
 \end{itemize}
 \textbf{Esempio 3}
 \[
-\lim_{x \to 0} \frac{e^{\tan \left( x \right) }- \cos\left( x \right) + \arctan \left( 2x \right) }{x} 
+	\lim_{x \to 0} \frac{e^{\tan \left( x \right) }- \cos\left( x \right) + \arctan \left( 2x \right) }{x}
 \]
 \begin{itemize}
 	\item Sommo e sottraggo 1
-\[
-\lim_{x \to 0} \frac{e^{\tan \left( x \right) }-1 + 1- \cos\left( x \right) + \arctan \left( 2x \right) }{x} 
-\] 
+	      \[
+		      \lim_{x \to 0} \frac{e^{\tan \left( x \right) }-1 + 1- \cos\left( x \right) + \arctan \left( 2x \right) }{x}
+	      \]
 	\item Quindi ottengo limiti notevoli:
-	\[
-	\lim_{x \to 0} \frac{e^{\tan \left( x \right) }-1}{x}+ \frac{1-\cos\left( x \right) }{x} + \frac{\arctan \left( 2x \right) }{x} 
-	\] 
+	      \[
+		      \lim_{x \to 0} \frac{e^{\tan \left( x \right) }-1}{x}+ \frac{1-\cos\left( x \right) }{x} + \frac{\arctan \left( 2x \right) }{x}
+	      \]
 	\item Moltiplico e divido numeratori e demonimatori per ottenere limiti notevoli
 \end{itemize}
 \textbf{Esempio 4}
 \[
-\lim_{x \to +\infty} \frac{\log\left( 1+2^{x} \right) }{x} 
+	\lim_{x \to +\infty} \frac{\log\left( 1+2^{x} \right) }{x}
 \]
 \begin{itemize}
 	\item Se $x \to + \infty$ l'uno diventa insignificante. Quindi:
-	\[
-	\lim_{x \to +\infty} \frac{\log\left( 1+2^{x} \right) }{x}= \frac{\log\left( 2^{x} \right) }{x} = \frac{x \log\left( x \right) }{x}  = \log\left( 2 \right) 
-	\] 
+	      \[
+		      \lim_{x \to +\infty} \frac{\log\left( 1+2^{x} \right) }{x}= \frac{\log\left( 2^{x} \right) }{x} = \frac{x \log\left( x \right) }{x}  = \log\left( 2 \right)
+	      \]
 	\item Rigorosamente potrei raccogliere a fattor comune il $2^{x}$
 \end{itemize}
 \subsection{Dimostrare non esistenza di un limite}
-\definizione{Sottosuccessione}{
-Data una successione $a_n$ una sottosuccessione è composta da tuttti i termini \underline{con indice crescente} selezionati secondo una data regola
-}
-\teorema{Essitenza di un limite di una successione}{
-Sia $a_n$ una successione di numeri reali e sia $a_{kn}$ la regola che descrive come scelgo la sottosuccessione. Supponiamo che $a_n \to l \in  \R$ allora 
-\[
-a_{kn} \to l
-\] 
-se $a_n$ non ha limite non posso dire nulla riguardo a $a_{nk}$
-}
+\begin{definizione}{Sottosuccessione}
+	Data una successione $a_n$ una sottosuccessione è composta da tuttti i termini \underline{con indice crescente} selezionati secondo una data regola
+\end{definizione}
+\begin{teorema}{Essitenza di un limite di una successione}
+	Sia $a_n$ una successione di numeri reali e sia $a_{kn}$ la regola che descrive come scelgo la sottosuccessione. Supponiamo che $a_n \to l \in  \R$ allora
+	\[
+		a_{kn} \to l
+	\]
+	se $a_n$ non ha limite non posso dire nulla riguardo a $a_{nk}$
+
+\end{teorema}
+
 Esempio:
 se voglio dimostrare che una successione non ha limite posso cercare due sottosuccessioni che non convergano verso lo stesso limite
 \[
-e_n = \left( - \right) ^{n} \rightarrow \text{ non ha limite }
-\] 
-\[
-a_{2n}=\left( -1 \right) ^{2n} \rightarrow_1,1,1,1,1 \rightarrow 1
+	e_n = \left( - \right) ^{n} \rightarrow \text{ non ha limite }
 \]
 \[
-a_{2n+1}= \left( 1 \right) ^{2n+1} = -1,-1,-1,-1,-1, \rightarrow -1
-\] 
+	a_{2n}=\left( -1 \right) ^{2n} \rightarrow_1,1,1,1,1 \rightarrow 1
+\]
+\[
+	a_{2n+1}= \left( 1 \right) ^{2n+1} = -1,-1,-1,-1,-1, \rightarrow -1
+\]
 per questo motivo visto che $l_1 \neq l_2$, $a_n$ non ha limite
 \[
-a_n=\sin\left( \frac{\pi}{2}n \right) 
-\] 
+	a_n=\sin\left( \frac{\pi}{2}n \right)
+\]
 \[
-a_{2n}= \sin\left( n \pi  \right) = 0,0,0,0,0 \rightarrow 
+	a_{2n}= \sin\left( n \pi  \right) = 0,0,0,0,0 \rightarrow
 \]
 
 \section{Numero di nepero}
 Per dimostrare che la successione $a_n = \left( 1+ \frac{1}{n} \right) ^{n}$ converge al numero di nepero servono dei prerequisiti e dei teoremi
 
-\definizione{Crescenza/decrescenza di una successione}{
-Una successione $a_n$ si dice:
-\begin{itemize}
-	\item Debolmente crescente se \quad $a_{n+1} \ge a_n \quad \forall n \in  \N$
-	\item Strettamente crescente se \quad $a_{n+1} > a_n \quad \forall n \in  \N$
-\end{itemize}
-La stessa cosa vale per la decrescenza
-}
+\begin{definizione}{Crescenza/decrescenza di una successione
+	}
+	Una successione $a_n$ si dice:
+	\begin{itemize}
+		\item Debolmente crescente se \quad $a_{n+1} \ge a_n \quad \forall n \in  \N$
+		\item Strettamente crescente se \quad $a_{n+1} > a_n \quad \forall n \in  \N$
+	\end{itemize}
+	La stessa cosa vale per la decrescenza
+\end{definizione}
+
 OSS: una funzione è debolmente crescente se e solo se per ogni $m >n$ anche $a_m \ge a_n$
-Consideriamo la successione $e_n = \left( 1+ \frac{1}{n} \right) ^{n}$ 
+Consideriamo la successione $e_n = \left( 1+ \frac{1}{n} \right) ^{n}$
 
-\teorema{Limiti succesioni crescenti}{
-Sia $a_n$ una successione debolmente crescente. Allora abbiamo 2 possibili limiti:
-\begin{itemize}
-	\item $a_n \to l \in  \R$
-	\item $ a_n \to + \infty$
-\end{itemize}
-In ogni caso il limite della successione è il $sup\left( a_n \right) $
-}
+\begin{teorema}{Limiti succesioni crescenti}
+	Sia $a_n$ una successione debolmente crescente. Allora abbiamo 2 possibili limiti:
+	\begin{itemize}
+		\item $a_n \to l \in  \R$
+		\item $ a_n \to + \infty$
+	\end{itemize}
+	In ogni caso il limite della successione è il $sup\left( a_n \right) $
 
-\teorema{Corollario al teorema precedente}{
-Sia $a_n$ una successione 
-\begin{itemize}
-	\item Debolemnte crescente 
-	\item Limitata superiormente
-\end{itemize}
-Allora \[
-a_n \to l \in  \R
-\] 
-NB: non necessariamente $l = k$
-}
+\end{teorema}
+
+\begin{teorema}{Corollario al teorema precedente}
+	Sia $a_n$ una successione
+	\begin{itemize}
+		\item Debolemnte crescente
+		\item Limitata superiormente
+	\end{itemize}
+	Allora \[
+		a_n \to l \in  \R
+	\]
+	NB: non necessariamente $l = k$
+\end{teorema}
+
 \subsection{Dimostrazione definizione numero di nepero}
 La dimostrazione si basa su 3 proprietà della succession $ e_n$
 \begin{itemize}
@@ -2057,93 +2164,93 @@ La dimostrazione si basa su 3 proprietà della succession $ e_n$
 	\item E' debolmente crescente
 	\item E' $\le 3 \forall n$
 \end{itemize}
-se so che $e_n$ è limitata e crescente allora posso affermare che 
+se so che $e_n$ è limitata e crescente allora posso affermare che
 \[
-e_n \to l \in \left[ 2,3 \right] 
-\] 
+	e_n \to l \in \left[ 2,3 \right]
+\]
 \textbox{Dimostro un passo alla volta}
 
- E' sempre $\ge 2 \forall n$
+E' sempre $\ge 2 \forall n$
 \begin{itemize}
-	\item Uso disuguaglianza di Bernoulli ossia 
-	\[
-	\left( 1+x \right) ^{n} \ge 1+ nx
-	\] 
-	\item Pongo $x=\frac{1}{n}$ ossia 
-	\[
-	e_n = \left( 1+\frac{1}{n} \right) ^{n} \ge 1 + n \frac{1}{n} \ge 2
-	\] 
+	\item Uso disuguaglianza di Bernoulli ossia
+	      \[
+		      \left( 1+x \right) ^{n} \ge 1+ nx
+	      \]
+	\item Pongo $x=\frac{1}{n}$ ossia
+	      \[
+		      e_n = \left( 1+\frac{1}{n} \right) ^{n} \ge 1 + n \frac{1}{n} \ge 2
+	      \]
 \end{itemize}
 E' debolmente crescente
 \begin{itemize}
 	\item \[
-	\left( 1+\frac{1}{n} \right)^{n} \ge \left( 1 + \frac{1}{n-1} \right) ^{n-1}
-	\] 
+		      \left( 1+\frac{1}{n} \right)^{n} \ge \left( 1 + \frac{1}{n-1} \right) ^{n-1}
+	      \]
 	\item \[
-	\left( \frac{n+1}{n} \right) ^{n} \ge \left( \frac{n}{n-1} \right) ^{n-1}
-	\] 
-	\[
-	\frac{\left( n+1 \right) ^{n}}{n^{n}} \ge \frac{n^{n-1}}{\left( n-1 \right) ^{n-1}}
-	\] 
+		      \left( \frac{n+1}{n} \right) ^{n} \ge \left( \frac{n}{n-1} \right) ^{n-1}
+	      \]
+	      \[
+		      \frac{\left( n+1 \right) ^{n}}{n^{n}} \ge \frac{n^{n-1}}{\left( n-1 \right) ^{n-1}}
+	      \]
 	\item Moltiplico e divido per $n$ e per $n-1$ il membro di destra
-	\[
-	\frac{\left( n+1 \right) ^{n}}{n^{n}} \ge \frac{n^{n-1}}{\left( n-1 \right) ^{n-1}} \cdot \frac{n}{n} \cdot \frac{n-1}{n-1}
-	\] 
-	ottengo quindi
-	\[
-	\frac{\left( n+1 \right) ^{n}}{n^{n}}\ge \frac{n^{n}}{\left( n-1 \right) ^{n}}\cdot \frac{n-1}{n}
-	\] 
-	\[
-	\frac{\left( n+1 \right) ^{n} \left( n-1 \right) ^{n}}{n^{2n}} \ge \frac{n-1}{n}
-	\] 
+	      \[
+		      \frac{\left( n+1 \right) ^{n}}{n^{n}} \ge \frac{n^{n-1}}{\left( n-1 \right) ^{n-1}} \cdot \frac{n}{n} \cdot \frac{n-1}{n-1}
+	      \]
+	      ottengo quindi
+	      \[
+		      \frac{\left( n+1 \right) ^{n}}{n^{n}}\ge \frac{n^{n}}{\left( n-1 \right) ^{n}}\cdot \frac{n-1}{n}
+	      \]
+	      \[
+		      \frac{\left( n+1 \right) ^{n} \left( n-1 \right) ^{n}}{n^{2n}} \ge \frac{n-1}{n}
+	      \]
 	\item Noto la somma per differenza al numeratore del primo menmbro
-	\[
-	\frac{\left( n^2-1 \right) ^{n}}{\left( n^2 \right) ^{n}} = \left( \frac{n^2-1}{n^2} \right) ^{n} = \left( 1 - \frac{1}{n^{2}} \right)^{n}\ge \frac{n-1}{n} = 1 - \frac{1}{n}
-	\] 
-	\[
-	\left( 1 - \frac{1}{n^{2}} \right)^{n} \ge   1 - \frac{1}{n}
-	\] 
+	      \[
+		      \frac{\left( n^2-1 \right) ^{n}}{\left( n^2 \right) ^{n}} = \left( \frac{n^2-1}{n^2} \right) ^{n} = \left( 1 - \frac{1}{n^{2}} \right)^{n}\ge \frac{n-1}{n} = 1 - \frac{1}{n}
+	      \]
+	      \[
+		      \left( 1 - \frac{1}{n^{2}} \right)^{n} \ge   1 - \frac{1}{n}
+	      \]
 	\item Pongo x = $-\frac{1}{n^2}$ e moltiplicando e dividendo per $n$ a destra ottengo che
 
-	\[
-	\left( 1-\frac{1}{n^2} \right) ^{n} \ge 1- \frac{1}{n} = \left( 1+x \right) ^{n} \ge 1+ nx
-	\] 
-	\textbox{La crescenza è quindi stata verificata per la disuguaglanza di bernoulli}
+	      \[
+		      \left( 1-\frac{1}{n^2} \right) ^{n} \ge 1- \frac{1}{n} = \left( 1+x \right) ^{n} \ge 1+ nx
+	      \]
+	      \textbox{La crescenza è quindi stata verificata per la disuguaglanza di bernoulli}
 \end{itemize}
 E' $\le 3 \forall n$
 \begin{itemize}
 	\item  Utilizzo binomio di Newtoon:
-	\[
-	\left( x+y \right)^{n} = \sum_{k=1}^{n} \binom{n}{k}x^{k}y^{n-k} = \sum_{k=1}^{n} \binom{n}{k} x^{n-k}y^{k} 
-	\] 
+	      \[
+		      \left( x+y \right)^{n} = \sum_{k=1}^{n} \binom{n}{k}x^{k}y^{n-k} = \sum_{k=1}^{n} \binom{n}{k} x^{n-k}y^{k}
+	      \]
 	\item Pongo $x=1$ e $y= \frac{1}{n}$ :
-	\[
-	\left( 1+\frac{1}{n} \right) ^{n}= \sum_{k=1}^{n} \binom{n}{k}1^{n-k}\frac{1}{n^{k}} = \sum_{k=1}^{n} \binom{n}{k} \frac{1}{n^{k}}
-\] 
+	      \[
+		      \left( 1+\frac{1}{n} \right) ^{n}= \sum_{k=1}^{n} \binom{n}{k}1^{n-k}\frac{1}{n^{k}} = \sum_{k=1}^{n} \binom{n}{k} \frac{1}{n^{k}}
+	      \]
 	\item Sviluppando la sommatoria mi accordo di alcune cose:
-	\[
-	 \binom{n}{0}\frac{1}{n^{0}}  \binom{n}{1} \frac{1}{n} + \binom{n}{2}\frac{1}{n^2}\ldots
-	\] 
-	\[
-	= 1 + 1 + \frac{n \left( n-1 \right) }{2!} \frac{1}{n^2} + \frac{n \left( n-1 \right) \left( n-2 \right) }{3!} \frac{1}{n^3} \ldots
-	\] 
+	      \[
+		      \binom{n}{0}\frac{1}{n^{0}}  \binom{n}{1} \frac{1}{n} + \binom{n}{2}\frac{1}{n^2}\ldots
+	      \]
+	      \[
+		      = 1 + 1 + \frac{n \left( n-1 \right) }{2!} \frac{1}{n^2} + \frac{n \left( n-1 \right) \left( n-2 \right) }{3!} \frac{1}{n^3} \ldots
+	      \]
 	\item Noto che la quantità $ \frac{n\left( n-1 \right) }{n^2}$ è maggiorata da 1. Posso affermare quindi che l'uguaglianza è maggiorata dalla seguente:
-	\[
-	1+1+\frac{1}{2!}+ \frac{1}{3!}+ \frac{1}{4!}+\ldots+ \frac{1}{n!}
-	\] 
+	      \[
+		      1+1+\frac{1}{2!}+ \frac{1}{3!}+ \frac{1}{4!}+\ldots+ \frac{1}{n!}
+	      \]
 	\item Visto che si può dimostrare per induzione che $ n! \ge 2^{n} \forall n \in  \N$ quest'ultima somma sarà a sua volta maggiorata dalla seguente:
-	\[
-	1+1+\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \ldots \frac{1}{2^n}
-	\] 
+	      \[
+		      1+1+\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \ldots \frac{1}{2^n}
+	      \]
 	\item Si può dimostrare poi per induzione che $1 + a + a^2 + a^3 + \ldots + a^{n-1} = \frac{1-a^{n}}{1-a}$, quindi nel nostro caso sappiamo che:
-	\[
-	1+1+\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \ldots \frac{1}{2^n} = 1+\frac{1-\frac{1}{2^{n}}}{1-\frac{1}{2}} = 3
-	\] 
+	      \[
+		      1+1+\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \ldots \frac{1}{2^n} = 1+\frac{1-\frac{1}{2^{n}}}{1-\frac{1}{2}} = 3
+	      \]
 	\item Quindi $a_n \le 3$
 \end{itemize}
 \bigbox{
-Ho dimostrato dunque che
-\[
-\lim_{x \to \infty} \left( 1+\frac{1}{n} \right) ^{n} = l \in \left( 2,3 \right) 
-\] 
+	Ho dimostrato dunque che
+	\[
+		\lim_{x \to \infty} \left( 1+\frac{1}{n} \right) ^{n} = l \in \left( 2,3 \right)
+	\]
 }
