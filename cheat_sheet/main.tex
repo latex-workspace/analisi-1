@@ -1,0 +1,97 @@
+%&../.preamble
+\endofdump
+%\begin{document}
+
+\author{Mattia Marini}
+\date{02.11.22}
+
+\begin{document}
+
+\section{Sviluppi taylor in 0}
+\begin{align*}
+	e^{x} &=  1 + x + \frac{x^2}{2!} + \frac{x^{3}}{3!} + \ldots & \log \left( 1+x \right) &= x - \frac{x^2}{2}+ \frac{x^3}{3}- \frac{x^{4}}{4} + \ldots \\ 
+	\sin \left( x \right) &=  x - \frac{x^3}{3!} + \frac{x^{5}}{5!}- \frac{x^{7}}{7!}+ \ldots & \cos \left( x \right) &=  1- \frac{x^2}{2!} + \frac{x^{4}}{4!} - \frac{x^{6}}{6!} \ldots\\
+	\sinh \left( x \right) &=  x + \frac{x^3}{3!} + \frac{x^{5}}{5!} + \frac{x^{7}}{7!} \ldots& \cosh \left( x \right) &=  1 + \frac{x^2}{2!} + \frac{x^{4}}{4!} + \frac{x^{6}}{6!} + \ldots \\
+	\arctan \left( x \right) &=  x - \frac{x^3}{3} + \frac{x^{5}}{5} - \frac{x^{7}}{7} \ldots & \\ \left( 1+x \right) ^{\alpha }&= 1 + \alpha  x + \frac{\alpha  \left( \alpha  -1 \right) }{2}x^2+ \ldots + \binom{\alpha }{n}x^{n} + \ldots
+\end{align*}
+
+\section{Limiti notevoli}
+	\begin{gather*}
+		\lim_{x \to 0} \frac{\sin\left( x \right) }{x} = 1 \\
+		\lim_{x \to + \infty} \left( 1+\frac{1}{x} \right) ^{x} = e
+	\end{gather*}
+
+	\begin{align*}
+		& \lim_{x \to 0} \frac{1-\cos\left( x \right) }{x^2} = \frac{1}{2} &\lim_{x \to 0} \frac{e^{x}-1}{x}=1 \\
+		& \lim_{x \to 0} \frac{\log\left( 1+x \right) }{x}=1 &\lim_{x \to \infty} \left( 1+\frac{1}{x} \right) ^{x} = e\\
+		& \lim_{x \to 0} \frac{ \tan \left( x \right) }{x}=1  & \lim_{x \to 0} \frac{\arctan \left( x \right) }{x} = 1  \\
+		& \lim_{x \to 0} \frac{\arcsin \left( x \right) }{x} = 1 & \lim_{x \to 0} \frac{a^{x}-1}{x}= \log \left( a \right) \\
+		& \lim_{x \to 0^{+}} x \log \left( x \right) =0
+	\end{align*}
+ \section{Proprietà fattoriali}
+
+\begin{itemize}
+	\item Scontate:
+	\begin{align*}
+	\binom{n}{0} &=  \frac{n!}{0!n!}= 1 &  \binom{n}{n}&=  \frac{n!}{n!0!}= 1 \\
+	\binom{n}{1} &=  \frac{n!}{1!\left( n-1 \right) !}=  \frac{n \left( n-1 \right) !}{\left( n-1 \right) }=n &  \binom{n}{n-1} &= \frac{n!}{\left( n-1 \right) 1!}= \frac{n\left( n-1 \right) !}{\left( n-1 \right) !}=n
+	\end{align*}
+	\item Simmetrica: 
+	\[
+	\binom{n}{k}= \binom{n}{n-k}
+	\] 
+	\item Generazione ricorsiva binomiale:
+	\[
+	\binom{n+1}{k+1} = \binom{n}{k} + \binom{n}{k+1}
+	\]
+\end{itemize}
+\section{Derivate elementari}
+\begin{align*}
+	&\left( \tan x \right) ' = \frac{1}{\cos ^2 x}=  1 + \left( \tan x \right) ^2 && \left( \arctan  \right) ' =  \frac{1}{1+x^2}\\
+	&\left( \arcsin \right) ' =  \frac{1}{\sqrt{1-x^2} }  &&\left( \arccos \right) ' =  -\frac{1}{\sqrt{1-x^2} }\\
+	&\left( a^{x} \right) ' =  a^{x} \cdot \log a  && \left( \log _a \left( x \right)  \right) ' = \frac{1}{x \ln \left( a \right) }
+\end{align*}
+
+\section{Formule di trigonometriche}
+\begin{align*}
+	\sin \left( \alpha  + \beta  \right) &=  \sin \left( \alpha  \right) \cos \left( \beta  \right) + \cos \left( \alpha  \right) \sin \left( \beta  \right) \\
+	\sin \left( \alpha - \beta  \right) &=  \sin \left( \alpha  \right) \cos \left( \beta  \right)  - \cos \left( \alpha  \right) \sin \left( \beta  \right)\\
+	\cos \left( \alpha  + \beta  \right)  &=  \cos \left( \alpha  \right)  \cos \left( \beta   \right) - \sin  \left( \alpha  \right) \sin \left( \beta  \right) \\
+	\cos \left( \alpha  - \beta  \right)  &=  \cos \left( \alpha  \right)  \cos \left( \beta  \right) + \sin \left( \alpha  \right) \sin  \left( \beta \right) 
+\end{align*}
+\section{Formule iperboliche}
+\begin{minipage}[t]{0.35\textwidth}
+	\begin{align*}
+		\cosh &=  \frac{e^{x} + e^{-x}}{2} \rightarrow pari\\
+		\sinh &=  \frac{e^{x} - e^{-x}}{2} \rightarrow dispari\\
+		\tanh &=  \frac{\sinh}{\cosh} \rightarrow dispari\\
+	\end{align*}
+\end{minipage}
+%
+\begin{minipage}[t]{0.65\textwidth}
+\begin{align*}
+	\sinh \left( 2 \alpha  \right) &=  2\sinh \left( \alpha  \right) \cosh \left( \alpha  \right)  \\
+	\cosh \left( 2 \alpha  \right)  &= \cosh ^2 \left( \alpha  \right)  + \sinh ^2 \left( \alpha  \right) \\
+	\sinh \left( \alpha + \beta  \right) &=  \sinh \left( \alpha  \right) \cosh \left( \beta  \right) + \sinh \left( \beta  \right) \cosh \left( \alpha  \right) \\
+	\cosh \left( \alpha  + \beta  \right)  &=  \cosh \left( \alpha  \right)  \cosh \left( \beta  \right) + \sinh\left( \alpha  \right) \sinh\left( \beta  \right)      
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\section{Angoli noti}
+\begin{center}
+  \includegraphics{Angoli noti}
+\end{center}
+\end{minipage}
+%
+\begin{minipage}[t]{0.48\textwidth}
+\section{Altro}
+\begin{align*}
+	\sum_{k=0}^{n} k &=  \frac{n\left( n+1 \right) }{2} & \sum_{k=0}^{n} k^2 &= \frac{n\left( n+1 \right) \left( 2n+1 \right) }{6} \\
+	\sum_{k=0}^{n} a^{k} &=  \frac{a^{n+1}-1}{a-1} & 2^{n} &\ge n\\
+\end{align*}
+\[
+	\left( 1+x \right) ^{n} \ge 1 + nx
+\] 
+\end{minipage}
+
+\end{document}

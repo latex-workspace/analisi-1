@@ -1,0 +1,180 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\input{../.preamble.tex}
+%\begin{document}
+
+\title{Titolo}
+\author{Mattia Marini}
+\date{16.10.22}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\listoftheorems
+\listofformulas
+\listofincomprensioni
+\listofdefs
+\newpage
+
+\section{Esercitazione 4 \textit{14 ottobre} }
+\begin{enumerate}
+	\item \[
+	s_n=\left( -1 \right) ^{n} \frac{n}{n+1}
+	\] 
+	\begin{itemize}
+		\item \underline{Non converge:} mi basta prendre due sottocsuccessioni e dimostrare che tendono a due limiti diversi
+		\item Ad esempio per ogni $n$ pari $a_n \to 1$, mentre per ogni $n$ dispari $ a_n \to -1$
+	\end{itemize}
+	\item 
+	\[
+	s_n = \cos\left( \frac{\pi}{2}\left( 2n +1 \right)  \right) n^2 - \sin \left( \frac{\pi}{2} \left( 2n +1 \right)  \right) \frac{1}{n}
+	\] 
+	\begin{itemize}
+		\item Noto che $\cos\left( \frac{\pi}{2}\left( 2n+1 \right)  \right) = \cos\left( \frac{\pi}{2} + \pi n \right) = 0 \quad \forall n \in  \N$ e che $\sin\left( \frac{\pi}{2}\left( 2n +1 \right)  \right) = \sin \left( \frac{\pi}{2} + n \pi \right)= \left( -1 \right) ^{n}$
+		\item \[ 
+		\underbrace{\cos\left( \frac{\pi}{2}\left( 2n +1 \right)  \right) n^2}_{=0} - \underbrace{\sin \left( \frac{\pi}{2} \left( 2n +1 \right)  \right) \frac{1}{n}}_{= \frac{\pm 1}{+ \infty }= 0}
+\] 
+	\item Quindi $s_n \to 0$
+	\end{itemize}
+	\item \[
+	S_n = \sqrt{n+1} - \sqrt{n} 
+	\] 
+	\begin{itemize}
+		\item Moltiplico e divido per $\sqrt{n+1} + \sqrt{n} $ 
+		\[
+		\frac{1}{\sqrt{n+1} + \sqrt{n} }
+		\] 
+		\item Ottengo $\frac{1}{+ \infty}= +\infty$
+	\end{itemize}
+	\item  \[
+	s_n = \frac{\sqrt[3]{n} \sin\left( n \right)}{n+1}
+	\] 
+	\begin{itemize}
+		\item Appuro che $-1 \le \sin\left( n \right) \le 1$ e considero 
+		\[
+		\frac{\sqrt[3]{n} }{n+1} = \frac{\sqrt[3]{n} }{n+1} \cdot \frac{\sqrt[3]{n}}{\sqrt[3]{n}} = \frac{\sqrt[3]{n} }{n+1} \cdot \frac{1}{n ^{\frac{1}{3}} n^{-\frac{1}{3}}} = \frac{1}{n^{\frac{2}{3}} n ^{-\frac{1}{3}}}
+		\] 
+		\item Il limite tende a zero. Visto che il seno è compreso fra -1 e 1 avro:
+		\[
+		s_n = \text{ numero finto } \cdot 0 \to 0
+		\] 
+	\end{itemize}
+	\item 
+	\[
+	\frac{n \sin\left( n \right) }{\sqrt{n^2 + 1} }
+	\] 
+	\begin{itemize}
+		\item Considero la seguente cosa:
+		\[
+		\frac{n}{\sqrt{n^2 +1}}= \frac{n}{\sqrt{n^2\left( 1 + \frac{1}{n^2} \right)}} = \frac{n}{n\sqrt{1+\frac{1}{n}}} = \frac{1}{\sqrt{1+\frac{1}{n^2}}} \to 1
+		\] 
+		\item Visto che il seno oscilla, e questo viene moltiplicato per $\frac{n}{\sqrt{n^2 +1} }$ che tende ad un numero finito, il limite \underline{non esiste}
+	\end{itemize}
+	\item 
+	\[
+	s_n = \frac{1}{\sqrt{n^2}} + \frac{1}{\sqrt{ n^2 +1} } + \frac{1}{\sqrt{n^2+2} } + \ldots + \frac{1}{\sqrt{n^2 + 2n} } \quad , n\ge 1
+	\] 
+	\begin{itemize}
+		\item In questo caso ho una successione che cambia il numero di elementi al variare di n quindi, nonostante ogni elemento tenda a zero, se n tende a infinito avrò un numero infinito di elementi
+		\item Visto che la radice quadrata è crescente per n positivi posso dire che ogni membro sia maggiorato dal termine $\frac{1}{\sqrt{n^2} }$:
+		\[
+		\frac{1}{\sqrt{n^2} } \ge \frac{1}{\sqrt{n^2 + 1} } \ge \ldots \ge \frac{1}{\sqrt{n^2 + 2n} }
+		\] 
+		\item Al contrario ogni termine sarà minorato dal termine $\frac{1}{\sqrt{n^2 + 2n} }$ 
+		\[
+		\frac{1}{n^2 + 2n} \le \frac{1}{\sqrt{n^2 + 2n -1} } \le \ldots \le \frac{1}{\sqrt{n^2} }
+		\] 
+		\item La successione è quindi compresa fra le due successioni composte sommando $2n+1$ volte i termini trovati ai due punti precedenti 
+		\[
+		\frac{2n+1}{\sqrt{n^2} } \ge s_n \ge \frac{2n + 1}{\sqrt{n^2 + sn} }
+		\] 
+		\item Visto che pero entrambe le successioni tendono a 2, per il confronto a 3 posso dire che $s_n \to 2$
+	\[
+		\underbrace{\frac{2n+1}{\sqrt{n^2} }}_{ \to 2} \ge s_n \ge \underbrace{\frac{2n + 1}{\sqrt{n^2 + sn} }}_{ \to 2}
+	\] 
+	\end{itemize}
+	\item \[
+	s_n = n \log \left( 1 + \frac{3}{n} \right) 
+	\] 
+	\begin{itemize}
+		\item Applico prorprietà dei logaritmi:
+		\[
+		s_n = n \log \left( 1 + \frac{3}{n} \right) = \log \left( \left( 1+\frac{3}{n} \right) ^{\frac{n}{3}3} \right) = 3\log\left( \left( 1+\frac{3}{n} \right) ^{\frac{n}{3}} \right) 
+		\] 
+		\item Ricordo il limite notevole $\left( 1+ \frac{1}{n} \right) ^{n} \to e$ e definisco $t=\frac{n}{3}$
+		\[
+		3\log\left( \left( 1+\frac{3}{n} \right) ^{\frac{n}{3}} \right) = 3\log\left( \left( 1+\frac{1}{t} \right) ^{t} \right) \to 3 \log \left( e \right) = 3
+		\] 
+	\end{itemize}
+	\item 
+	\item \[
+	s_n =
+	\begin{cases}
+		1 \quad \text{ se } n=0\\
+		1+ \sqrt{s_{n-1}}  \quad \text{ se } n \ge 1
+	\end{cases}
+	\] 
+	\begin{itemize}
+		\item 
+		i
+	\end{itemize}
+\end{enumerate}
+\section{Esercizio samu}
+\subsection{Sviluppo numeratore}
+\begin{itemize}
+	\item Sviluppo di $ e^{x} $ al terzo ordine: 
+		\[
+		1 + x + \frac{x^2}{2} + \frac{x^3}{6}
+		\] 
+	\item Sviluppo di $ e^{\sin x} $ al terzo ordine: 
+		\begin{itemize}
+			\item Sviluppo di $ \sin x $: 
+				\[
+					x - x^3 + o\left( x^3 \right) 
+				\] 
+			\item Sviluppo di $ e^{x - x^3 + o\left( x^3 \right) } $			
+		\end{itemize}
+		\[
+			 1 + \left( x-\frac{x^3}{6} \right) + \left( x-\frac{x^3}{6} \right) ^2 + \left( x-\frac{x^3}{6} \right) ^3 + o\left( x^3 \right) 
+		\] 
+	\item Sviluppo di $ e^{x}- e^{ \sin x} $: 
+	\[
+		x - x^3 + o\left( x^3 \right) - \left( 			1 + \left( x-\frac{x^3}{6} \right) + \left( x-\frac{x^3}{6} \right) ^2 + \left( x-\frac{x^3}{6} \right) ^3 + o\left( x^3 \right) 
+ \right) 
+	\] 
+		\[
+			=1 + x + \frac{x^2}{2} + \frac{x^3}{6} - (1+x +\frac{x^2}{2}+ o\left( x \right) ) = \frac{x^3}{6}+ o\left( x \right) 
+		\] 
+\end{itemize}
+\subsection{Sviluppo denominatore}
+\begin{itemize}
+	\item Sviluppo do $ \ln \left( x+1 \right)  $ al terzo ordine: 
+		\[
+			x-\frac{x^2}{2}+ \frac{x^3}{6} + o\left( x^3 \right) 
+		\] 
+	\item Sviluppo di $ \ln \left( \sin x \right)  $ al terzo ordine: 
+		\begin{itemize}
+			\item Sviluppo di $ \sin x $: 
+				\[
+					x - x^3 + o\left( x^3 \right) 
+				\] 
+			\item Sviluppo di $ \ln 1 + \left( x - x^3 + o\left( x^3 \right) \right)  $			
+				\[
+					\ln \left( 1+ \sin \left( x \right)  \right) = x - \frac{x^3}{6}- \left( x-\frac{x^3}{6} \right) ^2 + \left( x-\frac{x^3}{6} \right) ^3 + o\left( x^3 \right) 
+				\] 
+		\end{itemize}
+	\item Sviluppo di $ \ln \left( 1+x \right) - \ln \left( 1+ \sin \left( x \right)  \right)  $: 
+		\[
+					x-\frac{x^2}{2}+ \frac{x^3}{6} + o\left( x^3 \right) 
+		- \left( x - \frac{x^3}{6}- \left( x-\frac{x^3}{6} \right) ^2 + \left( x-\frac{x^3}{6} \right) ^3 + o\left( x^3 \right) \right) 
+		\] 
+		\[
+			= x - \frac{x^2}{2}+ \frac{x^3}{6}- \left( x - \frac{x^2}{2} \right) = \frac{x^3}{6}+ o\left( x^3 \right) 
+		\] 
+\end{itemize}
+\subsection{Mettendo insieme}
+Metto insieme numeratore e denominatore, raccogliendo $ x^3 $:
+\[
+ \lim_{x \to 0} \frac{x^3\left( \frac{1}{6}+\frac{o\left( x^3 \right) }{x^3} \right) }{x^3\left( \frac{1}{6}+\frac{o\left( x^3 \right) }{x^3} \right) }= 1
+\] 
+\end{document}
