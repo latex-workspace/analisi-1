@@ -53,12 +53,13 @@ NB: se venisse chiesto (come è purtroppo già accaduto) di dire quanto vale, ad
 \end{itemize}
 
 \section{Convessità}
-\definizione{Convessità/concavità sottoinsiemi}{
+\begin{definizione}{Convessità/concavità sottoinsiemi}
 	Un sottoinsieme $ A \subseteq \R$ si dice \underline{convesso }se per ogni coppia di punti $x,y \in  A$ allora
 	\[
 		\left[ x,y \right] \subseteq A
 	\]
-}
+
+\end{definizione}
 NB: ciò accade per 3 tipi di insieme:
 \begin{itemize}
 	\item $A \cong \R$
@@ -66,15 +67,18 @@ NB: ciò accade per 3 tipi di insieme:
 	\item Gli intervalli: $\left( a,b \right) \quad [a,b) \quad (a, b] \quad \left[ a,b \right] $
 \end{itemize}
 
-\definizione{Convessità geometrica}{
+\begin{definizione}{Convessità geometrica}
 	Sia $A \subseteq  \R$ convesso. Una funzione $f : A \to \R$ si dice \underline{ convessa }se per ogni coppia di punto $P, Q$ nel grafico di $f$ tutto il segmento $PQ$ sta sopra il grafico
-}
-\definizione{Convessità algebrica}{
+
+\end{definizione}
+
+\begin{definizione}{Convessità algebrica}
 	Sia $A \subseteq \R$. Una funzione $f: A \to \R$ si dice convesso se $ \forall a,b \in  A \quad \forall \lambda \in \left[ 0,1 \right] $
 	\[
 		f\left( \lambda  a + \left( 1-\lambda  \right) b \right) \le \lambda f\left( a \right)  + \left( 1-\lambda  \right) f\left( b \right)
 	\]
-}
+
+\end{definizione}
 Interpretazione geometrica:
 \begin{itemize}
 	\item la quantità $\lambda a + \left( 1- \lambda  \right) b$ con $ \lambda  \in  \left[ 0,1 \right] $ posso esprimere ogni punto compreso fra  $a$ e $b$ :
@@ -177,14 +181,15 @@ In questo caso procedo nel seguente modo:
 	      \]
 \end{itemize}
 \subsection{Teoremi integrabilità}
-\teorema{Integritabilità funzione}{
+\begin{teorema}{Integritabilità funzione}
 	I seguenti tipi di funzione sono integrabili:
 	\begin{itemize}
 		\item Tutte le funzioni \underline{monotone} (anche non continue)
 		\item Tutte le funzioni \underline{continue}
 		\item Tutte le funzione che hanno un numero finito di punti di discontinuità nei quali i limini destro e sinistro esistono
 	\end{itemize}
-}
+\end{teorema}
+
 Dimostrazione per funzioni monotone:
 \begin{itemize}
 	\item Se per un dato $\epsilon < 0 $ trovo una somma di Riemann superiore e una inferiore la cui differenza è $ < \epsilon $ sono a cavallo
@@ -211,18 +216,21 @@ Dimostrazione per funzioni monotone:
 \]
 \section{Calcolo di integrali e integrazione impropria}
 \subsection{Teoremi e definizioni}
-\definizione{Primitiva di una funzione}{
+\begin{definizione}{Primitiva di una funzione}
 	Sia $ f: \left[ a,b \right]  \to \R $ continua. Si dice \underline{primitiva} di $f$ una qualunque funzione $ F: \left[ a,b \right] \to \R$ tale che $F$ è derivabile in $ \left[ a,b \right] $ e vale
 	\[
 		F'\left( x \right) = f\left( x \right) \quad  \forall x \in  \left[ a,b \right]
 	\]
-}
-\definizione{Funzione integrale}{
+
+\end{definizione}
+
+\begin{definizione}{Funzione integrale}
 	Sia $ f: \left[ a,b \right] \to \R$ continua. Si dife funzione integrale la funzione:
 	\[
 		\Phi \left( x \right)  = \int_{a}^{x} f\left( t \right)  \; dt
 	\]
-}
+
+\end{definizione}
 NB: la funzione integrale gode delle seguenti proprietà:
 \[
 	\begin{lgathered}
@@ -230,19 +238,21 @@ NB: la funzione integrale gode delle seguenti proprietà:
 		\int_{c}^{d} f\left( x \right)  \; dx = \Phi \left( d \right) - \Phi \left( c \right)
 	\end{lgathered}
 \]
-\teorema{Teorema della media integrale}{
+\begin{teorema}{Teorema della media integrale}
 	Sia $ f: \left[ a,b \right] \to \R $ continua. Allora esiste almeno un punto $c \in  \left[ a,b \right] $ tale che:
 	\[
 		\int_{a}^{b} f\left( x \right)  \; dx = f\left( c \right) \left( b-a \right)
 	\]
-}
-\teorema{Teorema fondamentale del calcolo integrale}{
+\end{teorema}
+
+\begin{teorema}{Teorema fondamentale del calcolo integrale}
 	Sia $ f: \left[ a,b \right] \to \R $  continua. Sia $  \Phi  $ la sua funzione integrale. Allora
 	\[
 		\Phi ' \left( x \right)  = f\left( x \right) \quad \forall x \in  \left[ a,b \right]
 	\]
 	ossia $ \Phi  $ è primitiva di $ f $
-}
+\end{teorema}
+
 Dimostrazione:
 \begin{itemize}
 	\item Calcolo il rapporto incrementale di $  \Phi  $ per $ h > 0  $
@@ -558,7 +568,7 @@ Ciò risulta chiaro se osserviami i grafici delle funzioni
 		\end{axis}
 	\end{tikzpicture}
 \end{center}
-\teorema{Criterio del confronto}{
+\begin{teorema}{Criterio del confronto}
 	Sia $ f\left( x \right)  $ una funzione integranda, della quale voglio determinare l'ipotetica convergenza, su intervallo limitato o non. Sia $ g\left( x \right)  $ un infinito campione del tipo $ \frac{1}{x^{\alpha }} $. Se $ 0 \le f\left( x \right) \le g\left( x \right)  $ almeno in un intorno del problema (estremi intervallo integrazione, $ +\infty, - \infty $), allora:
 	\[
 		\text{ se }\int_{E} g\left( x \right)  \; dx \text{ converge } \Rightarrow \int_{E} f\left( x \right) \; dx \text{ converge }
@@ -566,14 +576,18 @@ Ciò risulta chiaro se osserviami i grafici delle funzioni
 	\[
 		\text{ se }\int_{E} f\left( x \right)  \; dx \text{ diverge } \Rightarrow \int_{E} g\left( x \right) \; dx \text{ diverge }
 	\]
-}
-\teorema{Teorema del confronto asintotico}{
+
+\end{teorema}
+
+\begin{teorema}{Teorema del confronto asintotico}
 	Supponiamo che $ f\left( x \right) \ge 0 $ e $ g\left( x \right) > 0 $. Allora se
 	\[
 		\lim_{x \to x_0} \frac{f\left( x \right) }{g\left( x \right) } \neq 0, \infty
 	\]
 	allora l'integrale delle due funzioni si comporta nello stesso modo (convergenza/divergenza è uguale)
-}
+
+\end{teorema}
+
 Se $ \lim_{x \to x_0} \frac{f\left( x \right) }{g\left( x \right) }  = 0 $
 \begin{itemize}
 	\item Se $ \int_{E} g\left( x \right)  \; dx $ converge allora $ \int_E f\left( x \right)  \; dx $ converge
@@ -586,14 +600,16 @@ Se $ \lim_{x \to x_0} \frac{f\left( x \right) }{g\left( x \right) }  = +\infty $
 \end{itemize}
 \subsubsection*{Assoluta integrabilità}
 Questo teorema può essere utile per applicare il teorema del confronto su funzioni che non sono sempre $ \ge 0  $ o $ \le 0 $.
-\teorema{Assoluta integrabilità}{
+
+\begin{teorema}{Assoluta integrabilità}
 	\[
 		\text{ Se }\int_{E}\left|f\left( x \right) \right| \; dx \text{ converge } \Rightarrow \int_{E} f\left( x \right)  \; dx \text{ converge }
 	\]
 	\[
 		\text{ Se } \int_{E}\left|f\left( x \right) \right| \; dx \text{ diverge } \rightarrow \text{ non posso affermare nulla }
 	\]
-}
+
+\end{teorema}
 Ad esempio:
 \[
 	\int_{0}^{+ \infty} \frac{\sin \left( x^2 \right) }{x^3} \; dx
@@ -633,13 +649,14 @@ Visto che ogni membro converge, posso affermare che $ \int_{0}^{+ \infty} \cos \
 
 \section{Equazioni differenziali}
 \subsection{Definizioni}
-\definizione{Equazione differenziale}{
+\begin{definizione}{Equazione differenziale}
 	Con il termine \underline{equazione differenziale} si intende una relazione tra una \underline{funzione incognita} e le sue derivate. Posso interpretarla come una funzione di più variabili:
 	\[
 		F\left( t, u\left( t \right) , u'\left( t \right) ,\ldots, u^{\left( k \right) }\left( t \right)  \right)=0
 	\]
 	dove $ t, u\left( t \right) ,\ldots, u^{\left( k \right) }\left( t \right)  $ sono le incognite dell'equazione differenziale
-}
+
+\end{definizione}
 La soluzione di un'equazione differenziale è un'equazione che risolve l'uguaglianza specificata
 \begin{itemize}
 	\item \textbf{Ordine}: l'ordine di un'equazione differenziale è uguale al massimo ordine di derivazione presente nell'equazione
@@ -742,28 +759,32 @@ Nota che le condizioni delle equazioni differenziali ordinarie devono essere tan
 	\end{cases}
 \]
 non sono problemi di Cauchy. Più in generale
-\definizione{Problema di Cauchy}{
+\begin{definizione}{Problema di Cauchy}
 	Data un'equazione differenziale ordinaria di ornine $ n $, un problema di Cauchy associato deve:
 	\begin{itemize}
 		\item Specificare le \underline{condizioni iniziali} in uno stesso punto
 		\item Specificare le condizioni iniziali per le derivate di ordine $ 0,1,\ldots, n-1 $
 	\end{itemize}
-}
-\teorema{Teorema di esistenza}{
+\end{definizione}
+
+\begin{teorema}{Teorema di esistenza}
 	Consideriamo il problema di Cauchy per una equazione differenziale ordinaria. Defininiamo la funzione:
 	\[
 		u^{\left( k \right) }= \Phi \left( u, u',u'',\ldots,u^{\left( k-1 \right) },t \right)
 	\]
 	Se $ \Phi   $ è continua in ogni variabile allora esiste sempre \underline{almeno una soluzione}
-}
+
+\end{teorema}
+
 la funzione $ \Phi $ è una funzione a più variabili. La sua continuità o la sua derivabilità si decreta "congelando" tutte le variabili meno che una e studiandone continuità/derivabilità
-\teorema{Teorema di unicità}{
+\begin{teorema}{Teorema di unicità}
 	Consideriamo il problema di Cauchy per una equazione differenziale ordinaria. Defininiamo la funzione:
 	\[
 		u^{\left( k \right) }= \Phi \left( u, u',u'',\ldots,u^{\left( k-1 \right) },t \right)
 	\]
 	Se $ \Phi  $ è \underline{derivabile} in tutte le variabili, allora la soluzione è \underline{unica}
-}
+
+\end{teorema}
 il cosiddetto "pennello" di Peano è un problema di Cauchy che presenta infinite soluzioni:
 \[
 	\begin{cases}
@@ -805,7 +826,7 @@ Esempio:
 Se all'edo è associato un problema di Cauchy è necessario studiare la soluzione: il dominio della soluzione varia in base al valore di $ c $ trovato. Per questa ragione devo restringere il dominio della funzione trovata.
 \textbox{Devo restringere il dominio della funzione trovata al massimo insieme di definizione che contiene il punto indicato nella condizione iniziale}
 \subsection{Tempo di vita ed esempi}
-\definizione{Tempo di vita}{
+\begin{definizione}{Tempo di vita}
 	Trovata la funzione $ u\left( t \right)  $ soluzione di un problema di Cauchy, si dice tempo di vita l'\underline{estremo superiore} dell massimo insieme di definizione contenente il punto $ t_0 $ che esprime la condizione di essistenza.
 	\begin{itemize}
 		\item Se $ T=+ \infty $ si dice che $ f\left( t \right)  $ ha \underline{esistenza globale} nel futuro
@@ -818,7 +839,8 @@ Se all'edo è associato un problema di Cauchy è necessario studiare la soluzion
 			            \]
 		      \end{itemize}
 	\end{itemize}
-}
+
+\end{definizione}
 
 \subsubsection*{Esempio Cauchy 1}
 \[
