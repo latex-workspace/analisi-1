@@ -1,0 +1,747 @@
+%&../.preamble
+\endofdump
+
+
+
+\usepackage{enumitem,amssymb}
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+\newcommand{\IM}{\operatorname{Im}}
+\newcommand{\RE}{\operatorname{Re}}
+
+\title{Esercizi analisi}
+\author{Valentino Abram}
+\date{2023}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Esercizi settimana 1}
+\begin{enumerate}
+	\item Determinare per quali valori del parametro $ a $ il polinomio è divisibile per il secondo
+	      \[
+		      P_1\left(x\right) = \left(1-a^2 \right)x^3  - \left(a-2\right)x^2  + \left(2-a\right)x + a  \quad P_2\left(x\right) = x+1
+	      \]
+	\item Fattorizzare i seguenti polinomi a coefficienti reali:
+	      \begin{align*}
+		      P\left(x\right) & = x^{4} - \left(a^2  - 1\right)x^2  - a^2 \quad a \in  \R \\
+		      P\left(x\right) & = x^{9}  + a^{9} \quad a \in  \R                          \\
+		      P\left(x\right) & = x^{6} + a^{6} \quad a \in  \R                           \\
+		      P\left(x\right) & = x^3  - 6x^2  - 2x + 7                                   \\
+		      P\left(x\right) & = 3x^{4} -1
+	      \end{align*}
+	\item Determinare, eventualmente al variare di $ m \in  \R  $ i seguenti insiemi:
+	      \begin{align*}
+		       & \left\{x \in \R : \quad  \frac{x^2  - \left(m+1\right)x + m}{x^3  +1}\ge 0 \right\} &  & \left\{x \in  \R : \quad  \frac{x+1}{x-2} > \frac{x-3}{x+3}\right\}  \\
+		       & \left\{x \in  \R : \quad \frac{\left|x-1\right|x}{x^2  + m} \le  0\right\}          &  & \left\{x \in \R : \quad \frac{\left(x+m\right)}{mx^2 } \ge 0\right\}
+	      \end{align*}
+	\item Sia $ P\left(x\right) $ un polinomio di grado $ n $. Qual è il numero massimo delle radici distinte di $ \left|P\left(x\right)\right| $? E di $ P\left(\left|x\right|\right) $?
+	\item Dimostra per induzione la formula del binomio di Newton:
+	      \[
+		      \left(a+b\right)^{n} = \sum_{i=0}^{n} \binom{n}{i}a^{n-i}b^{i}
+	      \]
+	      dove $ \binom{n}{i} = \frac{n!}{i! \left(n-i\right)!} $, $ n \ge i $ è un \underline{coefficiente binomiale} e $ n! = n\left(n-1\right)\left(n-2\right)\ldots 2, \quad 0! = 1 $
+	      \vskip3mm
+	      \bigbox{
+		      \textit{Suggerimento: nel passo induttivo effettuate la sosotiuzione $ t = k+1 $ nella sommatoria:}
+		      \[
+			      \sum_{k=0}^{n} b^{k+1} = \sum_{t=1}^{n+1} b^{t}
+		      \]
+		      \textit{Cervate di ricondurvi a due sommatorie uguali e usate la relazione $ \binom{n+1}{k} = \binom{n}{k} + \binom{n}{n-1} $}
+	      }
+	\item (Difficile) sia $ n \ge  2 $ e siano $ x_1,\ldots , x_n $ numeri reali positivi. Dimostrare che
+	      \[
+		      \text{ se } x_1,\ldots ,x_n = 1 \text{ allora } x_1 + \ldots + x_n \ge n
+	      \]
+	      \bigbox{
+		      \textit{Suggerimento: per il passo base $ n=2 $ dovere risolvere una semplice disequazione}
+		      \vskip3mm
+		      \textit{Per il passo induttivo , si supponga che}
+		      \[
+			      x_1 \ge  x_2 \ge  \ldots \ge x_{n+1}
+		      \]
+		      \textit{Cosa succede se $ x_1 <1 $? Cosa possiamo concludere ? E cosa succede di conseguenza a $ x_{n+1} $?
+			      \vskip3mm
+			      Stimate $ \left(x_1-1\right) \left(1 - x_{n+1}\right) $ ed utilizzate l'ipotesi induttiva
+		      }
+	      }
+\end{enumerate}
+\section{Esercizi settimana 2}
+\subsection{Estremo superiore e inferiore, massimo e minimo}
+\begin{enumerate}
+	\item Determinate estremo superiore ed inferiore dei seguenti insiemi, stabilendo se sono eventualmente massimo e minimo:
+	      \begin{gather*}
+		      \left\{a_n = 3 - \frac{1}{n}, n \in  \N \right\} \cap  \left(0,2\right]\\
+		      \left\{a_n = \frac{3^{n+1}}{n+1}, n \in  \N \right\}\\
+		      \left\{a_n = \frac{n^3  -1}{n-1}, n \in  \N  \setminus \left\{1\right\}\right\} \cup \left(-1,2\right)
+	      \end{gather*}
+	\item Determinate estremo superiore ed inferiore dei seguenti insiemi, stabilendo se sono eventualmente massimo e inimo:
+	      \begin{gather*}
+		      \left\{x \in  \R  : \quad \left| \cos x -1 \right| > \cos x\right\} \cap  \left[0,3 \pi \right]\\
+		      \left\{x \in  \R  : \quad \left(\frac{1}{4}\right)^{x^2  +2} \le  15\right\}   \\
+		      \left\{x \in  \R  : \quad \sqrt{2x + 4}> x-2\right\}
+	      \end{gather*}
+	\item Dimostrare, \underline{facendo uso della definizione}, che dato l'insieme
+	      \[
+		      A = \left\{\frac{n}{n+1}, n \in  \N \right\}
+	      \]
+	      vale che
+	      \[
+		      \operatorname{inf}A = \operatorname{min}A = 0 \quad \operatorname{sup}A = 1
+	      \]
+	\item Determinate estremo superiore ed inferiore del seguente insieme:
+	      \[
+		      \left\{\frac{n}{m}, n,m \in  \N : \quad 0 < m<n\right\}
+	      \]
+\end{enumerate}
+\subsection{Funzioni e le loro proprietà}
+\begin{enumerate}
+	\item Determinare i domini delle seguenti funzioni:
+	      \begin{align*}
+		       & f:x \mapsto \log \left(\sqrt{x^2  + 3}\right)                \\
+		       & f:x \mapsto \log \sin \left(\log \left(x^2  -1\right)\right) \\
+		       & f:x \mapsto \log \frac{\alpha x +1}{x^2 +3}                  \\
+		       & f:x \mapsto \log \tan \left(\log \left|x\right|\right)
+	      \end{align*}
+	\item Determinare le immagini delle seguenti funzioni:
+	      \begin{align*}
+		       & f : x \mapsto \operatorname{sign}\left(x\right)e^{x}, \text{ ove } \operatorname{sign}\left(x\right)
+		      = \begin{cases}
+			        +1 & \text{ se } x > 0 \\
+			        -1 & \text{ se x > 0 } \\
+			        0  & \text{ se } x = 0
+		        \end{cases}                                                                                \\
+		       & f: x \mapsto  x \sin \left(x\right)
+	      \end{align*}
+	\item Determinare la periodicità delle seguenti funzioni, e dire inoltre se sono pari o dispari:
+	      \begin{align*}
+		       & f : x \mapsto  e ^{ \pi  \sin \left(x\right)}      &  & f : x \mapsto \log \left(\cos \left(x\right)\right) \\
+		       & f : x \mapsto \left(\sin \left(x\right)\right)^2 x &  & f : x \mapsto \frac{x^2  + 3}{\cos x}
+	      \end{align*}
+	\item Siano $ A, B , C , D $ quattro insiemi e $ f,g,h $ tre funzioni
+	      \[
+		      A \xrightarrow{f}B \xrightarrow{g} C \xrightarrow{h}D
+	      \]
+	      Dimostrare che se $g \circ f: A \rightarrow  C $ e $ h \circ g: B \rightarrow  D $ sono entrambe biiettive allora $ f,g,h  $ sono biettive
+\end{enumerate}
+\section{Esercizi settimana 3}
+\begin{enumerate}
+	\item Sia $ x \in  \C  $. Scrivere in forma algebrica e polare i seguenti numeri complessi:
+	      \begin{itemize}
+		      \item Simmetrico di $ z $ rispetto all'origine
+		      \item Simmetrico di $ z $ rispetto all'asse immaginario
+		      \item Simmetrico di $ z $ rispetto alla bisettrice del $ I $ e $ III $ quadrante
+		      \item Simmetrico di $ z $ rispetto alla bisettrice del $ II $ e $ IV $ quadrante
+	      \end{itemize}
+	\item Rappresentare nel piano complesso le seguenti radici:
+	      \begin{align*}
+		      \sqrt[3]{2\left(i-1\right)} &  & \sqrt{[4]1 -i} &  & \sqrt[2]{i + 20}
+	      \end{align*}
+	\item Determinare la parte reale ed immaginario dei seguenti numeri complessi:
+	      \begin{align*}
+		      \left(1 + i\right)^{100} &  & \left(1 + i \right)^{ 101} &  & \left(\frac{1}{2} - \frac{\sqrt{3}}{2}i\right)^{4}
+	      \end{align*}
+	\item Determinare le soluzioni delle seguenti equazioni
+	      \begin{align*}
+		       & \overline{z} \left(\IM \left(z\right) + \RE  \left(z\right)\right) = z                   \\
+		       & \frac{8}{z \left|z\right|} = \sqrt{3} + i                                                \\
+		       & 2z \overline{z} + 2\left(z + \overline{z}\right) - 2i \left(z - \overline{z}\right) = -2 \\
+		       & 3 x^2  + 3 \overline{z}^2  + 2 z \overline{z} - 8 \left(z + \overline{z}\right) =  -4    \\
+		       & \RE  \left(z\right) + \IM \left(z\right) = z
+	      \end{align*}
+	\item Rappresentare nel piano compesso i seguenti insiemi:
+	      \begin{align*}
+		       & \begin{cases}
+			         \RE  \left(z\right) + 2 \IM \left(z\right) \ge 1 \\
+			         \left|z + i -3\right| <1
+		         \end{cases} &  & \begin{cases}
+			                          \left|\IM \left(z\right)\right| \le 2 \\
+			                          \left|z\right| = \left|z-1\right|
+		                          \end{cases} \\
+		       &
+		      \begin{cases}
+			      \left|z-1\right| \ge  \left|z-i\right| \\
+			      \left| z - 2i \right| \ge  1
+		      \end{cases}
+	      \end{align*}
+	\item Siamo $ z_1 ,\ldots , z_{n-1} \in  \C  $ le radici $ n-esime $ di un numero complesso $ w \in  \C  $, sia $ p \in  \N  $. Vale la seguente formula:
+	      \[
+		      \sum_{k=0}^{n-1} z_k^{p} = \begin{cases}
+			      nw ^{ p/n } & \text{ se $ p $ è multiplo di $ n $ } \\
+			      0           & \text{ altrimenti }
+		      \end{cases}
+	      \]
+	      \bigbox{
+		      \textit{Suggerimento: Conviene scrivere i numeri in forma polare. Il caso $ p $ multiplo di $ n $ è immediato; per il caso oppoosto, convieme ricordarsi la somma parziale di una serie geometrica di ragione $ a $:
+			      \[
+				      \sum_{k=0}^{n-1} a^{k} = \frac{a^{n} -1}{a-1}
+			      \]
+		      }
+	      }
+\end{enumerate}
+\section{Esercizi settimana 4}
+\begin{enumerate}
+	\item Determinare se le seguenti successioni convergono, ed eventualmente a quale numero reale:
+	      \begin{align*}
+		       & \left(s_n = \frac{2x^{4} - 5n}{1-n}\right)_n            &  & \left(s_n =  \frac{n! \left(n+1\right)^2 }{e^{n}\left(n^3 +3\right)}\right)_n                                        \\
+		       & \left(s_n = \sqrt{n^2  + n} -n\right)_n                 &  & \left(s_n = \frac{n!}{\left(n+1\right)! - n!}\right)_n                                                               \\
+		       & \left(s_n = \begin{cases}
+				                     \left(-1\right)^{n}   & , n \le 100 \\
+				                     \frac{n^2 }{1 + n^2 } & , n > 100
+			                     \end{cases}\right)_n                 &  & \left(s_n = \sqrt[n]{2^{n} + 3^{n}}\right)_n                                                                                \\
+		       & \left(s_n = \frac{1 + \ldots +n}{n^2 }\right)_n         &  & \left(s_n = \frac{\sin \left(n\right)}{\sqrt{n}}\right)_n                                                            \\
+		       & \left(s_n = \sqrt{n^2  + n} - \sqrt{ n^2  + 2}\right)_n &  & \underbracket[0.1ex]{\left(s_n = \sqrt[n]{\frac{1 - x^2 }{1 + x^2 }}\right)_n}_{\text{ con $ x \in  \R  $ fissato }}
+	      \end{align*}
+	\item Vale il seguente risultato:
+	      \teorema{Convergenza succesioni}{
+	      Se $ \left(b_n\right)_n $ e $ \left(a_n\right)_n $ sono tali per cui
+	      \begin{itemize}
+		      \item $ b_n >0 \quad \forall n \in  \N  $
+		      \item $ b_n \to  b , b > 0$
+		      \item $ a_n \to  a $
+	      \end{itemize}
+	      allora
+	      \[
+		      \lim_{n \to \infty} \left(b_n\right)^{a_n}= \left(\lim_{n \to \infty} b_n\right)^{\lim_{n \to \infty} a_n}
+	      \]
+	      }
+	      Determinare se le sseguenti successioni convergono, ed eventualmente a quale numero reale:
+	      \begin{align*}
+		       & \left(s_n = \left(\frac{n^{5} + 7}{5 n ^{5} - 1}\right)^{\displaystyle \sqrt[3]{n} - \sqrt[3]{n + 1}}\right)_n           \\
+		       & \left(s_n = \left(\sqrt{\frac{n^2 + 1}{n^2  -1}}\right) ^{\displaystyle \frac{n + \sin \left(n\right)}{2n + 5}}\right)_n
+	      \end{align*}
+	\item Definiamo la successione $ \left(s_n\right)_n $:
+	      \[
+		      s_n = \begin{cases}
+			      2                                       & \text{ se } n = 0   \\
+			      \frac{1}{2} s_{n-1} + \frac{1}{s_{n-1}} & \text{ se } n \ge 1
+		      \end{cases}
+	      \]
+	      Determinare se $ \left(s_n\right)_n $ converge, ed eventualmente a quale limite
+	\item Sia $ \left(a_n\right)_n $ con $ a_n \to 0$, allora $ (b_n = e^{n}a_n) $
+	      \begin{checklist}
+		      \item $ b_n $ converge per ogni scelta di $ \left(a_n\right)_n $
+		      \item  $ b_n $ è monotona crescente per ogni scelta di $ \left(a_n\right)_n $
+		      \item $ b_n \to  0 $ per qualsiasi $ \left(a_n\right)_n $
+		      \item $ \forall  a \in  \R   $ esiste $ \left(a_n\right) _n $ tale che $ b_n \to  a $
+	      \end{checklist}
+	\item Verificare, \underline{facendo uso della definizione}, che $ \left(a_n\right)_n $
+	      \[
+		      s_n = \left(-1\right)^{n} \frac{n}{n +1 }
+	      \]
+	      non converge
+	\item Definiamo la successione $ \left(f_n \right)_n $
+	      \[
+		      f_n =
+		      \begin{cases}
+			      1                  & n = 0, 1 \\
+			      f_{n-1} + g _{n-2} & n \ge  2
+		      \end{cases}
+	      \]
+	      Dimostrare che $ f_n $ diverge a $ + \infty  $
+	\item A partire da $ \left(f_n\right)_n $, definiamo la successione $ \left(l_n\right)_n $
+	      \[
+		      l_n = \frac{f_n}{f_{n-1}} \quad n \ge 1
+	      \]
+	      Dimostrare che $ l_n $ converge a $ l \in  \R  $, e determinare $ l $
+	      \bigbox{
+		      \textit{(Suggerimento): Se si suppone che $ l_n \to  l $, rislvendo un'equazione di punto fisso simile a quella vista a lezione (ricordarsi che $ f_n = f_{n.1} + f_{n-2} $!) otteniamo il valore di $ l $.
+			      \vskip3mm
+			      A questo punto possiamo verificare usando la definizione che effettivamente $ l_n \to  l $. A questo scopo, è utile trova una stima "rivorsiva" per $ \left| l_1- l\right| $ , ossia }
+		      \[
+			      \left|l_n - l\right| \le  \text{ (qualcosa che dipende da $ l_{n-1} $) }
+		      \]
+		      \textit{usando la monotonia di $ f_n$ ($ \left(l_n \ge  1 \forall n\right) $) !} e la regola rocorsiva per $ l_n $. usando poi che $ \frac{1}{l} <1  $ e che $ a^{n} \to  0 $ se $ a < 1 $ si conclude
+	      }
+\end{enumerate}
+\section{Esercizi settimana 5}
+\subsection{Limiti di funzioni}
+\begin{enumerate}
+	\item Calcolare, se esistono i seguenti limiti:
+	      \begin{align*}
+		       & \lim_{x \to \infty} \sqrt{3x^2  + 2x + 1} - \sqrt{ 3x^2  +5x}                                       &  & \lim_{x \to \infty} x \sin \left(x\right)                                                                               \\
+		       & \lim_{x \to 0} \frac{\sinh \left(x\right)}{x}                                                       &  & \lim_{x \to 0} \frac{\sin \left(e^{x} -1\right)}{\arctan\left(3x\right)}                                                \\
+		       & \lim_{x \to \infty} \sqrt[4]{x + 3} - \sqrt[4]{x -2}                                                &  & \lim_{x \to 0^{+}} x \frac{-1}{1 - \log \left(x\right)}                                                                 \\
+		       & \lim_{x \to 1} \arctan \left(\frac{1}{x-1}\right)                                                   &  & \lim_{x \to \infty} \left(\frac{1}{\log \left(x+3\right)}\right)^{x+3}                                                  \\
+		       & \lim_{x \to -\infty } \frac{\sqrt{x^2  +1} -x}{x + \sqrt{ 1 -x}}                                    &  & \lim_{x \to 0} \frac{1- \cos \left(e^{2x }-1\right)}{\sin \left(\log \left(1+\sqrt{\cos \left(x \right)}\right)\right)} \\
+		       & \lim_{x \to e} \frac{\log \left(x\right) -1}{x-e}                                                   &  & \lim_{x \to 0}  \frac{\left|x\right|\left(2 - x^2 +x\right)}{x}                                                         \\
+		       & \lim_{x \to \infty} \frac{\sqrt{x^2 +1}}{x} \sin \left(x\right)                                     &  & \lim_{x \to \infty} \left(\frac{1}{3}\right)^{\frac{x^2  + 1}{\sqrt{x}}}                                                \\
+		       & \lim_{x \to \frac{-1}{2}} \frac{2x + 1}{1 - \sqrt{8x^2  -1}}                                        &  & \lim_{x \to \infty} \left(\frac{3x + 2}{3x + 1}\right)^{x}                                                              \\
+		       & \lim_{x \to \frac{-\pi}{4}} \frac{1 + \operatorname{cotan} \left(x\right)}{1 + \tan \left(x\right)} &  & \lim_{x \to \infty} \left(\frac{1}{x}\right)^{x}                                                                        \\
+		       & \lim_{x \to 0} \frac{1 - \cos \left(x^3 \right)}{x^2  \left(\sqrt{1 + x} -1\right)}                 &  & \lim_{x \to 0} \left(1 + \tan \left(x\right)\right)^{ \operatorname{cotan}\left(x\right)}
+	      \end{align*}
+	\item Calcolare, se esistono i seguenti limiti al variare del parametro $ \alpha  \in  \R  $:
+	      \begin{align*}
+		       & \lim_{x \to \infty} \left(\frac{3 + x^{\alpha }}{2 + x}\right)^{x}             &  & \lim_{x \to 0} \frac{x^3  - 3 \sin \left(x^{\alpha }\right)}{\sqrt{1 + 4x^3 } -1}                       \\
+		       & \lim_{x \to 0} \frac{1-\cos \left(2x\right)}{\log \left(1+ x^{\alpha }\right)} &  & \lim_{x \to 0^{-}} \frac{\arctan \left(x^2  + x^{\alpha }\right)}{x^3}                                  \\
+		       & \lim_{x \to \infty} x\left(\alpha  + \sin  \left(x\right)\right)               &  & \lim_{x \to 0^{+}} \frac{\log  \left(x^{\alpha } + e^3 \right) - 3}{1 - \cos  \left(\sqrt[3]{x}\right)}
+	      \end{align*}
+\end{enumerate}
+\subsection{Continuità}
+\begin{enumerate}
+	\item Stabilire se le seguenti funzioni, inizialmente definite sul proprio naturale insieme di definizione, si possano estendere a funzioni continue su tutto $ \R  $:
+	      \begin{align*}
+		      f\left(x\right) = \frac{x}{\left|x\right|} &  & f\left(x\right) = \sin \left(\pi \frac{x}{\left|x\right|}\right) &  & f\left(x\right) = \frac{1}{1 + x + \frac{x}{\left|x\right|}}
+	      \end{align*}
+	\item Determinare per quali valori del parametro $ \alpha  in \R  $ le seguenti funzioni definite a tratti sono continue
+	      \begin{align*}
+		       &
+		      f\left(x\right) = \begin{cases}
+			                        \frac{x+2}{x-3} & x \le 1 \\
+			                        -3x + \alpha    & x >1
+		                        \end{cases}
+		       &   &
+		      f(x) = \begin{cases}
+			             \log \left(2x + \alpha \right) & \frac{-\alpha}{2} < x < 1 \\
+			             \arcsin \left(1 - x^2 \right)  & 1 \le  x \le  \sqrt{2}
+		             \end{cases}                   \\
+		       &
+		      f\left(x\right) = \begin{cases}
+			                        e^{\frac{\alpha^2 -4}{x}} + 1          & x > 0    \\
+			                        \cos \left(x\right) + \frac{\alpha}{2} & x \le  0
+		                        \end{cases}
+		       &   & f\left(x\right) = \begin{cases}
+			                               \sqrt{x^3  + 4}                                 & x \le  0 \\
+			                               \left(x - \alpha \right)^2  - \frac{1}{\alpha } & x > 0
+		                               \end{cases}
+	      \end{align*}
+	\item Una funzione $ f: \R  \to  \R  $ è detta addittiva se
+	      \[
+		      f\left(x + 4\right) = f\left(x\right) + f\left(y\right) \quad \forall  x , y \in  \R
+	      \]
+	      Dimostrare che se $ f $ è monotona crescente e addittiva, allora
+	      \[
+		      f\left(x\right) = x f\left(1\right) \quad \forall  x \in  \R
+	      \]
+	      \bigbox{
+		      \textit{(Suggerimento): innanzitutto, sudiate il comportamento di $ f $ in 0. Dopodiche, passate allo studio di $ f\left(n\right), n \in  \N  $ e $ f \left(z\right) , z \in  \Z $.
+			      \vskip3mm
+			      Cosa succede se considerate $ z f\left(z\right), z \in  \Z  $? Cosa si può concludere per $ f\left(q\right), q \in  \Q  $?
+			      \vskip3mm
+			      Dimostrare che $ f $ è continua in $ 0 $ tramite le successioni, per addittiviò concludete che $ f  $ è continua ovunque. A questo punto concludete ricondando che $ \forall  x \in  \R  \exists  \left(q_n\right)_n, \left\{q_n: n \in  \N \right\} \subseteq \Q $ tale che $ q_n \to  x $}
+	      }
+	\item Diciamo che $ f : \R  \to  \R  $ è moltiplicativa se
+	      \[
+		      f\left(xy\right) = f\left(x\right) f\left(y\right) \quad  \forall  x,y \in  \R
+	      \]
+	      Dimostrare che se $ f: \R  \to  \R  $ è additiva e moltiplicativa, allora $ f\left(x\right) = 0 \quad \forall x \in  \R  $ oppure
+	      \[
+		      f\left(x\right) = x \quad \forall  x \in  \R
+	      \]
+	      \bigbox{
+		      \textit{(Suggerimento): cercare di ricondurvi all'esercizio prederente, dimostrando che se $ f $ è additiva e moltiplicativa, allora $ f  $ è monotona. Per farlo, procedete valutando il comportamento di $ f $ in 0.
+			      \vskip3mm
+			      Determinate quindi il legame fra $ F \left(x\right) $ e $ f(-x) $, dopodichè valutate il comportamento di $ f\left(x^2 \right) $.
+			      \vskip3mm
+			      Ricordando che $ x^2  : R^{+} \to  \R ^{+} $ è suriettiva e iniettiva, cosa possiamo dire di $ f\left(x\right)  $ per $ x \ge 0 $? Se $ x \ge  y $, allora $ z-y \ge  0 $, usate i risultati precedenti per concludere che $ f $ è monotona crescente. Infine valutato $ f $ in 1
+		      }
+	      }
+\end{enumerate}
+\section{Esercizi settimana 6}
+\begin{enumerate}
+	\item Calcolare le derivate delle seguenti funzioni, definite nel loro naturale dominio di definizione:
+	      \begin{align*}
+		       & f\left(x\right) = \frac{1}{1 - x^2 }                                                              &  & f\left(x\right) = \sum_{k=0}^{n} \frac{x^{2k }}{k +1}                                                \\
+		       & f\left(x\right) = \sin \left(e^{x}\right)e^{\cos \left(x\right)}                                  &  & f\left(x\right) = \sqrt{x+ \sqrt{x}}                                                                 \\
+		       & f\left(x\right) = x ^{-1}\log  \left(x\right)                                                     &  & f\left(x\right) = \left(x  \beta \right)\left(x + \beta \right)x^{-n}, \quad  \alpha ,\beta  \in  \R \\
+		       & f\left(x\right) = \arcsin \left(x\right) \arccos \left(x\right)                                   &  & f\left(x\right) = \cosh \left(\sinh \left(x\right)\right)                                            \\
+		       & f\left(x\right) = \log \left(\sqrt{\frac{1 + \cos \left(\right)}{1 - \cos \left(x\right)}}\right) &  & f\left(x\right) = \log \left(\log \left(x\right)\right)                                              \\
+	      \end{align*}
+	\item Determinare dove le seguenti funzioni sono derivabili:
+	      \begin{align*}
+		       & f\left(x\right) = \sqrt{ x + \left|x\right|^3  + 1} &  & f\left(x\right) = \cosh \left|x\right|
+	      \end{align*}
+	\item Determinare la retta tangente al grafico di $ f\left(x\right) $ passante nel punto $ x_0, y_0 $ indicato:
+	      \begin{align*}
+		       & f\left(x\right) = e^{\cos \left(x\right)}               &  & \left(\frac{\pi}{2}, 1\right)                                                                               \\
+		       & f\left(x\right) = \log \left(\tan \left(x\right)\right) &  & \left(\frac{\pi}{4}, 0\right)                                                                               \\
+		       & f\left(x\right) = e^{\arctan \left(x\right)}            &  & \left(1, e^{\frac{\pi}{4}}\right)                                                                           \\
+		       & f\left(x\right) = 2^{x}                                 &  & \left(0,0 \right)\rightarrow \text{ !! Il punto $ \left(0,0\right) $ non appartiene al grafico di $ f $!! }
+	      \end{align*}
+	\item Determinare la retta tangente al grafico di $ f ^{-1}\left(x\right) $ passante per il punto di $ \operatorname{Graph}\left(f ^{-1}\right) $ indicato
+	      \begin{align*}
+		       & f\left(x\right) = \log \left(\frac{x}{e}\right) + x &  & \left(e,e\right)        \\
+		       & f\left(x\right) = \log \left(x\right) + \sqrt{ x}   &  & \left(2+e , e^2 \right) \\
+		       & f\left(x\right) = e^{x} + x^2                       &  & \left(e+1, 1\right)     \\
+	      \end{align*}
+	\item Determinare $ \alpha , \beta  \in  \R  $ ed eventualmente $ \gamma, \delta \in  \R  $ tali che $ f $ sia derivabile (nel naturale dominio di definizione):
+	      \begin{align*}
+		       & f\left(x\right) = \begin{cases}
+			                           e^{\alpha x}                         & x < 0    \\
+			                           \sqrt{1 + \sin \left(\beta x\right)} & x \ge  0
+		                           \end{cases} &   & f\left(x\right) =
+		      \begin{cases}
+			      \log \left|x - \alpha \right| & x <0    \\
+			      \beta x - \sin \left(x\right) & x \ge 0
+		      \end{cases}                              \\
+		       & f\left(x\right) =
+		      \begin{cases}
+			      \cos ^2 \left(x + \alpha \right) & x < 0  \\
+			      \sqrt{ 1 + \beta x^2 }           & \ge  0
+		      \end{cases}
+		       &                                                     &
+		      f\left(x\right)=
+		      \begin{cases}
+			      0                                                 & x \le  0      \\
+			      \alpha  x^3  + \beta  x ^2  +  \gamma  x + \delta & 0  < x \le  1 \\
+			      x                                                 & x \ge  1
+		      \end{cases}
+	      \end{align*}
+	\item Calcolare, se possibile, i seguenti limiti con il teorema di de l'Hôpital
+	      \begin{align*}
+		       & \lim_{x \to 0^{+}} ^{\sin \left(x\right)}                                                    &  & \lim_{x \to 0} x \log \left(\frac{1}{x^2 }\right)                                  \\
+		       & \lim_{x \to \infty} \frac{x + \sin \left(x\right)}{x + \cos \left(x\right)}                  &  & \lim_{x \to \infty} \frac{x + \sin \left(x\right)}{x + \log \left(x\right)}        \\
+		       & \lim_{x \to \infty} \frac{3x }{\log \left(1 + x^2 \right)}                                   &  & \lim_{x \to 0} \left(\frac{1}{x} - \frac{1}{\sin \left(x\right)}\right)            \\
+		       & \lim_{x \to 0}  \frac{ e^{x} + 2x^2  -1}{\cos \left(\frac{\pi}{2}\cos \left(x\right)\right)} &  & \lim_{x \to \frac{\pi}{2}} \left(\tan \left(x\right)\right)^{\tan \left(2x\right)}
+	      \end{align*}
+	\item Determinate i primi termini (decidete voi dove fermarvi, ma andate avanti almeno fino al quarto ordine) dello sviluppo di Taylor centrato in 0 delle seguenti funzioni:
+	      \begin{align*}
+		       & f\left(x\right) = 2\arctan \left(\sin \left(x\right)\right) - \sin \left(2x \right)                  \\
+		       & f\left(x\right) = \sin \left(\log \left(1 +x\right)\right) + x \log \left(\cos \left(x\right)\right) \\
+		       & f\left(x\right) = \sinh \left(x\right) - x \cosh \left(x\right)                                      \\
+		       & f\left(x\right) = x^2  \log \left(1 + \sin \left(x\right)\right)                                     \\
+		       & f\left(x\right) = \log \left(\sqrt[4]{\frac{1 + x^2 }{1 - x^2 }}\right)
+	      \end{align*}
+	      in seguito, determinate i valori di $ f'\left(0\right), f''\left(0\right), f^{\left(3\right)} \left(0\right), f^{\left(4\right)} \left(0\right) $ delle funzioni
+	\item Risolvere i seguenti limiti utilizzando Taylor:
+	      \begin{align*}
+		       & \lim_{x \to 0} \frac{e^{1 - \cos \left(x\right)} - 2x \sin \left(x\right) -1}{\sqrt{1 + 9x^{4}}-1}                         \\
+		       & \lim_{x \to 0} \frac{e^{3x } + e ^{ -3x } - 3cos\left(2x \right)}{ 2 \log \left(1 - 2x \right) - \log \left(1 - 4x\right)} \\
+		       & \lim_{x \to 0}  \left(\frac{\sin\left(x\right)}{x}\right)^{\frac{1}{x \sin \left(x\right)}}                                \\
+		       & \lim_{x \to 0} \frac{\left(\sqrt{e}\right)^{\sin \left(x\right)} - \cos  \sqrt{x} - x}{ \log ^2  \left(1 + x\right)}       \\
+		       & \lim_{x \to 0}  \frac{ \left(\left(1 - x\right) ^{-1} + e ^{x}\right)^2  - 4 e ^{ 2x } - 3x^2 }{x^3 }
+	      \end{align*}
+\end{enumerate}
+\section{Esercizi settimana 7}
+\begin{enumerate}
+	\item  Studiare l'andamento delle seguenti funzioni e disegnarne il grafico:
+	      \begin{align*}
+		                                                                            & f\left(x\right) = \frac{2x^2  + 4x + 11}{x^2  + 2x - 8} &                                       & f\left(x\right) = \frac{\cos \left(x\right)}{ \sin \left(x\right) -1} \\
+		      f\left(x\right) = \sqrt[3]{\left(x^2 - 5x + 6\right)^2 }              &                                                         & f\left(x\right) = \sqrt{1 + e^{x}}                                                                            \\
+		      f\left(x\right) = \log \left|1 - \frac{1}{\log \left|x\right|}\right| &                                                         & f\left(x\right) = \frac{e^{x}}{2x -1}
+	      \end{align*}
+	\item Determinare per quali valori di $ k \in  \R  $ la funzione polinomiale
+	      \[
+		      f\left(x\right) = x^3  - 6x^2  + 9x + k
+	      \]
+	      ammette una sola radice
+	\item Calcolare il volume massimo e la soperficie laterale massima si un cilindro ciroclare retto iscritto nella sfera di raggio unitario $ \mathbb{S}^2  $
+	\item Dato $ a \in  \R  $, sia definita $ g_a \left(x\right) = \left(x-a\right)e ^{-x^2 } $. Determinare, in funzione di $ a $ se esistono punti di minimo/massimo locali e globali $ \R ^{+} $, ed eventualmente trovarli
+	\item Se dovere calcolare $ \cos \left(1\right) $ con le cifre decimali esatte, usando lo sviluppo di Taylor, quanti termini è necessario considerare?
+	\item Calcolare $ \log \left(48\right) $ alla seconda cifra decimale, usando carta e penna (ed eventualmente la calcolatrice)
+	      \bigbox{
+		      \textit{(Suggerimento): ricordare che lo sviluppo di Taylor con resto di Lagrange per $ \log \left(1+x\right) $ è dato da
+			      \[
+				      \log \left(1+x\right) = \sum_{k=1}^{n} \left(-1\right)^{k-1} \frac{x^{k}}{k} + \left(-1\right)^{n} \frac{\left(1 + \delta \right)^{-n +1}}{n+1} x^{n+1}
+			      \]
+			      Pertanto l'errore cresce molto velocemente se ci allontaniamo da $ x=1 $, $ c $ cala molto lentamente per $ x=1 $. Pertanto provate a scrivere $ \log \left(48\right) $ come somma di termini più piccoli, per esempio $ \log \left(1 - \frac{1}{2}\right) $
+		      }
+	      }
+	\item Sia $ f : \left[a,b\right] \rightarrow \R  $ differenziabile due volte in $ \left[a,b\right] $ (ossia è differenziabile due volte su di un intervallo aperto contenente $ \left[a,b\right] $) e tale che:
+	      \begin{align*}
+		       & f\left(a\right) < 0, \quad f\left(b\right) > 0                     \\
+		       & f'\left(x\right) \ge d > 0  \quad  \forall  x \in \left[a,b\right] \\
+		       & 0 \le  f''(x) \le \mu \quad \forall  x \in \left[a,b\right]        \\
+	      \end{align*}
+	      \begin{enumerate}
+		      \item Dimostrare che esiste un unico punto $ \xi \in  \left(a,b\right) $ tale che $ f\left(\xi  \right)= 0 $
+		      \item Dato un generico $ x_1 \in  \left(\xi  ,b\right) $, definiamo per ricorsione
+		            \[
+			            x_{n+1} = x_n - \frac{f\left(x_n\right)}{f'\left(x_n\right)}
+		            \]
+		            Che significato geometrico ha il punto $ x_{n+1} $?
+		      \item Dimostrare che $ \lim_{n \to \infty} x_n = \xi  $
+		      \item Mostrare che vale la seguente stima:
+		            \[
+			            0 \le  x_{n +1} - \xi \le  \frac{2d }{\mu } \left(\frac{\mu}{2d } \left(x_1 - \xi \right)\right)^{2n}
+		            \]
+	      \end{enumerate}
+	      \bigbox{
+		      \textit{(Sugerimento): per il punto (a) procedere come fatto a lezione nell'esercizio sul teorema di Rolle.
+			      \vskip3mm
+			      Per il punto (d), ricodate che la retta tangente al grafico di $ f $ in $ \left(x_0, f\left(x_0\right)\right) $ è data da
+			      \[
+				      y = f'\left(x'\right) \left(x-x_0\right) + f\left(x_0\right)
+			      \]
+			      Per il punto (3), povate che la successione $ \left(x_n\right)_n $ è monotona decrescente e che è limitata inferiormente. Per fare questo, operate così facendo: $ x_1 > \xi  $ e quindi $ f\left(x_1\right) > 0 $ per costruzione. A questo punto $ x_2 > x_1 $ e applicando il teorema del valor medio otteniamo:
+			      \[
+				      f\left(x_2\right) = f\left(x_1\right) - f'\left(t_2\right) \left(x_1-x_2\right)\quad t_2 \in  \left(x_2,x_1\right)
+			      \]
+			      Per la terza ipotesi $ -f' \left(t_2\right) \ge  f' \left(x_1\right) $ (spiega!) e quindi :
+			      \[
+				      f\left(x_2 \right)\ge  f\left(x_1\right) - f'\left(x_1\right)\left(x_1-x_2\right) = f'\left(x_1\right)\left(\frac{f\left(x_1\right)}{f'\left(x_1\right)} - x_1 + x_2\right) = 0
+			      \]
+			      Poiché $ f $ è monotona crescente (perché?) allora $ x_2 \ge  \xi  $. Cosa succede se $ x_2 = \xi  $? Se invece $ x_2 > \xi  $, si può proseguire come prima per il passo induttivo
+			      \vskip3mm
+			      Poiché $ \left(x_n\right)_n $ converge, si può determinare il limite con brdicie di punto fisso.
+			      \vskip3mm
+			      Per la stima, utilizzare il teorema di Taylor on resto di Lagrange per stimare $ x_{n+1} - \xi  $ e utilizzare (b), (c) per stimare il coefficiente di $ \left(x_n - \xi \right)$. Infine procedere per ricorsione
+		      }
+	      }
+	      \bigbox{
+		      Questo metodo è un metodo numeri per il calcolo degli zeri di funzione, chiamato \underline{metodo di Newton}. E' estremamente veloce nel convergere alla radice (invere il metodo di bisezione e molto lento, ad ongi passaggio fissate una cifra binaria!)
+	      }
+\end{enumerate}
+\section{Esercizi settimana 8}
+\begin{enumerate}
+	\item Determinare le seguenti primitive usando il teorema  del cambiamento di variabile:
+	      \begin{align*}
+		       & \int \frac{1}{x \log \left(x\right)} \; dx        &  & \int x s\sqrt{x+ 1}\; dx                                                  \\
+		       & \int e^{x^2 } \; dx                               &  & \int \frac{\log \left(x + \sqrt{ 1 + x^2 }\right)}{\sqrt{ 1 + x^2 }}\; dx \\
+		       & \int x\sqrt{1 + x^2}   \; dx                      &  & \int \sqrt{e^{x} - 1} \; dx                                               \\
+		       & \int \tan \left(x\right) \; dx                    &  & \int \sqrt{\frac{1 + x}{1 -x}} \; dx                                      \\
+		       & \int \frac{1}{\sqrt{x}}\frac{1}{\sqrt{1-x}} \; dx &  & \int \sqrt{\frac{1-x}{1+x}}\; dx                                          \\
+		       & \int \frac{1}{e^{x} + e^{ -x}} \; dx              &  &
+	      \end{align*}
+	\item Determinare le seguenti primitive usando l'integrazione per parti:
+	      \begin{align*}
+		       & \int x \sin \left(x\right)\; dx             &  & \int \left(\log \left(x\right)\right)^2 \; dx       \\
+		       & \int x e^{x} \; dx                          &  & \int \arcsin \left(x\right) \; dx                   \\
+		       & \int x^2  \cos \left(x\right)\; dx          &  & \int \log \left(\sqrt{x+1} - \sqrt{x-1}\right)\; dx \\
+		       & \int x \arctan\left(x\right)\; dx           &  & \int \frac{x}{\cos  ^2 \left(x\right)} \; dx        \\
+		       & \int \log \left(\frac{x+1}{x-1}\right)\; dx &  & \int x^3  e ^{-x}\; dx                              \\
+		       & \int e ^{x} \cos \left(x\right)\; dx        &  & \int \cos ^2 \left(x\right)\; dx                    \\
+		       & \int \frac{\log \left(x\right)}{x^2 }\; dx  &  & \int e^{x} \sin \left(x\right)\; dx                 \\
+		       & \int  \frac{x \sqrt{x}}{1 +x}\; dx          &  &
+	      \end{align*}
+	\item Determinare le seguenti primitive di funzioni razioni
+	      \begin{align*}
+		       & \int \frac{1}{x^2  - x - 2}\; dx      &  & \int \frac{1}{4x^2  - 4x + 1}\; dx                       \\
+		       & \int \frac{2x + 1}{x^2 - 3x + 2}\; dx &  & \int \frac{2x + 1}{9x + 4}\; dx                          \\
+		       & \int \frac{x-1}{x+1}\; dx             &  & \int \frac{4 + x^3 }{x^2  - 1} \; dx                     \\
+		       & \int \frac{9}{9 + 4x^2 }\; dx         &  & \int \frac{x^2  - 1}{x^3 \left(2x^2  + 1\right)}\; dx    \\
+		       & \int \frac{1}{x^2 + 2x - 3}\; dx      &  & \int \frac{1}{\sqrt{x} -1}\; dx                          \\
+		       & \int \frac{1}{4x^2 + 12x + 9}\; dx    &  & \int \frac{1}{6 \sqrt{x} \left(1 + \sqrt{x}\right)}\; dx \\
+		       & \int \frac{1}{x^2  - 5x + 4}\; dx     &  & \int \frac{2x +  1}{x^2  + x + 1} \; dx
+	      \end{align*}
+	      i
+\end{enumerate}
+\section{Esercizi settimana 9}
+\begin{enumerate}
+	\item Data la funzione
+	      \[
+		      f\left(x\right) = \frac{1}{1 + \sqrt{1-x}}
+	      \]
+	      determinare il dominio di definizione $ D_F $ di
+	      \[
+		      F\left(x\right) = \int_{0}^{x} f\left(t\right) \; dt + 1
+	      \]
+	      Dimostrare che $ F $  è invertibile su $ D_F $ e calcolare
+	      \[
+		      \left(\frac{d}{dx} F ^{-1}\right)\left(1\right)
+	      \]
+	\item Calcolare gli sviluppi di Taylor delle seguenti funzioni (almeni i primi 3 termini)
+	      \begin{align*}
+		       & F\left(x\right) = \int_{0}^{x}  \sinh \left(t\right) + \frac{t^2 }{2} - \sin \left(\frac{t^2 }{2}\right) \; dt &  & \text{ in } x_0 = 0 \\
+		       & F\left(x\right) = \int_{0}^{x}  \left(t-1\right)^2  - \sin \left(\pi  t\right) \; dt                           &  & \text{ in } x_0 = 1 \\
+		       & F\left(x\right) = \int_{0}^{x^2  -1} e^{-t^2 } \; dt                                                           &  & \text{ in } x_0 = 1 \\
+		       & F\left(x\right) = \int_{0}^{x} t \cosh \left(t\right) - \sinh \left(t\right) \; dt                             &  & \text{ in } x_0 = 0
+	      \end{align*}
+	\item Calcolare i seguenti limiti in funzione del parametro reale $ \alpha  $, usando il teorema di de l'Hôpital:
+	      \begin{align*}
+		       & \lim_{x \to 0^{+}} \frac{\int_{0}^{x} t^2 + \sin \left(\pi t\right) \; dt}{x^{\alpha }}                                                                             \\
+		       & \lim_{x \to 0^{+}} \frac{\int_{0}^{x} \left(\frac{\sin \left(2t \right)}{t} + \frac{t^2 }{3} - 2 \cosh\left(t\right)\right) \; dt}{\int_{0}^{x} t ^{\alpha } \; dt} \\
+		       & \lim_{x \to 0^{+}} \frac{\int_{0}^{1-\cos \left(x\right)} te^{t ^{4}} \; dt}{x^{\alpha }}
+	      \end{align*}
+	\item Calcola i seguenti limiti sviluppando opportunamente la funzione integranda con Taylor:
+	      \begin{align*}
+		      \lim_{x \to 0^{+}} \int_{1}^{e} \frac{t^2 }{\sqrt[3]{x + t ^3 }} \; dt &  & \underbracket[0.1ex]{\lim_{x \to 0^{+}} \int_{0}^{\frac{\pi}{2}} \cos \left(xt\right) \; dt}_{\text{ verificare anche con espressione esplicita }} &  & \underbracket[0.1ex]{\lim_{x \to 0^{+}} \frac{1}{x} \int_{1}^{2} \frac{\log \left(\left(1 + x\right)^{t}\right)}{\sqrt{ t + x^2 }} \; dt}_{\text{ verificare anche con espressione esplicita }}
+	      \end{align*}
+	\item Calcolare i seguenti integrali:
+	      \begin{align*}
+		       & \int_{0}^{\frac{\pi}{4}} \tan \left(x\right) \; dx               &  & \int_{0 }^{3 }\frac{2 x^2  - 3x + 1}{x - 4} \; dx           \\
+		       & \int_{0}^{1} \frac{\arctan\left(x\right)}{1 + x^2 } \; dx        &  & \int_{0}^{1} \frac{1 + e^{2x }}{1 + e^{x}} \; dx            \\
+		       & \int_{1}^{2}  \frac{\log \left(x^2 \right)}{x} \; dx             &  & \int_{0}^{ \log 10} x^2  e^{x} \; dx                        \\
+		       & \int_{0}^{1} \frac{x-1}{x^2  -4} \; dx                           &  & \int_{2}^{3} x^3  \left(\log \left(x\right)\right)^2  \; dx \\
+		       & \int_{0}^{\frac{\pi}{2}} \frac{1}{\sin \left(x\right) + 2} \; dx &  & \int_{-1}^{1} x^{5}e^{ - x^2 } \; dx
+	      \end{align*}
+\end{enumerate}
+\section{Esercizi settimana 10}
+\begin{enumerate}
+	\item Determinare se i seguenti integrali impropri esistono o meno:
+	      \begin{align*}
+		       & \int_{-\infty }^{\infty } \frac{1}{1 + x^2 } \; dx                           &  & \int_{0}^{1}  \frac{1 + \cos \left(x\right)}{\left(1 + x^3 \right)^{\frac{1}{4}}} \; dx \\
+		       & \int_{4}^{\infty } \frac{3}{1+ x^2 } \; dx                                   &  & \int_{3}^{\infty } \frac{e^{-x}}{\sin \left(\frac{1}{x}\right)} \; dx                   \\
+		       & \int_{0}^{1} \frac{1}{\sqrt{1 -x^2 }} \; dx                                  &  & \int_{0}^{\frac{1}{4}} \frac{1}{\sqrt{x} \sqrt{2x +1}} \; dx                            \\
+		       & \int_{0}^{\pi } \frac{\cos \left(x\right)}{\sqrt{\sin \left(x\right)}} \; dx &  & \int_{-1}^{1} \frac{1}{xe^{x}} \; dx
+	      \end{align*}
+	\item Calcolare i seguenti integrali impropri:
+	      \begin{align*}
+		       & \int_{2}^{+\infty } \frac{1}{x \log ^3  \left(x\right)} \; dx        &  & \int_{\frac{1}{2}}^{+\infty } \frac{1}{\sqrt{2x }\left(2x +1\right)} \; dx                       \\
+		       & \int_{-1}^{1} \frac{\sqrt{\left|x\right|}}{x^2  - 2x} \; dx          &  & \int_{6}^{+ \infty } \frac{1}{\left(x-2\right)\sqrt{\left|x-3\right|}} \; dx                     \\
+		       & \int_{0}^{+\infty } \frac{\arctan\left(x\right)}{1 + x^2 } \; dx     &  & \int_{0}^{+ \infty } \frac{9x + 8}{\left(x+2\right) \left(x^2  + 1\right)} \; dx                 \\
+		       & \int_{-1}^{1} \frac{1}{\sqrt{\left|x\right|} \left(x-4\right)} \; dx &  & \int_{0}^{+\infty } \left(x^3  \left(8 + x^{4}\right)^{-\frac{5}{3}} + 3x e ^{ - x}\right) \; dx
+	      \end{align*}
+	\item Determinare i valori di $ \alpha, \beta \in  \R  $ tali per cui i seguenti integrali impropri esistono:
+	      \begin{align*}
+		       & \int_{0}^{+ \infty } \left(x + 2\right)^{ \frac{\alpha}{2}} \sin \left(\frac{1}{\left(x+3\right)^{2 \beta }}\right) \; dx                         &  & \int_{1}^{+\infty } \left(\frac{x^2 }{x^2  +1}\right) - \frac{\alpha }{3x -1} \; dx        \\
+		       & \int_{0}^{+\infty } \frac{\left(1 + \sin \left(x\right)\right) \left(3x^2  - 5x + 2\right)^{\frac{1}{3}}}{x^{ \beta }\left(1 + x^2 \right)} \; dx &  & \int_{2}^{+ \infty } \left(\frac{\alpha}{x^2  + 1} + \frac{ \beta }{ x^2  -4}\right) \; dx \\
+		       & \int_{2}^{ + \infty } \frac{\log \left(1 + \sqrt{x}\right) - \log \left(\sqrt{x} -1\right)}{x^{\frac{\beta}{2}}} \; dx                            &  & \int_{1}^{+ \infty } \left(\frac{\alpha x}{x -1} - \frac{3 \beta x}{x^3  -1}\right) \; dx  \\
+		       & \int_{0}^{+ \infty } \frac{\sin \left(\frac{x}{2}\right) \arctan\left(\pi  x\right)}{x^{ \alpha } \left(9x + 4\right)^{\beta }} \; dx             &  & \int_{ 0 }^{1} x^{ \alpha  -1} \left(1 - x\right)^{ \beta  -1} \; dx
+	      \end{align*}
+\end{enumerate}
+\section{Esercizi settimana 11}
+\begin{enumerate}
+	\item Calcolare gli integrali generali delle seguenti eqazioni differenziali, provare anche a determinare il dominio di definizione
+	      \begin{align*}
+		      \mu ' & = \mu  + \sin\left(t\right)                      & \mu '         & = \frac{1}{ \mu ^2  \left(t^2  + 1\right) }                   \\
+		      \mu'  & = t u + t^2   t                                  & \mu \mu '     & = 1 - t^2                                                     \\
+		      \mu ' & = t \left( \mu  - 1\right) \left( \mu  -2\right) & \mu '         & = \mu \tan \left(t\right) + \cos \left(t\right)               \\
+		      \mu ' & = \frac{\mu ^2 }{t^2  + 1}                       & t \mu ' - \mu & = \mu ^3                                                      \\
+		      \mu ' & = 2 \mu  \tan  \left(x\right) + \sqrt{\mu }      & \mu '         & = \frac{\mu}{t} - \frac{1}{\mu }                              \\
+		      \mu ' & = 2 \mu  - e^{t} \mu ^2                          & \mu '         & = \frac{t + \cos \left(\mu \right)}{t \sin \left(\mu \right)}
+	      \end{align*}
+	\item Dati i seguenti problemi di Cauchy, calcolare il valore della soluzione nel posto indicato:
+	      \begin{align*}
+		       &
+		      \begin{cases}
+			      \mu ' \left(t\right) = 1 + y^2 \\
+			      \mu \left(1\right) = 0
+		      \end{cases}
+		       &   & \mu \left(0\right) = ?             \\
+		       &
+		      \begin{cases}
+			      \mu ' \left(t\right) = \frac{2e^{-2 \mu }}{y + t^2 } \\
+			      \mu \left(0\right) = 0
+		      \end{cases}
+		       &   & \mu \left(3\right) = ?             \\
+		       &
+		      \begin{cases}
+			      \mu ' \left(t\right) = \frac{\mu }{t \left(t -1\right)} + t \\
+			      \mu \left(\frac{e}{1 - e}\right) = \frac{e }{2 \left(1 - e\right)^2 }
+		      \end{cases}
+		       &   &
+		      \mu \left(-2\right) =?                    \\
+		       &
+		      \begin{cases}
+			      \mu ' \left(t\right) = -\frac{1}{t} \mu + \frac{\sin \left(t\right)}{t} \\
+			      \mu \left(\pi \right) = \frac{1}{\pi }
+		      \end{cases}
+		       &   & \mu \left(\frac{\pi}{2}\right) = ? \\
+		       &
+		      \begin{cases}
+			      \mu ' - \frac{1}{\sin \left(t\right) \cos \left(t\right)} \mu  = \frac{1}{\sin \left(t\right)} \\
+			      \mu \left(\frac{\pi}{4}\right) = 0
+		      \end{cases}
+		       &   &
+		      \mu \left(\frac{\pi}{3}\right) =?         \\
+		       &
+		      \begin{cases}
+			      \mu ' \left(t\right) = \sinh \left(\mu ^3  -1\right) \\
+			      \mu \left(1\right) = 1
+		      \end{cases}
+		       &   &
+		      \mu \left(2\right) ?
+	      \end{align*}
+	\item Dati i seguenti problemi di Cauchy, determinare il comportamento locale della soluzione in un intorno dell'istante iniziale:
+	      \begin{align*}
+		       &
+		      \begin{cases}
+			      t \mu \left(t\right) - \mu ' \left(t\right) \cos \left(t\right) = e^{t} \\
+			      \mu \left(0\right)1
+		      \end{cases}
+		      \\
+		       &
+		      \begin{cases}
+			      2 \mu ' \left(t\right) - \mu  \left(t\right) = \cos \left(\frac{\pi }{2} - t\right) \\
+			      \mu \left(0\right)= 1
+		      \end{cases}
+		      \\
+		       &
+		      \begin{cases}
+			      \cosh \left(t\right) \mu ' \left(t\right) + \frac{1}{ \mu \left(t\right)} = e^{t} \\
+			      \mu \left(0\right) = 2
+		      \end{cases}
+	      \end{align*}
+	\item Determinare la soluzione dei seguenti problemi di Cauchy:
+	      \begin{align*}
+		       &
+		      \begin{cases}
+			      \mu ' = \left(\mu -1\right)\left( \mu -2\right) \\
+			      \mu \left(0\right) = 3
+		      \end{cases}
+		      \\
+		       &
+		      \begin{cases}
+			      \mu ' = \frac{\mu ^2 }{1 + t^2 } \\
+			      \mu  \left(0\right) = 1
+		      \end{cases}
+		      \\
+		       &
+		      \begin{cases}
+			      t\left(\mu '\right) + \mu  - e^{t} = 0 \\
+			      \mu \left(1\right) = a
+		      \end{cases}
+	      \end{align*}
+\end{enumerate}
+\section{Esercizi settimana 12}
+\begin{enumerate}
+	\item Risolvere i seguenti problemi di Cauchy e calcolare $ \mu  $ al tempo indicato
+	      \begin{align*}
+		       &
+		      \begin{cases}
+			      \mu '' = 4 \mu ' - 12 \mu  = 0 \\
+			      \mu  \left(0\right)=0          \\
+			      \mu ' \left(0\right) = 2
+		      \end{cases}
+		       &   & \mu \left(\frac{1}{2}\right) = ? \\
+		       &
+		      \begin{cases}
+			      \mu '' + 4 \mu ' - 12 \mu  = 0 \\
+			      \mu  \left(0\right) = -1       \\
+			      \mu ' \left(0\right) = 1
+		      \end{cases}
+		       &   & \mu \left(\frac{1}{5}\right) = ? \\
+		       &
+		      \begin{cases}
+			      \mu '' - 6 \mu ' - 27 \mu  = 0 \\
+			      \mu  \left(0\right) =0         \\
+			      \mu  ' \left(0\right) = 12
+		      \end{cases}
+		       &   & \mu \left(\frac{1}{3}\right) =?  \\
+		       &
+		      \begin{cases}
+			      \mu  '' + 2 \mu ' + 3 \mu  = 0     \\
+			      \mu \left(\sqrt{2} \pi \right) = 2 \\
+			      \mu ' \left(\sqrt{2} \pi \right) = -2
+		      \end{cases}
+		       &   & \mu \left(0\right)=?             \\
+	      \end{align*}
+	\item Risolvere i seguenti problemi di Cauchy:
+	      \begin{align*}
+		       &
+		      \begin{cases}
+			      \mu '' - 2 \mu ' - 15 \mu  = e^{t}  \\
+			      \mu \left(0\right) = - \frac{5}{12} \\
+			      \mu ' \left(0\right) = 1
+		      \end{cases}
+		       &                                                     &
+		      \mu_p \left(t\right) = k_1 e^{t}                                                                                                        \\
+		       &
+		      \begin{cases}
+			      \mu '' - 2 \mu ' - 15 \mu = e^{5t } \\
+			      \mu \left(0\right) = \frac{1}{10}   \\
+			      \mu ' \left(0\right) = \frac{5}{8}
+		      \end{cases}
+		       &                                                     & \mu _p \left(t\right) = k_1 t e ^{5t } + k_2 e ^{ 5t }                         \\
+		       &
+		      \begin{cases}
+			      \mu '' - 2 \mu ' - 15 \mu  = t e ^{ - 3t } \\
+			      \mu \left(0\right) = \frac{1}{10}          \\
+			      \mu ' \left(0\right) - \frac{1}{64}
+		      \end{cases}
+		       &                                                     & \mu_p \left(t\right) = k_2 t^2  e ^{ -3t } + k_1 t e ^{ -3t } + k_1 e ^{ -3t } \\
+		       & \begin{cases}
+			         \mu '' + 2 \mu ' - 3 \mu  = \cos \left(t\right) \\
+			         \mu \left(0\right) = - \frac{1}{2}              \\
+			         \mu ' \left(0\right) = \frac{1}{5}
+		         \end{cases}
+		       &                                                     & \mu _p\left(t\right) = k_1 e^{it} + k_2 e ^{ -it}
+	      \end{align*}
+	      \bigbox{
+		      \textit{Nel secondo e nel terzo problema di Cauchy $ k_1 $ e $ k_3 $ spariscono quanto inserite la soluzione particolare nell'equazione. Notate che $ e^{5t } $ e $ e^{-3t } $ sono parte della soluzione dell'omogenea; potete scomporre i coefficienti e trattarli come un'unica costante da determinare con le condizioni iniziali}
+	      }
+\end{enumerate}
+\end{document}
+
